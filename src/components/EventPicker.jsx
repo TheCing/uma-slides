@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL
+
 export function EventPicker({ events, onSelect }) {
   return (
     <div class="event-picker">
@@ -12,7 +14,7 @@ export function EventPicker({ events, onSelect }) {
           >
             <img
               class="event-card-icon"
-              src={`/${evt.icon}`}
+              src={`${base}${evt.icon}`}
               alt={evt.name}
               draggable={false}
             />

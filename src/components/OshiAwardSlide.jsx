@@ -1,9 +1,11 @@
 import { StatsBar } from './StatsBar'
 
+const base = import.meta.env.BASE_URL
+
 export function OshiAwardSlide({ slide, event }) {
   const { ign, trainee_name, uma_image, full_art_image, time, stats, quote } = slide
   const { track } = event
-  const imageUrl = full_art_image ? `/${full_art_image}` : `/${uma_image}`
+  const imageUrl = full_art_image ? `${base}${full_art_image}` : `${base}${uma_image}`
 
   return (
     <div class="slide oshi-award">
@@ -14,8 +16,8 @@ export function OshiAwardSlide({ slide, event }) {
 
       <div class="slide-content">
         <div class="slide-badges">
-          <img class="badge-icon" src={`/${event.icon}`} alt={event.name} draggable={false} />
-          <img class="badge-logo" src="/moologo2.png" alt="Moomoocows" draggable={false} />
+          <img class="badge-icon" src={`${base}${event.icon}`} alt={event.name} draggable={false} />
+          <img class="badge-logo" src={`${base}moologo2.png`} alt="Moomoocows" draggable={false} />
         </div>
 
         <div class="slide-header">
