@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "id": "CM10",
+      "name": "Aquarius Cup",
+      "icon": "aquarius_icon.png",
+      "file": "slides-cm10.json",
+      "slideCount": 4
+    },
+    {
+      "id": "CM9",
+      "name": "Capricorn Cup",
+      "icon": "capricorn_icon.png",
+      "file": "slides-cm9.json",
+      "slideCount": 4
+    }
+  ]
+}

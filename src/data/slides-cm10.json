@@ -1,0 +1,76 @@
+{
+  "event": {
+    "name": "Aquarius Cup",
+    "id": "CM10",
+    "icon": "aquarius_icon.png",
+    "distance": "Mile",
+    "surface": "Dirt",
+    "track": "Tokyo Dirt 1600m"
+  },
+  "slides": [
+    {
+      "ign": "Emoticon Father",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "1:34.0",
+      "result": "1st",
+      "quote": "CM CHAMPION DIRT B CHIYO LETS GO",
+      "stats": {
+        "speed": 1200,
+        "stamina": 652,
+        "power": 1101,
+        "guts": 506,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "Josh",
+      "trainee_name": "[Rising☆Fortune] Matikanefukukitaru",
+      "uma_image": "umas/[Rising☆Fortune] Matikanefukukitaru.png",
+      "time": "1:34.3",
+      "result": "1st",
+      "quote": "I have run so, so, so many Matikanefukukitaru and Mejiro Ryan runs despite teaching and doing a Ph.D. Shiraoki smiled on all of us today!",
+      "stats": {
+        "speed": 1194,
+        "stamina": 609,
+        "power": 1002,
+        "guts": 473,
+        "wit": 1143
+      },
+      "full_art_image": "umas/Matikanefukukitaru_(Race).png"
+    },
+    {
+      "ign": "Mao",
+      "trainee_name": "[Peak Blue] Daiwa Scarlet",
+      "uma_image": "umas/[Peak Blue] Daiwa Scarlet.png",
+      "time": "1:34.7",
+      "result": "1st",
+      "quote": "Just highroll the finals lobby",
+      "stats": {
+        "speed": 1200,
+        "stamina": 626,
+        "power": 891,
+        "guts": 395,
+        "wit": 784
+      },
+      "full_art_image": "umas/Daiwa_Scarlet_(Race).png"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "uma_image": "umas/[Rosy Dreams] Rice Shower.png",
+      "time": "1:34.5",
+      "result": "1st",
+      "quote": "Fuck you Taiki and Goldshit ",
+      "stats": {
+        "speed": 1200,
+        "stamina": 658,
+        "power": 934,
+        "guts": 497,
+        "wit": 662
+      },
+      "full_art_image": "umas/Rice_Shower_(Race).png"
+    }
+  ]
+}

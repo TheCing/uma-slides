@@ -1,0 +1,75 @@
+{
+  "event": {
+    "name": "Capricorn Cup",
+    "id": "CM9",
+    "icon": "capricorn_icon.png",
+    "distance": "Sprint",
+    "surface": "Turf",
+    "track": "Chukyo 1200m"
+  },
+  "slides": [
+    {
+      "ign": "Robo",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "uma_image": "umas/[Red Strife] Gold Ship.png",
+      "time": "1:08.3",
+      "result": "1st",
+      "quote": "Tables Hot.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 480,
+        "power": 894,
+        "guts": 472,
+        "wit": 1156
+      },
+      "full_art_image": "umas/Gold_Ship_(Race).png"
+    },
+    {
+      "ign": "1 Star Guts",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "1:07.6",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 401,
+        "power": 922,
+        "guts": 351,
+        "wit": 1110
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "Confound",
+      "trainee_name": "[Vampire Makeover!] Rice Shower",
+      "uma_image": "umas/[Vampire Makeover!] Rice Shower.png",
+      "time": "1:06.9",
+      "result": "1st",
+      "quote": "Oshi meta is only meta",
+      "stats": {
+        "speed": 1200,
+        "stamina": 426,
+        "power": 887,
+        "guts": 402,
+        "wit": 949
+      }
+    },
+    {
+      "ign": "Nightfish",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "uma_image": "umas/[Rosy Dreams] Rice Shower.png",
+      "time": "1:06.7",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 642,
+        "power": 1043,
+        "guts": 524,
+        "wit": 1033
+      },
+      "full_art_image": "umas/Rice_Shower_(Race).png"
+    }
+  ]
+}
