@@ -18,6 +18,7 @@ EVENT_CONFIG = {
     "CM9": {
         "name": "Capricorn Cup",
         "icon": "capricorn_icon.png",
+        "theme": "default",
         "distance": "Sprint",
         "surface": "Turf",
         "track": "Chukyo 1200m",
@@ -28,6 +29,7 @@ EVENT_CONFIG = {
     "CM10": {
         "name": "Aquarius Cup",
         "icon": "aquarius_icon.png",
+        "theme": "default",
         "distance": "Mile",
         "surface": "Dirt",
         "track": "Tokyo Dirt 1600m",
@@ -158,6 +160,7 @@ def main():
             "name": cfg["name"],
             "id": args.event,
             "icon": cfg["icon"],
+            "theme": cfg.get("theme", "default"),
             "distance": cfg["distance"],
             "surface": cfg["surface"],
             "track": cfg["track"],

@@ -3,6 +3,7 @@
     "name": "Capricorn Cup",
     "id": "CM9",
     "icon": "capricorn_icon.png",
+    "theme": "default",
     "distance": "Sprint",
     "surface": "Turf",
     "track": "Chukyo 1200m"

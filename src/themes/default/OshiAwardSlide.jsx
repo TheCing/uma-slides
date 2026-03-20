@@ -1,4 +1,5 @@
 import { StatsBar } from './StatsBar'
+import './styles.css'
 
 const base = import.meta.env.BASE_URL
 

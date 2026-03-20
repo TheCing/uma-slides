@@ -28,15 +28,19 @@ uma-slides/
 │   ├── app.jsx                # Root: event picker ↔ slide viewer routing
 │   ├── components/
 │   │   ├── EventPicker.jsx    # Landing page with event cards
-│   │   ├── SlideViewer.jsx    # Navigation, transitions, fullscreen
-│   │   ├── OshiAwardSlide.jsx # Individual slide layout
-│   │   └── StatsBar.jsx       # Speed/Stamina/Power/Guts/Wit display
+│   │   └── SlideViewer.jsx    # Navigation, transitions, fullscreen
+│   ├── themes/
+│   │   ├── registry.js        # Theme name → component mapping
+│   │   └── default/           # "default" theme (Oshi Award)
+│   │       ├── OshiAwardSlide.jsx
+│   │       ├── StatsBar.jsx
+│   │       └── styles.css
 │   ├── data/
 │   │   ├── index.json         # Generated manifest of all events
 │   │   ├── slides-cm9.json    # Generated slide data per event
 │   │   └── slides-cm10.json
 │   └── styles/
-│       └── slides.css         # All slide and viewer styling
+│       └── slides.css         # Shared viewer/controls/transition styles
 ├── public/
 │   ├── umas/                  # Character images (cropped + full art)
 │   ├── aquarius_icon.png      # CM event icons
@@ -58,7 +62,15 @@ uma-slides/
 
 ### Adding a new event
 
-Add an entry to `EVENT_CONFIG` in `preprocess.py` with the event's name, icon, track info, and file paths, then run the script.
+Add an entry to `EVENT_CONFIG` in `preprocess.py` with the event's name, icon, theme, track info, and file paths, then run the script. The `theme` field selects which visual theme to use (defaults to `"default"`).
+
+### Adding a new theme
+
+1. Create a folder under `src/themes/` (e.g. `src/themes/neon/`)
+2. Add a slide component (`NeonSlide.jsx`) and its own `styles.css`
+3. The component receives `{ slide, event }` props -- the data contract is the same across all themes
+4. Register it in `src/themes/registry.js`
+5. Set `"theme": "neon"` in the event's `EVENT_CONFIG` entry
 
 ### Full art images
 
@@ -74,6 +86,7 @@ When multiple costumes share a base character (e.g. two Rice Shower variants), t
 - **Click zones** — left/right 10% of the slide area for prev/next navigation
 - **Fullscreen mode** — button in top-right corner for recording/presentation
 - **Responsive 16:9 layout** — scales to fill the viewport while maintaining aspect ratio
+- **Theme system** — each event can use a different slide theme; themes are self-contained component + CSS folders
 
 ## Tech Stack
 

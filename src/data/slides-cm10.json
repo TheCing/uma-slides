@@ -3,6 +3,7 @@
     "name": "Aquarius Cup",
     "id": "CM10",
     "icon": "aquarius_icon.png",
+    "theme": "default",
     "distance": "Mile",
     "surface": "Dirt",
     "track": "Tokyo Dirt 1600m"

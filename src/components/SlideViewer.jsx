@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'preact/hooks'
-import { OshiAwardSlide } from './OshiAwardSlide'
+import { THEMES } from '../themes/registry'
 
 export function SlideViewer({ slides, event, onBack }) {
   const [index, setIndex] = useState(0)
@@ -54,6 +54,7 @@ export function SlideViewer({ slides, event, onBack }) {
   }
 
   const slide = slides[displayIndex]
+  const SlideComponent = THEMES[event.theme] || THEMES['default']
   const transClass = transitioning ? `slide-exit slide-exit-${direction}` : 'slide-enter'
 
   return (
@@ -71,7 +72,7 @@ export function SlideViewer({ slides, event, onBack }) {
       </button>
       <div class="slide-stage">
         <div class={`slide-transition ${transClass}`} key={displayIndex}>
-          <OshiAwardSlide slide={slide} event={event} />
+          <SlideComponent slide={slide} event={event} />
         </div>
         <div class="slide-hit-prev" onClick={prev} />
         <div class="slide-hit-next" onClick={next} />
