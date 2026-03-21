@@ -46,6 +46,28 @@
   color: var(--uma-text-primary);
 }
 
+.uma-slide::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url('./horseshoe.svg');
+  background-size: 56px 56px;
+  background-repeat: repeat;
+  transform: rotate(-45deg);
+  opacity: 0.04;
+  filter: sepia(1) saturate(3) hue-rotate(-10deg) brightness(0.6);
+  pointer-events: none;
+  z-index: 0;
+  animation: horseshoeDrift 30s linear infinite;
+}
+
+@keyframes horseshoeDrift {
+  from { background-position: 0 0; }
+  to { background-position: 56px 56px; }
+}
+
 /* ── Decorative Background Glows ─────────────────────── */
 
 .uma-glow {

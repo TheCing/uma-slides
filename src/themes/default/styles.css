@@ -9,7 +9,7 @@
   background: linear-gradient(135deg, #1a0a12 0%, #150d1e 40%, #0d0a16 100%);
 }
 
-.slide::before {
+.slide.oshi-award::before {
   content: '';
   position: absolute;
   inset: -50%;
