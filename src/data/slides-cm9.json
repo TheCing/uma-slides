@@ -54,7 +54,8 @@
         "power": 976,
         "guts": 493,
         "wit": 739
-      }
+      },
+      "full_art_image": "umas/Special_Week_(Race).png"
     },
     {
       "ign": "Confound",
@@ -101,7 +102,8 @@
         "power": 876,
         "guts": 425,
         "wit": 1025
-      }
+      },
+      "full_art_image": "umas/Haru_Urara_(Race).png"
     }
   ]
 }
