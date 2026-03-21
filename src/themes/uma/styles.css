@@ -1,0 +1,495 @@
+/* Uma Theme - In-game design language */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap');
+
+/* ── Design Tokens ───────────────────────────────────── */
+
+:root {
+  --uma-font-display: 'Nunito', system-ui, sans-serif;
+  --uma-font-body: 'Quicksand', system-ui, sans-serif;
+
+  --uma-bg-cream: #fffbf5;
+  --uma-bg-cream-dark: #fff3e0;
+  --uma-bg-panel: rgba(255, 255, 255, 0.75);
+  --uma-bg-glass: rgba(255, 255, 255, 0.55);
+
+  --uma-text-primary: #2c3e50;
+  --uma-text-secondary: #5d6d7e;
+  --uma-text-muted: #95a5a6;
+
+  --uma-orange: #ff9a3c;
+  --uma-gold: #ffcd3c;
+  --uma-pink: #ff6b9d;
+  --uma-blue: #5dade2;
+  --uma-green: #5cb85c;
+  --uma-purple: #9b59b6;
+
+  --uma-gradient-orange: linear-gradient(135deg, #ff9a3c 0%, #ffcd3c 100%);
+  --uma-gradient-pink: linear-gradient(135deg, #ff6b9d 0%, #ff9ec4 100%);
+  --uma-gradient-blue: linear-gradient(135deg, #5dade2 0%, #85c1e9 100%);
+  --uma-gradient-green: linear-gradient(135deg, #5cb85c 0%, #8fd460 100%);
+  --uma-gradient-purple: linear-gradient(135deg, #9b59b6 0%, #c39bd3 100%);
+  --uma-gradient-gold: linear-gradient(135deg, #f9ca24 0%, #f0932b 100%);
+
+  --uma-shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --uma-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --uma-shadow-warm: 0 4px 20px rgba(255, 154, 60, 0.15);
+}
+
+/* ── Slide Base ──────────────────────────────────────── */
+
+.uma-slide {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--uma-bg-cream) 0%, var(--uma-bg-cream-dark) 40%, #fde8d0 100%);
+  font-family: var(--uma-font-body);
+  color: var(--uma-text-primary);
+}
+
+/* ── Decorative Background Glows ─────────────────────── */
+
+.uma-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.uma-glow-orange {
+  width: 500px;
+  height: 500px;
+  top: -10%;
+  right: -5%;
+  background: radial-gradient(circle, rgba(255, 154, 60, 0.15) 0%, transparent 70%);
+  animation: umaFloat 8s ease-in-out infinite;
+}
+
+.uma-glow-pink {
+  width: 400px;
+  height: 400px;
+  bottom: -5%;
+  left: -5%;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+  animation: umaFloat 10s ease-in-out infinite reverse;
+}
+
+.uma-glow-gold {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 35%;
+  background: radial-gradient(circle, rgba(249, 202, 36, 0.08) 0%, transparent 70%);
+  animation: umaFloat 12s ease-in-out infinite;
+}
+
+@keyframes umaFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -15px); }
+}
+
+/* ── Content Layer ───────────────────────────────────── */
+
+.uma-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 40% 1fr;
+  grid-template-areas:
+    "char header"
+    "char info"
+    "footer footer";
+}
+
+/* ── Top-left Badges ─────────────────────────────────── */
+
+.uma-badges {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uma-badges img {
+  width: clamp(28px, 3vw, 42px);
+  height: clamp(28px, 3vw, 42px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 154, 60, 0.3);
+  box-shadow: var(--uma-shadow-warm);
+}
+
+/* ── Ribbon Title ────────────────────────────────────── */
+
+.uma-header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 28px 0;
+  z-index: 1;
+}
+
+.uma-ribbon-wrapper {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.uma-ribbon-accent {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #ffb81c;
+  z-index: 1;
+  transform: skewX(-12deg);
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+.uma-ribbon-main {
+  position: relative;
+  background: var(--uma-orange);
+  padding: 8px 32px;
+  transform: skewX(-12deg);
+  z-index: 2;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.uma-ribbon-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.08) 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 5px, 5px -5px, -5px 0;
+  pointer-events: none;
+}
+
+.uma-ribbon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: var(--uma-font-display);
+  font-size: clamp(11px, 1.4vw, 18px);
+  font-weight: 900;
+  transform: skewX(2deg);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.uma-ribbon-text svg {
+  flex-shrink: 0;
+}
+
+/* ── Character Portrait ──────────────────────────────── */
+
+.uma-character {
+  grid-area: char;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 0 0 16px;
+  overflow: hidden;
+}
+
+.uma-character .char-main {
+  height: 92%;
+  width: auto;
+  max-width: 110%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.2));
+  position: relative;
+  z-index: 1;
+  animation: umaCharIn 0.7s ease 0.2s both;
+}
+
+.uma-character .char-ghost {
+  position: absolute;
+  height: 105%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0.08;
+  right: -15%;
+  bottom: -5%;
+  z-index: 0;
+  filter: brightness(1.2) saturate(0.5);
+  animation: umaGhostIn 0.9s ease 0.3s both;
+}
+
+@keyframes umaCharIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes umaGhostIn {
+  from { opacity: 0; transform: translateX(15px); }
+  to { opacity: 0.08; transform: translateX(0); }
+}
+
+.uma-character.full-art {
+  overflow: visible;
+  padding: 0;
+  z-index: 0;
+}
+
+.uma-character.full-art .char-main {
+  height: auto;
+  width: 100%;
+  max-width: none;
+  margin-left: -10%;
+  margin-bottom: -60%;
+}
+
+.uma-character.full-art .char-ghost {
+  height: auto;
+  width: 115%;
+  right: -20%;
+  bottom: -65%;
+}
+
+/* ── Shimmer Overlay ─────────────────────────────────── */
+
+.uma-character::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  animation: umaShimmer 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes umaShimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* ── Info Area ───────────────────────────────────────── */
+
+.uma-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 28px;
+  gap: clamp(8px, 1.5vh, 16px);
+  overflow: hidden;
+  min-width: 0;
+  z-index: 1;
+}
+
+.uma-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.4em;
+  font-family: var(--uma-font-body);
+  font-size: clamp(11px, 1.6vw, 20px);
+  font-weight: 700;
+  color: var(--uma-text-secondary);
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+.uma-subtitle span {
+  white-space: nowrap;
+}
+
+.uma-ign {
+  font-family: var(--uma-font-display);
+  font-size: clamp(36px, 7vw, 110px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  background: var(--uma-gradient-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 12px rgba(255, 154, 60, 0.25));
+}
+
+.uma-quote {
+  font-family: var(--uma-font-body);
+  font-size: clamp(11px, 1.4vw, 18px);
+  font-weight: 600;
+  color: var(--uma-text-secondary);
+  font-style: italic;
+  max-width: 90%;
+  line-height: 1.4;
+  background: var(--uma-bg-glass);
+  backdrop-filter: blur(12px);
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--uma-shadow-soft);
+  width: fit-content;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+
+.uma-footer {
+  grid-area: footer;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 28px 16px;
+}
+
+.uma-track-time {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: clamp(10px, 1.5vw, 24px);
+  flex-wrap: nowrap;
+}
+
+.uma-track-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--uma-font-display);
+  font-size: clamp(10px, 1.4vw, 22px);
+  font-weight: 800;
+  color: var(--uma-text-primary);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.uma-track-item svg {
+  flex-shrink: 0;
+  color: var(--uma-orange);
+}
+
+/* ── Stats Bar ───────────────────────────────────────── */
+
+.uma-stats-bar {
+  display: flex;
+  gap: clamp(8px, 1.5vw, 20px);
+  padding: 8px 0 4px;
+  justify-content: end;
+}
+
+.uma-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: clamp(60px, 8vw, 110px);
+}
+
+.uma-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.uma-stat-label {
+  font-family: var(--uma-font-body);
+  font-size: clamp(7px, 0.8vw, 11px);
+  font-weight: 700;
+  color: var(--uma-text-muted);
+  letter-spacing: 0.5px;
+}
+
+.uma-grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(16px, 1.8vw, 24px);
+  height: clamp(16px, 1.8vw, 24px);
+  border-radius: 4px;
+  font-family: var(--uma-font-display);
+  font-weight: 900;
+  font-size: clamp(9px, 1vw, 14px);
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.uma-grade-S { background: var(--uma-gradient-gold); box-shadow: 0 2px 6px rgba(249, 202, 36, 0.4); }
+.uma-grade-A { background: var(--uma-gradient-orange); box-shadow: 0 2px 6px rgba(255, 154, 60, 0.4); }
+.uma-grade-B { background: var(--uma-gradient-pink); box-shadow: 0 2px 6px rgba(255, 107, 157, 0.4); }
+.uma-grade-C { background: var(--uma-gradient-green); box-shadow: 0 2px 6px rgba(92, 184, 92, 0.4); }
+.uma-grade-D { background: var(--uma-gradient-blue); box-shadow: 0 2px 6px rgba(93, 173, 226, 0.4); }
+.uma-grade-E { background: var(--uma-gradient-purple); box-shadow: 0 2px 6px rgba(155, 89, 182, 0.3); }
+.uma-grade-F { background: linear-gradient(135deg, #8e44ad 0%, #b771d4 100%); box-shadow: 0 2px 6px rgba(142, 68, 173, 0.3); }
+.uma-grade-G { background: linear-gradient(135deg, #95a5a6 0%, #bdc3c7 100%); box-shadow: 0 2px 6px rgba(149, 165, 166, 0.3); }
+
+.uma-stat-bar-track {
+  width: 100%;
+  height: clamp(6px, 0.7vw, 10px);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.uma-stat-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  animation: umaBarFill 0.8s ease 0.4s both;
+  transform-origin: left;
+}
+
+@keyframes umaBarFill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.uma-stat-bar-fill.speed { background: var(--uma-gradient-blue); }
+.uma-stat-bar-fill.stamina { background: var(--uma-gradient-pink); }
+.uma-stat-bar-fill.power { background: var(--uma-gradient-orange); }
+.uma-stat-bar-fill.guts { background: var(--uma-gradient-green); }
+.uma-stat-bar-fill.wit { background: var(--uma-gradient-purple); }
+
+.uma-stat-value {
+  font-family: var(--uma-font-display);
+  font-size: clamp(18px, 2.8vw, 40px);
+  font-weight: 900;
+  color: var(--uma-text-primary);
+  line-height: 1;
+}
+
+/* ── Sparkle Decorations ─────────────────────────────── */
+
+.uma-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.uma-sparkle {
+  position: absolute;
+  animation: umaTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes umaTwinkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}

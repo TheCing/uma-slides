@@ -1,7 +1,8 @@
-import { useState, useEffect, useCallback, useRef } from 'preact/hooks'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'preact/hooks'
 import { THEMES } from '../themes/registry'
 
 export function SlideViewer({ slides, event, onBack }) {
+  const allTraineeNames = useMemo(() => slides.map(s => s.trainee_name), [slides])
   const [index, setIndex] = useState(0)
   const [displayIndex, setDisplayIndex] = useState(0)
   const [transitioning, setTransitioning] = useState(false)
@@ -72,7 +73,7 @@ export function SlideViewer({ slides, event, onBack }) {
       </button>
       <div class="slide-stage">
         <div class={`slide-transition ${transClass}`} key={displayIndex}>
-          <SlideComponent slide={slide} event={event} />
+          <SlideComponent slide={slide} event={event} allTraineeNames={allTraineeNames} />
         </div>
         <div class="slide-hit-prev" onClick={prev} />
         <div class="slide-hit-next" onClick={next} />

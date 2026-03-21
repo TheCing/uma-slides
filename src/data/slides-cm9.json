@@ -42,6 +42,21 @@
       "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
     },
     {
+      "ign": "LMaximus",
+      "trainee_name": "[Special Dreamer] Special Week",
+      "uma_image": "umas/[Special Dreamer] Special Week.png",
+      "time": "1:07.8",
+      "result": "1st",
+      "quote": "Believe in your dreams",
+      "stats": {
+        "speed": 1066,
+        "stamina": 597,
+        "power": 976,
+        "guts": 493,
+        "wit": 739
+      }
+    },
+    {
       "ign": "Confound",
       "trainee_name": "[Vampire Makeover!] Rice Shower",
       "uma_image": "umas/[Vampire Makeover!] Rice Shower.png",
@@ -54,7 +69,8 @@
         "power": 887,
         "guts": 402,
         "wit": 949
-      }
+      },
+      "full_art_image": "umas/Rice_Shower_(Alt).png"
     },
     {
       "ign": "Nightfish",
@@ -71,6 +87,21 @@
         "wit": 1033
       },
       "full_art_image": "umas/Rice_Shower_(Race).png"
+    },
+    {
+      "ign": "AfroDanceMan",
+      "trainee_name": "[Bestest Prize ♪] Haru Urara",
+      "uma_image": "umas/[Bestest Prize ♪] Haru Urara.png",
+      "time": "1:06.8",
+      "result": "1st",
+      "quote": "The Queen of Sprints",
+      "stats": {
+        "speed": 1200,
+        "stamina": 402,
+        "power": 876,
+        "guts": 425,
+        "wit": 1025
+      }
     }
   ]
 }

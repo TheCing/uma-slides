@@ -29,7 +29,7 @@ EVENT_CONFIG = {
     "CM10": {
         "name": "Aquarius Cup",
         "icon": "aquarius_icon.png",
-        "theme": "default",
+        "theme": "uma",
         "distance": "Mile",
         "surface": "Dirt",
         "track": "Tokyo Dirt 1600m",
@@ -46,6 +46,10 @@ COL_RESULT = "Finals result?"
 
 DEFAULT_COSTUME = {
     "Rice Shower": "[Rosy Dreams] Rice Shower",
+}
+
+ALT_ART = {
+    "[Vampire Makeover!] Rice Shower": "Rice_Shower_(Alt).png",
 }
 
 
@@ -78,6 +82,7 @@ def main():
 
     slides = []
     images_needed = set()
+    claimed_umas = set()
 
     for _, row in oshi_first.iterrows():
         ign = row[COL_IGN]
@@ -85,8 +90,17 @@ def main():
 
         player_wins = race_winners[race_winners["trainer_name"] == ign]
         if player_wins.empty:
-            print(f"  SKIP {ign}: no podium win found")
-            continue
+            stat_match = stats_df[(stats_df["ign"] == ign) & (stats_df["is_user"] == True)]
+            if stat_match.empty:
+                stat_match = stats_df[stats_df["ign"] == ign]
+            if not stat_match.empty:
+                candidate = stat_match.iloc[0]["name"]
+                player_wins = race_winners[race_winners["trainee_name"] == candidate]
+                if not player_wins.empty:
+                    print(f"  Resolved {ign} via stats fallback -> {candidate}")
+            if player_wins.empty:
+                print(f"  SKIP {ign}: no podium win found")
+                continue
 
         win = player_wins.iloc[0]
         trainee = win["trainee_name"]
@@ -95,6 +109,11 @@ def main():
         if trainee not in unique_umas:
             print(f"  SKIP {ign}: {trainee} not unique ({uma_win_counts.get(trainee, 0)} wins)")
             continue
+
+        if trainee in claimed_umas:
+            print(f"  SKIP {ign}: {trainee} already claimed by another player")
+            continue
+        claimed_umas.add(trainee)
 
         has_user_flag = stats_df["is_user"].any()
         if has_user_flag:
@@ -141,6 +160,14 @@ def main():
 
     for slide_entry in slides:
         trainee = slide_entry["trainee_name"]
+
+        if trainee in ALT_ART:
+            alt_path = project_root / "public" / "umas" / ALT_ART[trainee]
+            if alt_path.exists():
+                slide_entry["full_art_image"] = f"umas/{ALT_ART[trainee]}"
+                print(f"  Full art assigned (alt): {trainee} -> {ALT_ART[trainee]}")
+                continue
+
         base_name = re.sub(r"\[.*?\]\s*", "", trainee).strip()
         full_art_name = base_name.replace(" ", "_") + "_(Race).png"
         full_art_path = project_root / "public" / "umas" / full_art_name

@@ -1,19 +1,17 @@
 import { StatsBar } from './StatsBar'
+import { getDisplayName } from '../../utils/names'
 import './styles.css'
 
 const base = import.meta.env.BASE_URL
 
-export function OshiAwardSlide({ slide, event }) {
+export function OshiAwardSlide({ slide, event, allTraineeNames }) {
   const { ign, trainee_name, uma_image, full_art_image, time, stats, quote } = slide
   const { track } = event
+  const displayName = getDisplayName(trainee_name, allTraineeNames || [])
   const imageUrl = full_art_image ? `${base}${full_art_image}` : `${base}${uma_image}`
 
   return (
     <div class="slide oshi-award">
-      <div class="slide-bg">
-        <img src={imageUrl} alt="" draggable={false} />
-      </div>
-      <div class="slide-bg-overlay" />
 
       <div class="slide-content">
         <div class="slide-badges">
@@ -36,17 +34,20 @@ export function OshiAwardSlide({ slide, event }) {
         </div>
 
         <div class="slide-info">
+          <div class="ign" style={{ fontSize: ign.length > 10 ? `clamp(28px, ${Math.max(3, 7 - (ign.length - 6) * 0.35)}vw, ${Math.max(50, 110 - (ign.length - 6) * 6)}px)` : undefined }}>{ign.toUpperCase()}</div>
           <div class="subtitle">
             <span>THE ONLY</span>
-            <span>{trainee_name.toUpperCase()}</span>
+            <span>{displayName.toUpperCase()}</span>
             <span>FINALS WINNER</span>
           </div>
-          <div class="ign">{ign.toUpperCase()}</div>
           {quote && <div class="quote">"{quote}"</div>}
         </div>
 
         <div class="slide-footer">
           <div class="track-time">
+            <span class="track-item">
+              EVENT: {event.name.toUpperCase()}
+            </span>
             <span class="track-item">
               TRACK: {track.toUpperCase()}
             </span>

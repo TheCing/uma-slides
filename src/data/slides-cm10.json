@@ -3,7 +3,7 @@
     "name": "Aquarius Cup",
     "id": "CM10",
     "icon": "aquarius_icon.png",
-    "theme": "default",
+    "theme": "uma",
     "distance": "Mile",
     "surface": "Dirt",
     "track": "Tokyo Dirt 1600m"
@@ -72,6 +72,22 @@
         "wit": 662
       },
       "full_art_image": "umas/Rice_Shower_(Race).png"
+    },
+    {
+      "ign": "cafedomancier",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "uma_image": "umas/[Scramble☆Zone] Mayano Top Gun.png",
+      "time": "1:33.3",
+      "result": "1st",
+      "quote": "i love mayano top gun",
+      "stats": {
+        "speed": 1153,
+        "stamina": 671,
+        "power": 845,
+        "guts": 681,
+        "wit": 739
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
     }
   ]
 }
