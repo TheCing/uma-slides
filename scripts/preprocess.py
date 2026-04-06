@@ -225,6 +225,50 @@ def main():
         json.dump(index, f, indent=2, ensure_ascii=False)
     print(f"Updated {index_path}")
 
+    # --- Write winners JSON and Markdown ---
+    out_dir = project_root / "output"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    base_name_fn = lambda t: re.sub(r"\[.*?\]\s*", "", t).strip()
+
+    winners = []
+    for s in slides:
+        winners.append({
+            "ign": s["ign"],
+            "trainee_name": s["trainee_name"],
+            "base_name": base_name_fn(s["trainee_name"]),
+            "time": s["time"],
+            "stats": s["stats"],
+            "quote": s["quote"],
+        })
+
+    winners_json_path = out_dir / f"winners-{args.event.lower()}.json"
+    with open(winners_json_path, "w") as f:
+        json.dump({
+            "event": args.event,
+            "name": cfg["name"],
+            "track": cfg["track"],
+            "winners": winners,
+        }, f, indent=2, ensure_ascii=False)
+    print(f"Wrote {winners_json_path}")
+
+    winners_md_path = out_dir / f"winners-{args.event.lower()}.md"
+    with open(winners_md_path, "w") as f:
+        f.write(f"# {cfg['name']} ({args.event}) — Oshi's Champion Awardees\n\n")
+        f.write(f"**Track:** {cfg['track']}  \n")
+        f.write(f"**Winners:** {len(winners)}\n\n")
+        f.write("---\n\n")
+        for i, w in enumerate(winners, 1):
+            total = sum(w["stats"].values())
+            f.write(f"### {i}. {w['ign']}\n\n")
+            f.write(f"**Uma:** {w['trainee_name']}  \n")
+            f.write(f"**Time:** {w['time']}  \n")
+            f.write(f"**Stats:** {w['stats']['speed']} / {w['stats']['stamina']} / {w['stats']['power']} / {w['stats']['guts']} / {w['stats']['wit']} (Total: {total})  \n")
+            if w["quote"]:
+                f.write(f"\n> {w['quote']}\n")
+            f.write("\n")
+    print(f"Wrote {winners_md_path}")
+
     umas_out = project_root / "public" / "umas"
     umas_out.mkdir(parents=True, exist_ok=True)
     copied = 0

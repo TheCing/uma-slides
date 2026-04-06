@@ -1,0 +1,77 @@
+{
+  "event": "CM10",
+  "name": "Aquarius Cup",
+  "track": "Tokyo Dirt 1600m",
+  "winners": [
+    {
+      "ign": "Emoticon Father",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "base_name": "Sakura Chiyono O",
+      "time": "1:34.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 652,
+        "power": 1101,
+        "guts": 506,
+        "wit": 1200
+      },
+      "quote": "CM CHAMPION DIRT B CHIYO LETS GO"
+    },
+    {
+      "ign": "Josh",
+      "trainee_name": "[Rising☆Fortune] Matikanefukukitaru",
+      "base_name": "Matikanefukukitaru",
+      "time": "1:34.3",
+      "stats": {
+        "speed": 1194,
+        "stamina": 609,
+        "power": 1002,
+        "guts": 473,
+        "wit": 1143
+      },
+      "quote": "I have run so, so, so many Matikanefukukitaru and Mejiro Ryan runs despite teaching and doing a Ph.D. Shiraoki smiled on all of us today!"
+    },
+    {
+      "ign": "Mao",
+      "trainee_name": "[Peak Blue] Daiwa Scarlet",
+      "base_name": "Daiwa Scarlet",
+      "time": "1:34.7",
+      "stats": {
+        "speed": 1200,
+        "stamina": 626,
+        "power": 891,
+        "guts": 395,
+        "wit": 784
+      },
+      "quote": "Just highroll the finals lobby"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:34.5",
+      "stats": {
+        "speed": 1200,
+        "stamina": 658,
+        "power": 934,
+        "guts": 497,
+        "wit": 662
+      },
+      "quote": "Fuck you Taiki and Goldshit "
+    },
+    {
+      "ign": "cafedomancier",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "1:33.3",
+      "stats": {
+        "speed": 1153,
+        "stamina": 671,
+        "power": 845,
+        "guts": 681,
+        "wit": 739
+      },
+      "quote": "i love mayano top gun"
+    }
+  ]
+}

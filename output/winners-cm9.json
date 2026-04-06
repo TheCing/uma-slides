@@ -1,0 +1,91 @@
+{
+  "event": "CM9",
+  "name": "Capricorn Cup",
+  "track": "Chukyo 1200m",
+  "winners": [
+    {
+      "ign": "Robo",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "base_name": "Gold Ship",
+      "time": "1:08.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 480,
+        "power": 894,
+        "guts": 472,
+        "wit": 1156
+      },
+      "quote": "Tables Hot."
+    },
+    {
+      "ign": "1 Star Guts",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "base_name": "Sakura Chiyono O",
+      "time": "1:07.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 401,
+        "power": 922,
+        "guts": 351,
+        "wit": 1110
+      },
+      "quote": ""
+    },
+    {
+      "ign": "LMaximus",
+      "trainee_name": "[Special Dreamer] Special Week",
+      "base_name": "Special Week",
+      "time": "1:07.8",
+      "stats": {
+        "speed": 1066,
+        "stamina": 597,
+        "power": 976,
+        "guts": 493,
+        "wit": 739
+      },
+      "quote": "Believe in your dreams"
+    },
+    {
+      "ign": "Confound",
+      "trainee_name": "[Vampire Makeover!] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:06.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 426,
+        "power": 887,
+        "guts": 402,
+        "wit": 949
+      },
+      "quote": "Oshi meta is only meta"
+    },
+    {
+      "ign": "Nightfish",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:06.7",
+      "stats": {
+        "speed": 1200,
+        "stamina": 642,
+        "power": 1043,
+        "guts": 524,
+        "wit": 1033
+      },
+      "quote": ""
+    },
+    {
+      "ign": "AfroDanceMan",
+      "trainee_name": "[Bestest Prize ♪] Haru Urara",
+      "base_name": "Haru Urara",
+      "time": "1:06.8",
+      "stats": {
+        "speed": 1200,
+        "stamina": 402,
+        "power": 876,
+        "guts": 425,
+        "wit": 1025
+      },
+      "quote": "The Queen of Sprints"
+    }
+  ]
+}
