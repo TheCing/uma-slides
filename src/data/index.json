@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "id": "CM9",
+      "name": "Capricorn Cup",
+      "icon": "capricorn_icon.png",
+      "file": "slides-cm9.json",
+      "slideCount": 6
+    },
+    {
       "id": "CM10",
       "name": "Aquarius Cup",
       "icon": "aquarius_icon.png",
@@ -8,11 +15,11 @@
       "slideCount": 5
     },
     {
-      "id": "CM9",
-      "name": "Capricorn Cup",
-      "icon": "capricorn_icon.png",
-      "file": "slides-cm9.json",
-      "slideCount": 6
+      "id": "CM11",
+      "name": "Pisces Cup",
+      "icon": "pisces_icon.png",
+      "file": "slides-cm11.json",
+      "slideCount": 10
     }
   ]
 }

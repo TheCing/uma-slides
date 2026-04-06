@@ -1,0 +1,10 @@
+[project]
+name = "uma-slides"
+version = "0.1.0"
+description = "Browser-based slideshow for Umamusume Virgo Cup Oshi Champion Awardee presentations"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "pillow>=12.2.0",
+    "pyarrow",
+]

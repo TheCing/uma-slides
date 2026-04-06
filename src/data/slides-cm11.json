@@ -1,0 +1,173 @@
+{
+  "event": {
+    "name": "Pisces Cup",
+    "id": "CM11",
+    "icon": "pisces_icon.png",
+    "theme": "uma",
+    "distance": "Long",
+    "surface": "Turf",
+    "track": "Hanshin Turf 3200m"
+  },
+  "slides": [
+    {
+      "ign": "SwordResolve",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "uma_image": "umas/[Sunlight Bouquet] Mayano Top Gun.png",
+      "time": "3:13.9",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1199,
+        "stamina": 1135,
+        "power": 1073,
+        "guts": 797,
+        "wit": 745
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+    },
+    {
+      "ign": "ran5z",
+      "trainee_name": "[Hopp'n♪Happy Heart] Special Week",
+      "uma_image": "umas/[Hopp'n♪Happy Heart] Special Week.png",
+      "time": "3:13.4",
+      "result": "1st",
+      "quote": "The hardest working uma! (Dies if she can't push to 6th as an end closer)",
+      "stats": {
+        "speed": 1164,
+        "stamina": 950,
+        "power": 1200,
+        "guts": 723,
+        "wit": 995
+      },
+      "full_art_image": "umas/Special_Week_(Race).png"
+    },
+    {
+      "ign": "Linh124",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "uma_image": "umas/[Princess of Pink] Kawakami Princess.png",
+      "time": "3:12.7",
+      "result": "1st",
+      "quote": "Kawakami end trust",
+      "stats": {
+        "speed": 1190,
+        "stamina": 947,
+        "power": 1117,
+        "guts": 661,
+        "wit": 932
+      },
+      "full_art_image": "umas/Kawakami_Princess_(Race).png"
+    },
+    {
+      "ign": "ShadPrince",
+      "trainee_name": "[Quercus Civilis] Air Groove",
+      "uma_image": "umas/[Quercus Civilis] Air Groove.png",
+      "time": "3:13.4",
+      "result": "1st",
+      "quote": "The Empress will reign eternal",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1189,
+        "power": 912,
+        "guts": 650,
+        "wit": 1050
+      },
+      "full_art_image": "umas/Air_Groove_(Race).png"
+    },
+    {
+      "ign": "sglogic",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "uma_image": "umas/[Archer by Moonlight] Symboli Rudolf.png",
+      "time": "3:12.3",
+      "result": "1st",
+      "quote": "I used Festival Symboli Rudolf (lowkey prefer this alt over og) and ran her as a pace chaser despite people saying that she's better as front or pace chasers weren't meta from this CM. I know it may not be the biggest oshi pick with her already having the right aptitudes and a gold recovery but I certainly didn't pick her for her meta viability. ",
+      "stats": {
+        "speed": 1197,
+        "stamina": 1029,
+        "power": 1124,
+        "guts": 529,
+        "wit": 884
+      },
+      "full_art_image": "umas/Symboli_Rudolf_(Race).png"
+    },
+    {
+      "ign": "Cawiar",
+      "trainee_name": "[Jokester ☆ Vibes] Tosen Jordan",
+      "uma_image": "umas/[Jokester ☆ Vibes] Tosen Jordan.png",
+      "time": "3:12.9",
+      "result": "1st",
+      "quote": "TT horse with 79 losses wins final!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 788,
+        "power": 1022,
+        "guts": 970,
+        "wit": 777
+      },
+      "full_art_image": "umas/Tosen_Jordan_(Race).png"
+    },
+    {
+      "ign": "Towel13",
+      "trainee_name": "[Rouge Caroler] Biwa Hayahide",
+      "uma_image": "umas/[Rouge Caroler] Biwa Hayahide.png",
+      "time": "3:13.3",
+      "result": "1st",
+      "quote": "When the track doesn't present an opportunity to win, you have to make one yourself for your oshi!! ",
+      "stats": {
+        "speed": 1140,
+        "stamina": 1034,
+        "power": 999,
+        "guts": 518,
+        "wit": 1062
+      },
+      "full_art_image": "umas/Biwa_Hayahide_(Race).png"
+    },
+    {
+      "ign": "Poyo",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "3:12.8",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1154,
+        "stamina": 1147,
+        "power": 882,
+        "guts": 600,
+        "wit": 1016
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "Oboros",
+      "trainee_name": "[Full-Color Fangirling] Agnes Digital",
+      "uma_image": "umas/[Full-Color Fangirling] Agnes Digital.png",
+      "time": "3:12.8",
+      "result": "1st",
+      "quote": "Digitan supremacy",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1008,
+        "power": 1200,
+        "guts": 565,
+        "wit": 752
+      },
+      "full_art_image": "umas/Agnes_Digital_(Race).png"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
+      "time": "3:12.0",
+      "result": "1st",
+      "quote": "Og Opera",
+      "stats": {
+        "speed": 1200,
+        "stamina": 978,
+        "power": 1013,
+        "guts": 590,
+        "wit": 979
+      },
+      "full_art_image": "umas/T.M._Opera_O_(Race).png"
+    }
+  ]
+}

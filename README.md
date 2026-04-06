@@ -6,11 +6,11 @@ Browser-based slideshow for Umamusume Virgo Cup "Oshi's Champion Awardee" presen
 
 ```bash
 npm install
-pip install pandas pyarrow   # for the preprocessor
+uv sync                      # install Python deps (pandas, pyarrow)
 
 # Generate slide data (run per event)
-python3 scripts/preprocess.py --repo ../Umamusume_Virgo_Cup_Dashboard --event CM9
-python3 scripts/preprocess.py --repo ../Umamusume_Virgo_Cup_Dashboard --event CM10
+uv run python scripts/preprocess.py --repo ../Umamusume_Virgo_Cup_Dashboard --event CM9
+uv run python scripts/preprocess.py --repo ../Umamusume_Virgo_Cup_Dashboard --event CM10
 
 # Start dev server
 npm run dev
@@ -54,6 +54,7 @@ uma-slides/
 │   ├── capricorn_icon.png
 │   ├── horseshoe.svg          # Horseshoe icon source
 │   └── moologo2.png           # Moomoocows logo
+├── pyproject.toml             # Python deps (uv)
 └── package.json
 ```
 
@@ -120,5 +121,5 @@ Deployed to GitHub Pages via GitHub Actions on push to `main`. The Vite `base` i
 ## Tech Stack
 
 - **Preact** + **Vite** — lightweight frontend
-- **Python** + **pandas/pyarrow** — data preprocessing
+- **Python** + **pandas/pyarrow** (managed by **uv**) — data preprocessing
 - **CSS** — custom styling, gradient text, animated backgrounds, transitions

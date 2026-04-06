@@ -1,0 +1,147 @@
+{
+  "event": "CM11",
+  "name": "Pisces Cup",
+  "track": "Hanshin Turf 3200m",
+  "winners": [
+    {
+      "ign": "SwordResolve",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "3:13.9",
+      "stats": {
+        "speed": 1199,
+        "stamina": 1135,
+        "power": 1073,
+        "guts": 797,
+        "wit": 745
+      },
+      "quote": ""
+    },
+    {
+      "ign": "ran5z",
+      "trainee_name": "[Hopp'n♪Happy Heart] Special Week",
+      "base_name": "Special Week",
+      "time": "3:13.4",
+      "stats": {
+        "speed": 1164,
+        "stamina": 950,
+        "power": 1200,
+        "guts": 723,
+        "wit": 995
+      },
+      "quote": "The hardest working uma! (Dies if she can't push to 6th as an end closer)"
+    },
+    {
+      "ign": "Linh124",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "base_name": "Kawakami Princess",
+      "time": "3:12.7",
+      "stats": {
+        "speed": 1190,
+        "stamina": 947,
+        "power": 1117,
+        "guts": 661,
+        "wit": 932
+      },
+      "quote": "Kawakami end trust"
+    },
+    {
+      "ign": "ShadPrince",
+      "trainee_name": "[Quercus Civilis] Air Groove",
+      "base_name": "Air Groove",
+      "time": "3:13.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1189,
+        "power": 912,
+        "guts": 650,
+        "wit": 1050
+      },
+      "quote": "The Empress will reign eternal"
+    },
+    {
+      "ign": "sglogic",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "base_name": "Symboli Rudolf",
+      "time": "3:12.3",
+      "stats": {
+        "speed": 1197,
+        "stamina": 1029,
+        "power": 1124,
+        "guts": 529,
+        "wit": 884
+      },
+      "quote": "I used Festival Symboli Rudolf (lowkey prefer this alt over og) and ran her as a pace chaser despite people saying that she's better as front or pace chasers weren't meta from this CM. I know it may not be the biggest oshi pick with her already having the right aptitudes and a gold recovery but I certainly didn't pick her for her meta viability. "
+    },
+    {
+      "ign": "Cawiar",
+      "trainee_name": "[Jokester ☆ Vibes] Tosen Jordan",
+      "base_name": "Tosen Jordan",
+      "time": "3:12.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 788,
+        "power": 1022,
+        "guts": 970,
+        "wit": 777
+      },
+      "quote": "TT horse with 79 losses wins final!"
+    },
+    {
+      "ign": "Towel13",
+      "trainee_name": "[Rouge Caroler] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "3:13.3",
+      "stats": {
+        "speed": 1140,
+        "stamina": 1034,
+        "power": 999,
+        "guts": 518,
+        "wit": 1062
+      },
+      "quote": "When the track doesn't present an opportunity to win, you have to make one yourself for your oshi!! "
+    },
+    {
+      "ign": "Poyo",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "base_name": "Sakura Chiyono O",
+      "time": "3:12.8",
+      "stats": {
+        "speed": 1154,
+        "stamina": 1147,
+        "power": 882,
+        "guts": 600,
+        "wit": 1016
+      },
+      "quote": ""
+    },
+    {
+      "ign": "Oboros",
+      "trainee_name": "[Full-Color Fangirling] Agnes Digital",
+      "base_name": "Agnes Digital",
+      "time": "3:12.8",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1008,
+        "power": 1200,
+        "guts": 565,
+        "wit": 752
+      },
+      "quote": "Digitan supremacy"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "3:12.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 978,
+        "power": 1013,
+        "guts": 590,
+        "wit": 979
+      },
+      "quote": "Og Opera"
+    }
+  ]
+}

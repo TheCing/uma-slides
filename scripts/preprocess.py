@@ -4,6 +4,7 @@ Preprocess Umamusume dashboard data into slide JSON for the Preact viewer.
 
 Usage:
     python3 scripts/preprocess.py --repo ../Umamusume_Virgo_Cup_Dashboard --event CM10
+    python3 scripts/preprocess.py --event CM11   # uses local data in src/data/
 """
 
 import argparse
@@ -37,6 +38,18 @@ EVENT_CONFIG = {
         "statsheet": "data/cm10_finals_statsheet_0.parquet",
         "podium": "data/cm10_finals_podium_0.parquet",
     },
+    "CM11": {
+        "name": "Pisces Cup",
+        "icon": "pisces_icon.png",
+        "theme": "uma",
+        "distance": "Long",
+        "surface": "Turf",
+        "track": "Hanshin Turf 3200m",
+        "finals_csv": "sheet_cache_merged_1.csv",
+        "statsheet": "cm11_finals_statsheet_0.parquet",
+        "podium": "cm11_finals_podium_0.parquet",
+        "local": True,
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -55,18 +68,25 @@ ALT_ART = {
 
 def main():
     parser = argparse.ArgumentParser(description="Generate oshi award slide data")
-    parser.add_argument("--repo", required=True, help="Path to Umamusume_Virgo_Cup_Dashboard repo")
+    parser.add_argument("--repo", help="Path to Umamusume_Virgo_Cup_Dashboard repo (optional for local events)")
     parser.add_argument("--event", required=True, choices=EVENT_CONFIG.keys(), help="Event ID")
     args = parser.parse_args()
 
-    repo = Path(args.repo).resolve()
     cfg = EVENT_CONFIG[args.event]
     project_root = Path(__file__).resolve().parent.parent
 
-    finals_df = pd.read_csv(repo / cfg["finals_csv"])
-    podium_df = pd.read_parquet(repo / cfg["podium"])
-    stats_df = pd.read_parquet(repo / cfg["statsheet"])
-    umas_dir = repo / "assets" / "umas"
+    if cfg.get("local"):
+        data_base = project_root / "src" / "data"
+        umas_dir = None
+    else:
+        if not args.repo:
+            parser.error(f"--repo is required for {args.event}")
+        data_base = Path(args.repo).resolve()
+        umas_dir = data_base / "assets" / "umas"
+
+    finals_df = pd.read_csv(data_base / cfg["finals_csv"])
+    podium_df = pd.read_parquet(data_base / cfg["podium"])
+    stats_df = pd.read_parquet(data_base / cfg["statsheet"])
 
     print(f"Loaded {len(finals_df)} CSV rows, {len(podium_df)} podium rows, {len(stats_df)} stat rows")
 
@@ -95,9 +115,17 @@ def main():
                 stat_match = stats_df[stats_df["ign"] == ign]
             if not stat_match.empty:
                 candidate = stat_match.iloc[0]["name"]
-                player_wins = race_winners[race_winners["trainee_name"] == candidate]
-                if not player_wins.empty:
-                    print(f"  Resolved {ign} via stats fallback -> {candidate}")
+                candidate_wins = race_winners[race_winners["trainee_name"] == candidate]
+                for _, cw in candidate_wins.iterrows():
+                    pod_trainer = cw["trainer_name"].lower()
+                    ign_lower = ign.lower()
+                    if (pod_trainer.startswith(ign_lower[:3])
+                            or ign_lower.startswith(pod_trainer[:3])
+                            or pod_trainer in ign_lower
+                            or ign_lower in pod_trainer):
+                        player_wins = candidate_wins[candidate_wins.index == cw.name]
+                        print(f"  Resolved {ign} via stats fallback -> {candidate} (trainer={cw['trainer_name']})")
+                        break
             if player_wins.empty:
                 print(f"  SKIP {ign}: no podium win found")
                 continue
@@ -220,7 +248,7 @@ def main():
     else:
         index["events"].append(entry)
 
-    index["events"].sort(key=lambda e: e["id"])
+    index["events"].sort(key=lambda e: int(e["id"].replace("CM", "")))
     with open(index_path, "w") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
     print(f"Updated {index_path}")
@@ -271,16 +299,22 @@ def main():
 
     umas_out = project_root / "public" / "umas"
     umas_out.mkdir(parents=True, exist_ok=True)
-    copied = 0
-    for name in images_needed:
-        src = umas_dir / f"{name}.png"
-        dst = umas_out / f"{name}.png"
-        if src.exists():
-            shutil.copy2(src, dst)
-            copied += 1
-        else:
-            print(f"  WARN image not found: {src.name}")
-    print(f"Copied {copied}/{len(images_needed)} images to {umas_out}")
+    if umas_dir:
+        copied = 0
+        for name in images_needed:
+            src = umas_dir / f"{name}.png"
+            dst = umas_out / f"{name}.png"
+            if src.exists():
+                shutil.copy2(src, dst)
+                copied += 1
+            else:
+                print(f"  WARN image not found: {src.name}")
+        print(f"Copied {copied}/{len(images_needed)} images to {umas_out}")
+    else:
+        missing = [n for n in images_needed if not (umas_out / f"{n}.png").exists()]
+        if missing:
+            print(f"  WARN {len(missing)} images not in public/umas/: {', '.join(missing)}")
+        print(f"Skipped image copy (local mode, no --repo source)")
 
 
 if __name__ == "__main__":
