@@ -26,20 +26,19 @@
       "full_art_image": "umas/Gold_Ship_(Race).png"
     },
     {
-      "ign": "1 Star Guts",
-      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
-      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
-      "time": "1:07.6",
+      "ign": "Brian",
+      "trainee_name": "Hishi Akebono",
+      "uma_image": "umas/Hishi Akebono.png",
+      "time": "1:08.4",
       "result": "1st",
       "quote": "",
       "stats": {
-        "speed": 1200,
-        "stamina": 401,
-        "power": 922,
-        "guts": 351,
-        "wit": 1110
-      },
-      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+        "speed": 0,
+        "stamina": 0,
+        "power": 0,
+        "guts": 0,
+        "wit": 0
+      }
     },
     {
       "ign": "LMaximus",
@@ -56,6 +55,36 @@
         "wit": 739
       },
       "full_art_image": "umas/Special_Week_(Race).png"
+    },
+    {
+      "ign": "Lily",
+      "trainee_name": "[Fast as Lightning] Tamamo Cross",
+      "uma_image": "umas/[Fast as Lightning] Tamamo Cross.png",
+      "time": "1:06.6",
+      "result": "1st",
+      "quote": "Moomoocows moo'd for this uma",
+      "stats": {
+        "speed": 1189,
+        "stamina": 437,
+        "power": 1002,
+        "guts": 428,
+        "wit": 898
+      }
+    },
+    {
+      "ign": "arc999",
+      "trainee_name": "[Authentic / 1928] Gold City",
+      "uma_image": "umas/[Authentic / 1928] Gold City.png",
+      "time": "1:06.5",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1161,
+        "stamina": 562,
+        "power": 906,
+        "guts": 550,
+        "wit": 766
+      }
     },
     {
       "ign": "Confound",
@@ -90,20 +119,34 @@
       "full_art_image": "umas/Rice_Shower_(Race).png"
     },
     {
-      "ign": "AfroDanceMan",
-      "trainee_name": "[Bestest Prize ♪] Haru Urara",
-      "uma_image": "umas/[Bestest Prize ♪] Haru Urara.png",
-      "time": "1:06.8",
+      "ign": "Mayoi",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "uma_image": "umas/[Peak Joy] Tokai Teio.png",
+      "time": "1:07.7",
       "result": "1st",
-      "quote": "The Queen of Sprints",
+      "quote": "Hachimi First, The Rest Nowhere",
       "stats": {
         "speed": 1200,
-        "stamina": 402,
-        "power": 876,
-        "guts": 425,
-        "wit": 1025
-      },
-      "full_art_image": "umas/Haru_Urara_(Race).png"
+        "stamina": 572,
+        "power": 915,
+        "guts": 442,
+        "wit": 1098
+      }
+    },
+    {
+      "ign": "Sonoue",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "uma_image": "umas/[Down the Line] Mejiro Ryan.png",
+      "time": "1:06.9",
+      "result": "1st",
+      "quote": "Guts dueling ahh win",
+      "stats": {
+        "speed": 1200,
+        "stamina": 502,
+        "power": 1031,
+        "guts": 475,
+        "wit": 1053
+      }
     }
   ]
 }

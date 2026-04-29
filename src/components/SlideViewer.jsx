@@ -1,15 +1,35 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'preact/hooks'
 import { THEMES } from '../themes/registry'
+import { findSlideIndex } from '../utils/route'
 
-export function SlideViewer({ slides, event, onBack }) {
+export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, onSlideChange }) {
   const allTraineeNames = useMemo(() => slides.map(s => s.trainee_name), [slides])
-  const [index, setIndex] = useState(0)
-  const [displayIndex, setDisplayIndex] = useState(0)
+  const initialIndex = useMemo(() => findSlideIndex(slides, initialIgnSlug), [slides, initialIgnSlug])
+  const [index, setIndex] = useState(initialIndex)
+  const [displayIndex, setDisplayIndex] = useState(initialIndex)
   const [transitioning, setTransitioning] = useState(false)
   const [direction, setDirection] = useState(null)
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const [copied, setCopied] = useState(false)
   const stageRef = useRef(null)
   const total = slides.length
+
+  // Push current slide IGN into the URL hash whenever it changes.
+  useEffect(() => {
+    if (onSlideChange && slides[displayIndex]) {
+      onSlideChange(eventId, slides[displayIndex].ign)
+    }
+  }, [displayIndex, eventId, slides, onSlideChange])
+
+  // Honor external hash changes (e.g. user edits the URL) by snapping index.
+  useEffect(() => {
+    const target = findSlideIndex(slides, initialIgnSlug)
+    if (target !== index) {
+      setIndex(target)
+      setDisplayIndex(target)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialIgnSlug])
 
   const navigate = useCallback((newIndex, dir) => {
     if (transitioning || newIndex === index) return
@@ -30,6 +50,16 @@ export function SlideViewer({ slides, event, onBack }) {
       stageRef.current?.requestFullscreen()
     } else {
       document.exitFullscreen()
+    }
+  }, [])
+
+  const copyLink = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch {
+      /* clipboard blocked — silently noop */
     }
   }, [])
 
@@ -60,6 +90,21 @@ export function SlideViewer({ slides, event, onBack }) {
 
   return (
     <div class="slide-viewer" ref={stageRef}>
+      <button
+        class="copy-link-btn"
+        onClick={copyLink}
+        title="Copy link to this slide"
+      >
+        {copied ? (
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+          </svg>
+        ) : (
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0 0 10h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 0-10z" />
+          </svg>
+        )}
+      </button>
       <button class="fullscreen-btn" onClick={toggleFullscreen} title="Toggle fullscreen (F)">
         {isFullscreen ? (
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">

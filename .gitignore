@@ -28,3 +28,8 @@ src/assets/vite.svg
 *.njsproj
 *.sln
 *.sw?
+
+# Cafe Awards (kept local — private to our group)
+.cursor/
+src/data/slides-cafe*.json
+src/themes/cafe/

@@ -1,0 +1,189 @@
+{
+  "event": "CM12",
+  "name": "Aries Cup",
+  "track": "Nakayama Turf 2000m",
+  "winners": [
+    {
+      "ign": "giantsoybean",
+      "trainee_name": "[Special Dreamer] Special Week",
+      "base_name": "Special Week",
+      "time": "1:57.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 724,
+        "power": 1078,
+        "guts": 446,
+        "wit": 1189
+      },
+      "quote": ""
+    },
+    {
+      "ign": "AntWolf",
+      "trainee_name": "[Fast as Lightning] Tamamo Cross",
+      "base_name": "Tamamo Cross",
+      "time": "1:57.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 788,
+        "power": 1200,
+        "guts": 640,
+        "wit": 1036
+      },
+      "quote": "I CAME FOR YOU CINDERELLA GRAY!!! END CLOSER GAMING!!!"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:56.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 702,
+        "power": 1153,
+        "guts": 616,
+        "wit": 927
+      },
+      "quote": "1 left for Triple Crown Rice "
+    },
+    {
+      "ign": "abstractshrimp",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "base_name": "Gold Ship",
+      "time": "1:57.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 691,
+        "power": 1139,
+        "guts": 605,
+        "wit": 1093
+      },
+      "quote": ""
+    },
+    {
+      "ign": "RandomlyCasual@JOBBER",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "base_name": "Mejiro Ardan",
+      "time": "1:57.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 640,
+        "power": 1071,
+        "guts": 526,
+        "wit": 1035
+      },
+      "quote": "Press Duel to JUST Run Faster"
+    },
+    {
+      "ign": "rly.",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "base_name": "King Halo",
+      "time": "1:56.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 593,
+        "power": 1174,
+        "guts": 714,
+        "wit": 1158
+      },
+      "quote": "xoguris be damned"
+    },
+    {
+      "ign": "Quabity",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "base_name": "Fine Motion",
+      "time": "1:57.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 639,
+        "power": 1169,
+        "guts": 550,
+        "wit": 1014
+      },
+      "quote": ""
+    },
+    {
+      "ign": "wide",
+      "trainee_name": "[Succès Étoilé] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "1:56.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 683,
+        "power": 1049,
+        "guts": 564,
+        "wit": 1167
+      },
+      "quote": ""
+    },
+    {
+      "ign": "Prince_of_jupiter",
+      "trainee_name": "[Creeping Shadow] Manhattan Cafe",
+      "base_name": "Manhattan Cafe",
+      "time": "1:56.3",
+      "stats": {
+        "speed": 1196,
+        "stamina": 798,
+        "power": 1165,
+        "guts": 545,
+        "wit": 1037
+      },
+      "quote": "Mile sparks are a HOAX"
+    },
+    {
+      "ign": "NEXGENEEZY",
+      "trainee_name": "[Wild Top Gear] Vodka",
+      "base_name": "Vodka",
+      "time": "1:57.2",
+      "stats": {
+        "speed": 1200,
+        "stamina": 841,
+        "power": 1200,
+        "guts": 566,
+        "wit": 1200
+      },
+      "quote": "i made this ace so i could say \"happy birthday robo\""
+    },
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "1:57.7",
+      "stats": {
+        "speed": 1200,
+        "stamina": 743,
+        "power": 1040,
+        "guts": 623,
+        "wit": 1046
+      },
+      "quote": "If you lock in you can d anything"
+    },
+    {
+      "ign": "RavenZy",
+      "trainee_name": "[Fille Éclair] Curren Chan",
+      "base_name": "Curren Chan",
+      "time": "1:57.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 578,
+        "power": 1200,
+        "guts": 929,
+        "wit": 1013
+      },
+      "quote": "#LookatCurren"
+    },
+    {
+      "ign": "dvd",
+      "trainee_name": "[Run & Win] Nice Nature",
+      "base_name": "Nice Nature",
+      "time": "1:56.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 803,
+        "power": 1171,
+        "guts": 585,
+        "wit": 1128
+      },
+      "quote": "I CAN Win Sometimes!"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "event": {
+    "name": "Aries Cup",
+    "id": "CM12",
+    "icon": "aries_icon.png",
+    "theme": "uma",
+    "distance": "Medium",
+    "surface": "Turf",
+    "track": "Nakayama Turf 2000m"
+  },
+  "slides": [
+    {
+      "ign": "giantsoybean",
+      "trainee_name": "[Special Dreamer] Special Week",
+      "uma_image": "umas/[Special Dreamer] Special Week.png",
+      "time": "1:57.6",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 724,
+        "power": 1078,
+        "guts": 446,
+        "wit": 1189
+      },
+      "full_art_image": "umas/Special_Week_(Race).png"
+    },
+    {
+      "ign": "AntWolf",
+      "trainee_name": "[Fast as Lightning] Tamamo Cross",
+      "uma_image": "umas/[Fast as Lightning] Tamamo Cross.png",
+      "time": "1:57.6",
+      "result": "1st",
+      "quote": "I CAME FOR YOU CINDERELLA GRAY!!! END CLOSER GAMING!!!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 788,
+        "power": 1200,
+        "guts": 640,
+        "wit": 1036
+      },
+      "full_art_image": "umas/Tamamo_Cross_(Race).png"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "uma_image": "umas/[Rosy Dreams] Rice Shower.png",
+      "time": "1:56.1",
+      "result": "1st",
+      "quote": "1 left for Triple Crown Rice ",
+      "stats": {
+        "speed": 1200,
+        "stamina": 702,
+        "power": 1153,
+        "guts": 616,
+        "wit": 927
+      },
+      "full_art_image": "umas/Rice_Shower_(Race).png"
+    },
+    {
+      "ign": "abstractshrimp",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "uma_image": "umas/[Red Strife] Gold Ship.png",
+      "time": "1:57.1",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 691,
+        "power": 1139,
+        "guts": 605,
+        "wit": 1093
+      },
+      "full_art_image": "umas/Gold_Ship_(Race).png"
+    },
+    {
+      "ign": "RandomlyCasual@JOBBER",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "uma_image": "umas/[Crystalline] Mejiro Ardan.png",
+      "time": "1:57.0",
+      "result": "1st",
+      "quote": "Press Duel to JUST Run Faster",
+      "stats": {
+        "speed": 1200,
+        "stamina": 640,
+        "power": 1071,
+        "guts": 526,
+        "wit": 1035
+      },
+      "full_art_image": "umas/Mejiro_Ardan_(Race).png"
+    },
+    {
+      "ign": "rly.",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "uma_image": "umas/[King of Emeralds] King Halo.png",
+      "time": "1:56.6",
+      "result": "1st",
+      "quote": "xoguris be damned",
+      "stats": {
+        "speed": 1200,
+        "stamina": 593,
+        "power": 1174,
+        "guts": 714,
+        "wit": 1158
+      },
+      "full_art_image": "umas/King_Halo_(Race).png"
+    },
+    {
+      "ign": "Quabity",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "uma_image": "umas/[Noble Seamair] Fine Motion.png",
+      "time": "1:57.6",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 639,
+        "power": 1169,
+        "guts": 550,
+        "wit": 1014
+      },
+      "full_art_image": "umas/Fine_Motion_(Race).png"
+    },
+    {
+      "ign": "wide",
+      "trainee_name": "[Succès Étoilé] Fuji Kiseki",
+      "uma_image": "umas/[Succès Étoilé] Fuji Kiseki.png",
+      "time": "1:56.4",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 683,
+        "power": 1049,
+        "guts": 564,
+        "wit": 1167
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+    },
+    {
+      "ign": "Prince_of_jupiter",
+      "trainee_name": "[Creeping Shadow] Manhattan Cafe",
+      "uma_image": "umas/[Creeping Shadow] Manhattan Cafe.png",
+      "time": "1:56.3",
+      "result": "1st",
+      "quote": "Mile sparks are a HOAX",
+      "stats": {
+        "speed": 1196,
+        "stamina": 798,
+        "power": 1165,
+        "guts": 545,
+        "wit": 1037
+      },
+      "full_art_image": "umas/Manhattan_Cafe_(Race).png"
+    },
+    {
+      "ign": "NEXGENEEZY",
+      "trainee_name": "[Wild Top Gear] Vodka",
+      "uma_image": "umas/[Wild Top Gear] Vodka.png",
+      "time": "1:57.2",
+      "result": "1st",
+      "quote": "i made this ace so i could say \"happy birthday robo\"",
+      "stats": {
+        "speed": 1200,
+        "stamina": 841,
+        "power": 1200,
+        "guts": 566,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Vodka_(Race).png"
+    },
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "uma_image": "umas/[El☆Número 1] El Condor Pasa.png",
+      "time": "1:57.7",
+      "result": "1st",
+      "quote": "If you lock in you can d anything",
+      "stats": {
+        "speed": 1200,
+        "stamina": 743,
+        "power": 1040,
+        "guts": 623,
+        "wit": 1046
+      },
+      "full_art_image": "umas/El_Condor_Pasa_(Race).png"
+    },
+    {
+      "ign": "RavenZy",
+      "trainee_name": "[Fille Éclair] Curren Chan",
+      "uma_image": "umas/[Fille Éclair] Curren Chan.png",
+      "time": "1:57.0",
+      "result": "1st",
+      "quote": "#LookatCurren",
+      "stats": {
+        "speed": 1200,
+        "stamina": 578,
+        "power": 1200,
+        "guts": 929,
+        "wit": 1013
+      },
+      "full_art_image": "umas/Curren_Chan_(Race).png"
+    },
+    {
+      "ign": "dvd",
+      "trainee_name": "[Run & Win] Nice Nature",
+      "uma_image": "umas/[Run & Win] Nice Nature.png",
+      "time": "1:56.9",
+      "result": "1st",
+      "quote": "I CAN Win Sometimes!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 803,
+        "power": 1171,
+        "guts": 585,
+        "wit": 1128
+      },
+      "full_art_image": "umas/Nice_Nature_(Race).png"
+    }
+  ]
+}

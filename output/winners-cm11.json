@@ -32,6 +32,20 @@
       "quote": "The hardest working uma! (Dies if she can't push to 6th as an end closer)"
     },
     {
+      "ign": "MahoneyOs",
+      "trainee_name": "[Kukulkan Warrior] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "3:12.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1082,
+        "power": 898,
+        "guts": 625,
+        "wit": 1142
+      },
+      "quote": "NSM is mandatory, actually."
+    },
+    {
       "ign": "Linh124",
       "trainee_name": "[Princess of Pink] Kawakami Princess",
       "base_name": "Kawakami Princess",
@@ -142,6 +156,34 @@
         "wit": 979
       },
       "quote": "Og Opera"
+    },
+    {
+      "ign": "Zardimi",
+      "trainee_name": "[Azure Amazon] Hishi Amazon",
+      "base_name": "Hishi Amazon",
+      "time": "3:13.8",
+      "stats": {
+        "speed": 1184,
+        "stamina": 1115,
+        "power": 983,
+        "guts": 576,
+        "wit": 1107
+      },
+      "quote": "Accelaration is Fake"
+    },
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "3:12.2",
+      "stats": {
+        "speed": 1121,
+        "stamina": 994,
+        "power": 843,
+        "guts": 690,
+        "wit": 1105
+      },
+      "quote": "If you lock in you can do anything"
     }
   ]
 }

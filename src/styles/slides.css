@@ -192,12 +192,12 @@
   right: 0;
 }
 
-/* ── Fullscreen button ───────────────────────────────── */
+/* ── Stage overlay buttons (fullscreen, copy-link) ───── */
 
-.fullscreen-btn {
+.fullscreen-btn,
+.copy-link-btn {
   position: absolute;
   top: 10px;
-  right: 10px;
   z-index: 10;
   width: 32px;
   height: 32px;
@@ -212,11 +212,16 @@
   opacity: 0;
 }
 
-.slide-viewer:hover .fullscreen-btn {
+.fullscreen-btn { right: 10px; }
+.copy-link-btn { right: 50px; }
+
+.slide-viewer:hover .fullscreen-btn,
+.slide-viewer:hover .copy-link-btn {
   opacity: 1;
 }
 
-.fullscreen-btn:hover {
+.fullscreen-btn:hover,
+.copy-link-btn:hover {
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
 }

@@ -5,21 +5,28 @@
       "name": "Capricorn Cup",
       "icon": "capricorn_icon.png",
       "file": "slides-cm9.json",
-      "slideCount": 6
+      "slideCount": 9
     },
     {
       "id": "CM10",
       "name": "Aquarius Cup",
       "icon": "aquarius_icon.png",
       "file": "slides-cm10.json",
-      "slideCount": 5
+      "slideCount": 7
     },
     {
       "id": "CM11",
       "name": "Pisces Cup",
       "icon": "pisces_icon.png",
       "file": "slides-cm11.json",
-      "slideCount": 10
+      "slideCount": 13
+    },
+    {
+      "id": "CM12",
+      "name": "Aries Cup",
+      "icon": "aries_icon.png",
+      "file": "slides-cm12.json",
+      "slideCount": 13
     }
   ]
 }

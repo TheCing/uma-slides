@@ -1,7 +1,7 @@
 # Pisces Cup (CM11) — Oshi's Champion Awardees
 
 **Track:** Hanshin Turf 3200m  
-**Winners:** 10
+**Winners:** 13
 
 ---
 
@@ -19,7 +19,15 @@
 
 > The hardest working uma! (Dies if she can't push to 6th as an end closer)
 
-### 3. Linh124
+### 3. MahoneyOs
+
+**Uma:** [Kukulkan Warrior] El Condor Pasa  
+**Time:** 3:12.1  
+**Stats:** 1200 / 1082 / 898 / 625 / 1142 (Total: 4947)  
+
+> NSM is mandatory, actually.
+
+### 4. Linh124
 
 **Uma:** [Princess of Pink] Kawakami Princess  
 **Time:** 3:12.7  
@@ -27,7 +35,7 @@
 
 > Kawakami end trust
 
-### 4. ShadPrince
+### 5. ShadPrince
 
 **Uma:** [Quercus Civilis] Air Groove  
 **Time:** 3:13.4  
@@ -35,7 +43,7 @@
 
 > The Empress will reign eternal
 
-### 5. sglogic
+### 6. sglogic
 
 **Uma:** [Archer by Moonlight] Symboli Rudolf  
 **Time:** 3:12.3  
@@ -43,7 +51,7 @@
 
 > I used Festival Symboli Rudolf (lowkey prefer this alt over og) and ran her as a pace chaser despite people saying that she's better as front or pace chasers weren't meta from this CM. I know it may not be the biggest oshi pick with her already having the right aptitudes and a gold recovery but I certainly didn't pick her for her meta viability. 
 
-### 6. Cawiar
+### 7. Cawiar
 
 **Uma:** [Jokester ☆ Vibes] Tosen Jordan  
 **Time:** 3:12.9  
@@ -51,7 +59,7 @@
 
 > TT horse with 79 losses wins final!
 
-### 7. Towel13
+### 8. Towel13
 
 **Uma:** [Rouge Caroler] Biwa Hayahide  
 **Time:** 3:13.3  
@@ -59,13 +67,13 @@
 
 > When the track doesn't present an opportunity to win, you have to make one yourself for your oshi!! 
 
-### 8. Poyo
+### 9. Poyo
 
 **Uma:** [Strength in Full Bloom] Sakura Chiyono O  
 **Time:** 3:12.8  
 **Stats:** 1154 / 1147 / 882 / 600 / 1016 (Total: 4799)  
 
-### 9. Oboros
+### 10. Oboros
 
 **Uma:** [Full-Color Fangirling] Agnes Digital  
 **Time:** 3:12.8  
@@ -73,11 +81,27 @@
 
 > Digitan supremacy
 
-### 10. Excelt
+### 11. Excelt
 
 **Uma:** [O Sole Suo!] T.M. Opera O  
 **Time:** 3:12.0  
 **Stats:** 1200 / 978 / 1013 / 590 / 979 (Total: 4760)  
 
 > Og Opera
+
+### 12. Zardimi
+
+**Uma:** [Azure Amazon] Hishi Amazon  
+**Time:** 3:13.8  
+**Stats:** 1184 / 1115 / 983 / 576 / 1107 (Total: 4965)  
+
+> Accelaration is Fake
+
+### 13. Tiphxodia
+
+**Uma:** [El☆Número 1] El Condor Pasa  
+**Time:** 3:12.2  
+**Stats:** 1121 / 994 / 843 / 690 / 1105 (Total: 4753)  
+
+> If you lock in you can do anything
 

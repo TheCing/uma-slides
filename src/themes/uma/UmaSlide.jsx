@@ -49,10 +49,11 @@ function SparkleIcon({ size = 12 }) {
 }
 
 export function UmaSlide({ slide, event, allTraineeNames }) {
-  const { ign, trainee_name, uma_image, full_art_image, time, stats, quote } = slide
+  const { ign, trainee_name, uma_image, full_art_image, full_art_compact, time, stats, quote } = slide
   const { track } = event
   const displayName = getDisplayName(trainee_name, allTraineeNames || [])
   const imageUrl = full_art_image ? `${base}${full_art_image}` : `${base}${uma_image}`
+  const useFullArtLayout = !!full_art_image && !full_art_compact
 
   return (
     <div class="slide uma-slide">
@@ -99,7 +100,7 @@ export function UmaSlide({ slide, event, allTraineeNames }) {
         </div>
 
         {/* Character */}
-        <div class={`uma-character${full_art_image ? ' full-art' : ''}`}>
+        <div class={`uma-character${useFullArtLayout ? ' full-art' : ''}`}>
           <img class="char-ghost" src={imageUrl} alt="" draggable={false} />
           <img class="char-main" src={imageUrl} alt={trainee_name} draggable={false} />
         </div>

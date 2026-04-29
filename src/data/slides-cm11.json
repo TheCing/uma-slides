@@ -39,7 +39,22 @@
         "guts": 723,
         "wit": 995
       },
-      "full_art_image": "umas/Ikusei_Special_Week_Mizugi.png.webp"
+      "full_art_image": "umas/Special_Week_(Race).png"
+    },
+    {
+      "ign": "MahoneyOs",
+      "trainee_name": "[Kukulkan Warrior] El Condor Pasa",
+      "uma_image": "umas/[Kukulkan Warrior] El Condor Pasa.png",
+      "time": "3:12.1",
+      "result": "1st",
+      "quote": "NSM is mandatory, actually.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1082,
+        "power": 898,
+        "guts": 625,
+        "wit": 1142
+      }
     },
     {
       "ign": "Linh124",
@@ -168,6 +183,36 @@
         "wit": 979
       },
       "full_art_image": "umas/T.M._Opera_O_(Race).png"
+    },
+    {
+      "ign": "Zardimi",
+      "trainee_name": "[Azure Amazon] Hishi Amazon",
+      "uma_image": "umas/[Azure Amazon] Hishi Amazon.png",
+      "time": "3:13.8",
+      "result": "1st",
+      "quote": "Accelaration is Fake",
+      "stats": {
+        "speed": 1184,
+        "stamina": 1115,
+        "power": 983,
+        "guts": 576,
+        "wit": 1107
+      }
+    },
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "uma_image": "umas/[El☆Número 1] El Condor Pasa.png",
+      "time": "3:12.2",
+      "result": "1st",
+      "quote": "If you lock in you can do anything",
+      "stats": {
+        "speed": 1121,
+        "stamina": 994,
+        "power": 843,
+        "guts": 690,
+        "wit": 1105
+      }
     }
   ]
 }

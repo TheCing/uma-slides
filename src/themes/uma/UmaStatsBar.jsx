@@ -50,7 +50,7 @@ export function UmaStatsBar({ stats }) {
                 style={{ width: `${pct * 100}%` }}
               />
             </div>
-            <span class="uma-stat-value">{val}</span>
+            <span class="uma-stat-value">{val.toLocaleString('en-US')}</span>
           </div>
         )
       })}

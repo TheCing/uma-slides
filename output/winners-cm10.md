@@ -1,7 +1,7 @@
 # Aquarius Cup (CM10) — Oshi's Champion Awardees
 
 **Track:** Tokyo Dirt 1600m  
-**Winners:** 5
+**Winners:** 7
 
 ---
 
@@ -13,7 +13,13 @@
 
 > CM CHAMPION DIRT B CHIYO LETS GO
 
-### 2. Josh
+### 2. DankPengy
+
+**Uma:** [Emperor's Path] Symboli Rudolf  
+**Time:** 1:34.3  
+**Stats:** 1180 / 665 / 977 / 449 / 730 (Total: 4001)  
+
+### 3. Josh
 
 **Uma:** [Rising☆Fortune] Matikanefukukitaru  
 **Time:** 1:34.3  
@@ -21,7 +27,7 @@
 
 > I have run so, so, so many Matikanefukukitaru and Mejiro Ryan runs despite teaching and doing a Ph.D. Shiraoki smiled on all of us today!
 
-### 3. Mao
+### 4. Mao
 
 **Uma:** [Peak Blue] Daiwa Scarlet  
 **Time:** 1:34.7  
@@ -29,7 +35,15 @@
 
 > Just highroll the finals lobby
 
-### 4. Izuru
+### 5. Wecondo12
+
+**Uma:** [Crystalline] Mejiro Ardan  
+**Time:** 1:33.2  
+**Stats:** 1200 / 612 / 1062 / 554 / 1026 (Total: 4454)  
+
+> I really like Mejiro Ardan.
+
+### 6. Izuru
 
 **Uma:** [Rosy Dreams] Rice Shower  
 **Time:** 1:34.5  
@@ -37,7 +51,7 @@
 
 > Fuck you Taiki and Goldshit 
 
-### 5. cafedomancier
+### 7. cafedomancier
 
 **Uma:** [Scramble☆Zone] Mayano Top Gun  
 **Time:** 1:33.3  

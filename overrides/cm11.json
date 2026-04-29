@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "time": "3:12.2",
+      "reason": "Podium OCR failed; win confirmed via raw screenshot, stats present in statsheet. Time hand-entered from screenshot; quote auto-pulled from CSV."
+    }
+  ],
+  "patches": [
+    {
+      "ign": "MahoneyOs",
+      "quote": "NSM is mandatory, actually."
+    }
+  ]
+}

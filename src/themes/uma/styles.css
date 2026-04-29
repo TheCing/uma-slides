@@ -310,6 +310,12 @@
   100% { left: 200%; }
 }
 
+/* Full-art characters overflow the container (margin-bottom: -60%);
+   stretch the shimmer to cover the visible art instead of just the container. */
+.uma-character.full-art::after {
+  height: 160%;
+}
+
 /* ── Info Area ───────────────────────────────────────── */
 
 .uma-info {

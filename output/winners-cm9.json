@@ -18,16 +18,16 @@
       "quote": "Tables Hot."
     },
     {
-      "ign": "1 Star Guts",
-      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
-      "base_name": "Sakura Chiyono O",
-      "time": "1:07.6",
+      "ign": "Brian",
+      "trainee_name": "Hishi Akebono",
+      "base_name": "Hishi Akebono",
+      "time": "1:08.4",
       "stats": {
-        "speed": 1200,
-        "stamina": 401,
-        "power": 922,
-        "guts": 351,
-        "wit": 1110
+        "speed": 0,
+        "stamina": 0,
+        "power": 0,
+        "guts": 0,
+        "wit": 0
       },
       "quote": ""
     },
@@ -44,6 +44,34 @@
         "wit": 739
       },
       "quote": "Believe in your dreams"
+    },
+    {
+      "ign": "Lily",
+      "trainee_name": "[Fast as Lightning] Tamamo Cross",
+      "base_name": "Tamamo Cross",
+      "time": "1:06.6",
+      "stats": {
+        "speed": 1189,
+        "stamina": 437,
+        "power": 1002,
+        "guts": 428,
+        "wit": 898
+      },
+      "quote": "Moomoocows moo'd for this uma"
+    },
+    {
+      "ign": "arc999",
+      "trainee_name": "[Authentic / 1928] Gold City",
+      "base_name": "Gold City",
+      "time": "1:06.5",
+      "stats": {
+        "speed": 1161,
+        "stamina": 562,
+        "power": 906,
+        "guts": 550,
+        "wit": 766
+      },
+      "quote": ""
     },
     {
       "ign": "Confound",
@@ -74,18 +102,32 @@
       "quote": ""
     },
     {
-      "ign": "AfroDanceMan",
-      "trainee_name": "[Bestest Prize ♪] Haru Urara",
-      "base_name": "Haru Urara",
-      "time": "1:06.8",
+      "ign": "Mayoi",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "1:07.7",
       "stats": {
         "speed": 1200,
-        "stamina": 402,
-        "power": 876,
-        "guts": 425,
-        "wit": 1025
+        "stamina": 572,
+        "power": 915,
+        "guts": 442,
+        "wit": 1098
       },
-      "quote": "The Queen of Sprints"
+      "quote": "Hachimi First, The Rest Nowhere"
+    },
+    {
+      "ign": "Sonoue",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "base_name": "Mejiro Ryan",
+      "time": "1:06.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 502,
+        "power": 1031,
+        "guts": 475,
+        "wit": 1053
+      },
+      "quote": "Guts dueling ahh win"
     }
   ]
 }
