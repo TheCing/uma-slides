@@ -1,7 +1,7 @@
 # Aries Cup (CM12) — Oshi's Champion Awardees
 
 **Track:** Nakayama Turf 2000m  
-**Winners:** 13
+**Winners:** 14
 
 ---
 
@@ -25,21 +25,19 @@
 **Time:** 1:56.1  
 **Stats:** 1200 / 702 / 1153 / 616 / 927 (Total: 4598)  
 
-> 1 left for Triple Crown Rice 
+> 1 left for Triple Crown Rice (please let me win the derby)
 
-### 4. abstractshrimp
+### 4. tofu2
+
+**Uma:** [Blazed Head, Covered Fists] Yaeno Muteki  
+**Time:** 1:57.3  
+**Stats:** 1193 / 795 / 1127 / 502 / 1044 (Total: 4661)  
+
+### 5. abstractshrimp
 
 **Uma:** [Red Strife] Gold Ship  
 **Time:** 1:57.1  
 **Stats:** 1200 / 691 / 1139 / 605 / 1093 (Total: 4728)  
-
-### 5. RandomlyCasual@JOBBER
-
-**Uma:** [Crystalline] Mejiro Ardan  
-**Time:** 1:57.0  
-**Stats:** 1200 / 640 / 1071 / 526 / 1035 (Total: 4472)  
-
-> Press Duel to JUST Run Faster
 
 ### 6. rly.
 
@@ -69,7 +67,15 @@
 
 > Mile sparks are a HOAX
 
-### 10. NEXGENEEZY
+### 10. CisMale
+
+**Uma:** [Sunlight Bouquet] Mayano Top Gun  
+**Time:** 1:58.0  
+**Stats:** 1200 / 792 / 1200 / 627 / 1131 (Total: 4950)  
+
+> Mayano Wedding
+
+### 11. NEXGENEEZY
 
 **Uma:** [Wild Top Gear] Vodka  
 **Time:** 1:57.2  
@@ -77,7 +83,7 @@
 
 > i made this ace so i could say "happy birthday robo"
 
-### 11. Tiphxodia
+### 12. Tiphxodia
 
 **Uma:** [El☆Número 1] El Condor Pasa  
 **Time:** 1:57.7  
@@ -85,7 +91,7 @@
 
 > If you lock in you can d anything
 
-### 12. RavenZy
+### 13. RavenZy
 
 **Uma:** [Fille Éclair] Curren Chan  
 **Time:** 1:57.0  
@@ -93,7 +99,7 @@
 
 > #LookatCurren
 
-### 13. dvd
+### 14. dvd
 
 **Uma:** [Run & Win] Nice Nature  
 **Time:** 1:56.9  

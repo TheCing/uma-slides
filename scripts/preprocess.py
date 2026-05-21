@@ -59,9 +59,21 @@ EVENT_CONFIG = {
         "distance": "Medium",
         "surface": "Turf",
         "track": "Nakayama Turf 2000m",
-        "finals_csv": "data/cm12_finals.csv",
-        "statsheet": "data/cm12_finals_statsheet_0.parquet",
-        "podium": "data/cm12_finals_podium_0.parquet",
+        "finals_csv": "events/cm12/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm12/data/statsheet.parquet",
+        "podium": "events/cm12/data/podium.parquet",
+    },
+    "CM13": {
+        "name": "2nd Taurus Cup",
+        "icon": "taurus_icon.png",
+        "theme": "uma",
+        "distance": "Medium",
+        "surface": "Turf",
+        "track": "Tokyo Turf 2400m",
+        "finals_csv": "events/cm13/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm13/data/statsheet.parquet",
+        "podium": "events/cm13/data/podium.parquet",
+        "schema": "v2",
     },
 }
 
@@ -90,7 +102,7 @@ ALT_ART = {
 # Use when the player submitted their data under a different name and fuzzy
 # matching would fail (case-insensitive lookup).
 IGN_ALIASES = {
-    "mahoneyos": "Mitchell",  # CM11 — documented IGN inconsistency
+    "mahoneyos": "Mitchell",  
 }
 
 
@@ -126,10 +138,119 @@ def load_overrides(event_id, project_root):
     return data.get("overrides", []), data.get("patches", [])
 
 
+COL_OSHI_QUOTE_V2 = 'Optional - Finals - Winner - Oshi Award Quote (in case you end up winning one)'
+
+
+def _normalize_v2(finals_df, podium_df):
+    """CM13+ form schema dropped 'Finals - Winner - Name', winner-time, and the
+    oshi flag. Reconstruct v1-equivalent columns from CSV + podium so the rest
+    of the pipeline runs unchanged.
+
+    - Winning ace + time: derived from podium parquet (is_user=True, placement=1)
+      matched to CSV IGN via exact / alias / fuzzy trainer_name lookup.
+    - Oshi flag: 'Yes' iff the v2 oshi-quote field is non-empty (deliberate opt-in).
+    - Quote: copied from the v2 quote column into the canonical COL_QUOTE.
+    """
+    user_wins = podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
+    by_trainer = {}
+    for _, r in user_wins.iterrows():
+        k = str(r["trainer_name"]).strip().lower()
+        if k and k not in by_trainer:
+            by_trainer[k] = (r["trainee_name"], r["time"] if pd.notna(r["time"]) else "")
+
+    def lookup(ign):
+        ign_l = str(ign).strip().lower()
+        alias = resolve_alias(ign)
+        alias_l = alias.lower() if alias else None
+        if ign_l in by_trainer:
+            return by_trainer[ign_l]
+        if alias_l and alias_l in by_trainer:
+            return by_trainer[alias_l]
+        for k, v in by_trainer.items():
+            if (
+                k.startswith(ign_l[:3])
+                or ign_l.startswith(k[:3])
+                or k in ign_l
+                or ign_l in k
+            ):
+                return v
+        return (None, None)
+
+    out = finals_df.copy()
+    names, times = [], []
+    for ign in out[COL_IGN]:
+        n, t = lookup(ign)
+        names.append(n)
+        times.append(t)
+    out[COL_WINNER_NAME] = names
+    out[COL_WINNER_TIME] = times
+
+    if COL_OSHI_QUOTE_V2 in out.columns:
+        quote_series = out[COL_OSHI_QUOTE_V2].fillna("").astype(str).str.strip()
+    else:
+        quote_series = pd.Series([""] * len(out), index=out.index)
+    out[COL_QUOTE] = quote_series
+    out[COL_OSHI] = quote_series.apply(lambda q: "Yes" if q else "No")
+
+    print(f"[v2 normalize] Mapped {sum(1 for n in names if n)}/{len(names)} CSV rows to a podium winning ace")
+    print(f"[v2 normalize] Oshi-quote-claim signal present on {(quote_series != '').sum()} rows")
+    return out
+
+
+def _csv_only_preview(finals_df):
+    """Print the strict candidate pool + oshi-claiming uniques without touching parquets."""
+    pool_filter = (
+        (finals_df[COL_RESULT] == "1st")
+        & finals_df[COL_LEAGUE].astype(str).str.startswith(LEAGUE_GRADED_PREFIX)
+        & finals_df[COL_PODIUM_UPLOAD].notna()
+    )
+    if COL_FINALS_GROUP in finals_df.columns:
+        pool_filter &= (finals_df[COL_FINALS_GROUP] == "A Finals")
+    if COL_STAT_UPLOAD_2 in finals_df.columns:
+        pool_filter &= (
+            finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
+        )
+    else:
+        pool_filter &= finals_df[COL_STAT_UPLOAD_1].notna()
+    pool = finals_df[pool_filter & finals_df[COL_WINNER_NAME].notna()].copy()
+    print(f"Strict candidate pool (Graded/A-Finals/1st/SubmitPodium/SubmitStat): {len(pool)}")
+
+    counts = pool[COL_WINNER_NAME].value_counts()
+    uniques = set(counts[counts == 1].index)
+    dupes = counts[counts > 1]
+    print(f"Unique declared winners: {len(uniques)}")
+    if len(dupes):
+        print(f"Contested umas (>1 declarant in pool): {len(dupes)}")
+        for name, n in dupes.items():
+            print(f"  [{n}x] {name}")
+
+    oshi_unique = pool[
+        (pool[COL_OSHI] == "Yes")
+        & pool[COL_WINNER_NAME].isin(uniques)
+    ]
+    print(f"\nOshi-claiming unique winners: {len(oshi_unique)}\n")
+    for _, r in oshi_unique.iterrows():
+        ign = r[COL_IGN]
+        trainee = r[COL_WINNER_NAME]
+        time_val = r[COL_WINNER_TIME] if COL_WINNER_TIME in r and pd.notna(r[COL_WINNER_TIME]) else ""
+        print(f"  {ign:25s}  {trainee}  ({time_val or '—'})")
+
+    non_oshi_unique = pool[
+        (pool[COL_OSHI] != "Yes")
+        & pool[COL_WINNER_NAME].isin(uniques)
+    ]
+    if len(non_oshi_unique):
+        print(f"\nUnique winners NOT claiming oshi ({len(non_oshi_unique)}) — would be excluded:")
+        for _, r in non_oshi_unique.iterrows():
+            print(f"  {r[COL_IGN]:25s}  {r[COL_WINNER_NAME]}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate oshi award slide data")
     parser.add_argument("--repo", help="Path to Umamusume_Virgo_Cup_Dashboard repo (optional for local events)")
     parser.add_argument("--event", required=True, choices=EVENT_CONFIG.keys(), help="Event ID")
+    parser.add_argument("--csv", help="Override path to finals CSV (useful when parquets aren't ready yet)")
+    parser.add_argument("--csv-only", action="store_true", help="CSV-only preview: print candidate pool & oshi list, then exit (no parquets, no slides)")
     args = parser.parse_args()
 
     cfg = EVENT_CONFIG[args.event]
@@ -139,16 +260,26 @@ def main():
         data_base = project_root / "src" / "data"
         umas_dir = None
     else:
-        if not args.repo:
-            parser.error(f"--repo is required for {args.event}")
-        data_base = Path(args.repo).resolve()
-        umas_dir = data_base / "assets" / "umas"
+        if not args.repo and not args.csv:
+            parser.error(f"--repo is required for {args.event} (or pass --csv for csv-only previews)")
+        data_base = Path(args.repo).resolve() if args.repo else project_root
+        umas_dir = (data_base / "assets" / "umas") if args.repo else None
 
-    finals_df = pd.read_csv(data_base / cfg["finals_csv"])
+    csv_path = Path(args.csv).expanduser().resolve() if args.csv else (data_base / cfg["finals_csv"])
+    finals_df = pd.read_csv(csv_path)
+
+    if args.csv_only:
+        print(f"Loaded {len(finals_df)} CSV rows from {csv_path}")
+        _csv_only_preview(finals_df)
+        return
+
     podium_df = pd.read_parquet(data_base / cfg["podium"])
     stats_df = pd.read_parquet(data_base / cfg["statsheet"])
 
     print(f"Loaded {len(finals_df)} CSV rows, {len(podium_df)} podium rows, {len(stats_df)} stat rows")
+
+    if cfg.get("schema") == "v2":
+        finals_df = _normalize_v2(finals_df, podium_df)
 
     # --- Candidate pool: strict CSV-side filter (Step 1) ---
     # League=Graded, Result=1st, SubmitPodium present, SubmitStat present.

@@ -47,7 +47,7 @@
       "uma_image": "umas/[Rosy Dreams] Rice Shower.png",
       "time": "1:56.1",
       "result": "1st",
-      "quote": "1 left for Triple Crown Rice ",
+      "quote": "1 left for Triple Crown Rice (please let me win the derby)",
       "stats": {
         "speed": 1200,
         "stamina": 702,
@@ -56,6 +56,21 @@
         "wit": 927
       },
       "full_art_image": "umas/Rice_Shower_(Race).png"
+    },
+    {
+      "ign": "tofu2",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "uma_image": "umas/[Blazed Head, Covered Fists] Yaeno Muteki.png",
+      "time": "1:57.3",
+      "result": "1st",
+      "quote": "",
+      "stats": {
+        "speed": 1193,
+        "stamina": 795,
+        "power": 1127,
+        "guts": 502,
+        "wit": 1044
+      }
     },
     {
       "ign": "abstractshrimp",
@@ -72,22 +87,6 @@
         "wit": 1093
       },
       "full_art_image": "umas/Gold_Ship_(Race).png"
-    },
-    {
-      "ign": "RandomlyCasual@JOBBER",
-      "trainee_name": "[Crystalline] Mejiro Ardan",
-      "uma_image": "umas/[Crystalline] Mejiro Ardan.png",
-      "time": "1:57.0",
-      "result": "1st",
-      "quote": "Press Duel to JUST Run Faster",
-      "stats": {
-        "speed": 1200,
-        "stamina": 640,
-        "power": 1071,
-        "guts": 526,
-        "wit": 1035
-      },
-      "full_art_image": "umas/Mejiro_Ardan_(Race).png"
     },
     {
       "ign": "rly.",
@@ -152,6 +151,22 @@
         "wit": 1037
       },
       "full_art_image": "umas/Manhattan_Cafe_(Race).png"
+    },
+    {
+      "ign": "CisMale",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "uma_image": "umas/[Sunlight Bouquet] Mayano Top Gun.png",
+      "time": "1:58.0",
+      "result": "1st",
+      "quote": "Mayano Wedding",
+      "stats": {
+        "speed": 1200,
+        "stamina": 792,
+        "power": 1200,
+        "guts": 627,
+        "wit": 1131
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
     },
     {
       "ign": "NEXGENEEZY",

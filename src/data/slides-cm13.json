@@ -1,0 +1,153 @@
+{
+  "event": {
+    "name": "2nd Taurus Cup",
+    "id": "CM13",
+    "icon": "taurus_icon.png",
+    "theme": "uma",
+    "distance": "Medium",
+    "surface": "Turf",
+    "track": "Tokyo Turf 2400m"
+  },
+  "slides": [
+    {
+      "ign": "Fake Life",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "uma_image": "umas/[Sunlight Bouquet] Mayano Top Gun.png",
+      "time": "2:22.1",
+      "result": "1st",
+      "quote": "Maya first, the rest nowhere",
+      "stats": {
+        "speed": 1200,
+        "stamina": 925,
+        "power": 1187,
+        "guts": 669,
+        "wit": 893
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+    },
+    {
+      "ign": "Veronius",
+      "trainee_name": "[Brunissage Line] Mejiro Bright",
+      "uma_image": "umas/[Brunissage Line] Mejiro Bright.png",
+      "time": "2:20.6",
+      "result": "1st",
+      "quote": "Glory to the Mejiro!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 829,
+        "power": 1089,
+        "guts": 766,
+        "wit": 871
+      }
+    },
+    {
+      "ign": "Chrysene",
+      "trainee_name": "[Precise Chocolatier] Eishin Flash",
+      "uma_image": "umas/[Precise Chocolatier] Eishin Flash.png",
+      "time": "2:21.4",
+      "result": "1st",
+      "quote": "勝利のレシピ通りです",
+      "stats": {
+        "speed": 1165,
+        "stamina": 1075,
+        "power": 1122,
+        "guts": 579,
+        "wit": 790
+      }
+    },
+    {
+      "ign": "Naivora",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "uma_image": "umas/[Princess of Pink] Kawakami Princess.png",
+      "time": "2:21.4",
+      "result": "1st",
+      "quote": "THAT'S MY PRINCESS!! 👊",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1037,
+        "power": 1016,
+        "guts": 679,
+        "wit": 713
+      },
+      "full_art_image": "umas/Kawakami_Princess_(Race).png"
+    },
+    {
+      "ign": "Cata",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "uma_image": "umas/[Archer by Moonlight] Symboli Rudolf.png",
+      "time": "2:22.4",
+      "result": "1st",
+      "quote": "The mad lad did it!",
+      "stats": {
+        "speed": 1171,
+        "stamina": 900,
+        "power": 1058,
+        "guts": 781,
+        "wit": 959
+      },
+      "full_art_image": "umas/Symboli_Rudolf_(Race).png"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
+      "time": "2:22.1",
+      "result": "1st",
+      "quote": "All Path of Glory Leads to Overlord.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 851,
+        "power": 1025,
+        "guts": 636,
+        "wit": 1123
+      },
+      "full_art_image": "umas/T.M._Opera_O_(Race).png"
+    },
+    {
+      "ign": "Arveen",
+      "trainee_name": "[Beyond the Horizon] Tokai Teio",
+      "uma_image": "umas/[Beyond the Horizon] Tokai Teio.png",
+      "time": "2:22.0",
+      "result": "1st",
+      "quote": "hachimi hachimi hachimi",
+      "stats": {
+        "speed": 1200,
+        "stamina": 948,
+        "power": 1037,
+        "guts": 525,
+        "wit": 914
+      }
+    },
+    {
+      "ign": "Dyllyn",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "uma_image": "umas/[Line Breakthrough] Mejiro Palmer.png",
+      "time": "2:21.9",
+      "result": "1st",
+      "quote": "MEJIRO PALMER IS BEST GIRL",
+      "stats": {
+        "speed": 1200,
+        "stamina": 846,
+        "power": 938,
+        "guts": 725,
+        "wit": 1132
+      }
+    },
+    {
+      "ign": "Kaioo",
+      "trainee_name": "[pf. Winning Equation...] Biwa Hayahide",
+      "uma_image": "umas/[pf. Winning Equation...] Biwa Hayahide.png",
+      "time": "2:21.6",
+      "result": "1st",
+      "quote": "Biwa the goat, needs more respect",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1012,
+        "power": 1099,
+        "guts": 729,
+        "wit": 1025
+      },
+      "full_art_image": "umas/Biwa_Hayahide_(Race).png"
+    }
+  ]
+}

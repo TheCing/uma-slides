@@ -1,0 +1,133 @@
+{
+  "event": "CM13",
+  "name": "2nd Taurus Cup",
+  "track": "Tokyo Turf 2400m",
+  "winners": [
+    {
+      "ign": "Fake Life",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "2:22.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 925,
+        "power": 1187,
+        "guts": 669,
+        "wit": 893
+      },
+      "quote": "Maya first, the rest nowhere"
+    },
+    {
+      "ign": "Veronius",
+      "trainee_name": "[Brunissage Line] Mejiro Bright",
+      "base_name": "Mejiro Bright",
+      "time": "2:20.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 829,
+        "power": 1089,
+        "guts": 766,
+        "wit": 871
+      },
+      "quote": "Glory to the Mejiro!"
+    },
+    {
+      "ign": "Chrysene",
+      "trainee_name": "[Precise Chocolatier] Eishin Flash",
+      "base_name": "Eishin Flash",
+      "time": "2:21.4",
+      "stats": {
+        "speed": 1165,
+        "stamina": 1075,
+        "power": 1122,
+        "guts": 579,
+        "wit": 790
+      },
+      "quote": "勝利のレシピ通りです"
+    },
+    {
+      "ign": "Naivora",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "base_name": "Kawakami Princess",
+      "time": "2:21.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1037,
+        "power": 1016,
+        "guts": 679,
+        "wit": 713
+      },
+      "quote": "THAT'S MY PRINCESS!! 👊"
+    },
+    {
+      "ign": "Cata",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "base_name": "Symboli Rudolf",
+      "time": "2:22.4",
+      "stats": {
+        "speed": 1171,
+        "stamina": 900,
+        "power": 1058,
+        "guts": 781,
+        "wit": 959
+      },
+      "quote": "The mad lad did it!"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "2:22.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 851,
+        "power": 1025,
+        "guts": 636,
+        "wit": 1123
+      },
+      "quote": "All Path of Glory Leads to Overlord."
+    },
+    {
+      "ign": "Arveen",
+      "trainee_name": "[Beyond the Horizon] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "2:22.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 948,
+        "power": 1037,
+        "guts": 525,
+        "wit": 914
+      },
+      "quote": "hachimi hachimi hachimi"
+    },
+    {
+      "ign": "Dyllyn",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "base_name": "Mejiro Palmer",
+      "time": "2:21.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 846,
+        "power": 938,
+        "guts": 725,
+        "wit": 1132
+      },
+      "quote": "MEJIRO PALMER IS BEST GIRL"
+    },
+    {
+      "ign": "Kaioo",
+      "trainee_name": "[pf. Winning Equation...] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "2:21.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 1012,
+        "power": 1099,
+        "guts": 729,
+        "wit": 1025
+      },
+      "quote": "Biwa the goat, needs more respect"
+    }
+  ]
+}

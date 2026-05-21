@@ -43,7 +43,21 @@
         "guts": 616,
         "wit": 927
       },
-      "quote": "1 left for Triple Crown Rice "
+      "quote": "1 left for Triple Crown Rice (please let me win the derby)"
+    },
+    {
+      "ign": "tofu2",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "base_name": "Yaeno Muteki",
+      "time": "1:57.3",
+      "stats": {
+        "speed": 1193,
+        "stamina": 795,
+        "power": 1127,
+        "guts": 502,
+        "wit": 1044
+      },
+      "quote": ""
     },
     {
       "ign": "abstractshrimp",
@@ -58,20 +72,6 @@
         "wit": 1093
       },
       "quote": ""
-    },
-    {
-      "ign": "RandomlyCasual@JOBBER",
-      "trainee_name": "[Crystalline] Mejiro Ardan",
-      "base_name": "Mejiro Ardan",
-      "time": "1:57.0",
-      "stats": {
-        "speed": 1200,
-        "stamina": 640,
-        "power": 1071,
-        "guts": 526,
-        "wit": 1035
-      },
-      "quote": "Press Duel to JUST Run Faster"
     },
     {
       "ign": "rly.",
@@ -128,6 +128,20 @@
         "wit": 1037
       },
       "quote": "Mile sparks are a HOAX"
+    },
+    {
+      "ign": "CisMale",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "1:58.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 792,
+        "power": 1200,
+        "guts": 627,
+        "wit": 1131
+      },
+      "quote": "Mayano Wedding"
     },
     {
       "ign": "NEXGENEEZY",
