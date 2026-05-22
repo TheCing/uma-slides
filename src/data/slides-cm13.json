@@ -38,7 +38,8 @@
         "power": 1089,
         "guts": 766,
         "wit": 871
-      }
+      },
+      "full_art_image": "umas/Mejiro_Bright_(Race).png"
     },
     {
       "ign": "Chrysene",
@@ -53,7 +54,8 @@
         "power": 1122,
         "guts": 579,
         "wit": 790
-      }
+      },
+      "full_art_image": "umas/Eishin_Flash_(Race).png"
     },
     {
       "ign": "Naivora",
@@ -116,7 +118,8 @@
         "power": 1037,
         "guts": 525,
         "wit": 914
-      }
+      },
+      "full_art_image": "umas/Tokai_Teio_(Race).png"
     },
     {
       "ign": "Dyllyn",
@@ -131,7 +134,8 @@
         "power": 938,
         "guts": 725,
         "wit": 1132
-      }
+      },
+      "full_art_image": "umas/Mejiro_Palmer_(Race).png"
     },
     {
       "ign": "Kaioo",
