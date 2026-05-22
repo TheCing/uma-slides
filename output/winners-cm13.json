@@ -128,6 +128,20 @@
         "wit": 1025
       },
       "quote": "Biwa the goat, needs more respect"
+    },
+    {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "2:22.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 877,
+        "power": 1054,
+        "guts": 602,
+        "wit": 1048
+      },
+      "quote": "Pacers are not dead!!!"
     }
   ]
 }

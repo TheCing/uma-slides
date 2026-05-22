@@ -1,0 +1,11 @@
+{
+  "overrides": [
+    {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "time": "2:22.3",
+      "reason": "Podium OCR linked the row to 'TsukiAva@43RB' as is_user=False, so v2-normalize skipped them. CSV pool-eligible (Graded/A-Finals/1st, screenshots present) and oshi-quote filled. Stats found in statsheet under ign='TsukiAva'. Time taken from podium row."
+    }
+  ],
+  "patches": []
+}

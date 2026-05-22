@@ -148,6 +148,22 @@
         "wit": 1025
       },
       "full_art_image": "umas/Biwa_Hayahide_(Race).png"
+    },
+    {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
+      "time": "2:22.3",
+      "result": "1st",
+      "quote": "Pacers are not dead!!!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 877,
+        "power": 1054,
+        "guts": 602,
+        "wit": 1048
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
     }
   ]
 }

@@ -1,7 +1,7 @@
 # 2nd Taurus Cup (CM13) — Oshi's Champion Awardees
 
 **Track:** Tokyo Turf 2400m  
-**Winners:** 9
+**Winners:** 10
 
 ---
 
@@ -76,4 +76,12 @@
 **Stats:** 1200 / 1012 / 1099 / 729 / 1025 (Total: 5065)  
 
 > Biwa the goat, needs more respect
+
+### 10. TsukiAva
+
+**Uma:** [Shooting Star Revue] Fuji Kiseki  
+**Time:** 2:22.3  
+**Stats:** 1200 / 877 / 1054 / 602 / 1048 (Total: 4781)  
+
+> Pacers are not dead!!!
 
