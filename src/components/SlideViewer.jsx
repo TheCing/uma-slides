@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'preact/hooks'
 import { THEMES } from '../themes/registry'
 import { TocSlide } from '../themes/toc/TocSlide'
-import { findSlideIndex } from '../utils/route'
+import { findSlideIndex, buildHash } from '../utils/route'
 
 export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, onSlideChange }) {
   const allTraineeNames = useMemo(() => slides.map(s => s.trainee_name), [slides])
@@ -154,6 +154,16 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
         >
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+          </svg>
+        </button>
+        <button
+          class="nav-btn back-btn"
+          onClick={() => { window.location.hash = buildHash(eventId) }}
+          disabled={isToc}
+          title="Back to summary"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 1 0 7.74 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
           </svg>
         </button>
       </div>
