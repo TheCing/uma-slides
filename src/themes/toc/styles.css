@@ -132,44 +132,39 @@
 
 .toc-grid {
   display: grid;
-  gap: clamp(14px, 1.6vw, 22px);
-  align-content: start;
+  gap: clamp(10px, 1.2vw, 18px);
+  align-content: stretch;
   min-height: 0;
-}
-
-/* Default: 5-column grid for typical 9-14 winners */
-.toc-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
 }
 
-/* Tighten for smaller decks */
-.toc-grid.count-7,
-.toc-grid.count-8 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.toc-grid.count-6 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.toc-grid.count-5,
-.toc-grid.count-4 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.toc-grid.count-3,
+/* Column count tuned to keep at most 2 rows so portraits stay legible. */
+.toc-grid.count-1,
 .toc-grid.count-2,
-.toc-grid.count-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
+.toc-grid.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.toc-grid.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.toc-grid.count-5,
+.toc-grid.count-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.toc-grid.count-7,
+.toc-grid.count-8 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.toc-grid.count-9,
+.toc-grid.count-10 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.toc-grid.count-11,
+.toc-grid.count-12 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.toc-grid.count-13,
+.toc-grid.count-14 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.toc-grid.count-15,
+.toc-grid.count-16 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 
 .toc-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: clamp(10px, 1.4vw, 18px) clamp(8px, 1.2vw, 14px);
+  justify-content: center;
+  gap: clamp(4px, 0.6vh, 10px);
+  padding: clamp(6px, 1vh, 14px) clamp(6px, 0.9vw, 12px);
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(255, 154, 60, 0.25);
   border-radius: 14px;
@@ -177,8 +172,10 @@
   backdrop-filter: blur(4px);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   min-width: 0;
+  min-height: 0;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 }
 
 .toc-card:hover,
@@ -192,9 +189,11 @@
   border-color: #ff9a3c;
 }
 
+/* Portrait scales by both viewport width AND height so multi-row decks
+   (11+ winners) stay within the slide instead of clipping the bottom row. */
 .toc-portrait {
-  width: clamp(72px, 9vw, 128px);
-  height: clamp(72px, 9vw, 128px);
+  width: clamp(48px, min(7vw, 14vh), 128px);
+  height: clamp(48px, min(7vw, 14vh), 128px);
   border-radius: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, #fff3e0 0%, #fde8d0 100%);
