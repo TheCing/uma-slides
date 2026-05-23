@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'preact/hooks'
 import { THEMES } from '../themes/registry'
+import { TocSlide } from '../themes/toc/TocSlide'
 import { findSlideIndex } from '../utils/route'
 
 export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, onSlideChange }) {
@@ -85,6 +86,8 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
   }
 
   const slide = slides[displayIndex]
+  const isToc = slide?._layout === 'toc'
+  const realWinners = useMemo(() => slides.filter(s => !s._layout), [slides])
   const SlideComponent = THEMES[event.theme] || THEMES['default']
   const transClass = transitioning ? `slide-exit slide-exit-${direction}` : 'slide-enter'
 
@@ -118,7 +121,11 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
       </button>
       <div class="slide-stage">
         <div class={`slide-transition ${transClass}`} key={displayIndex}>
-          <SlideComponent slide={slide} event={event} allTraineeNames={allTraineeNames} />
+          {isToc ? (
+            <TocSlide event={event} eventId={eventId} winners={realWinners} />
+          ) : (
+            <SlideComponent slide={slide} event={event} allTraineeNames={allTraineeNames} />
+          )}
         </div>
         <div class="slide-hit-prev" onClick={prev} />
         <div class="slide-hit-next" onClick={next} />

@@ -55,9 +55,26 @@ export function App() {
   const data = getEventData(event.file)
   if (!data) return null
 
+  // Synthetic table-of-contents slide that opens every event. Renders via the
+  // 'toc' theme dispatch in SlideViewer; carries no IGN so the URL stays at
+  // #/EVENTID when sitting on it (#/EVENTID/<ign> still deep-links to a winner).
+  const slidesWithToc = [
+    {
+      _layout: 'toc',
+      ign: '',
+      trainee_name: '',
+      uma_image: '',
+      time: '',
+      result: '',
+      quote: '',
+      stats: { speed: 0, stamina: 0, power: 0, guts: 0, wit: 0 },
+    },
+    ...data.slides,
+  ]
+
   return (
     <SlideViewer
-      slides={data.slides}
+      slides={slidesWithToc}
       event={data.event}
       eventId={event.id}
       initialIgnSlug={route.ignSlug}
