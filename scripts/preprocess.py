@@ -92,10 +92,12 @@ LEAGUE_GRADED_PREFIX = "Graded"
 
 DEFAULT_COSTUME = {
     "Rice Shower": "[Rosy Dreams] Rice Shower",
+    "Fuji Kiseki": "[Shooting Star Revue] Fuji Kiseki",
 }
 
 ALT_ART = {
     "[Vampire Makeover!] Rice Shower": "Rice_Shower_(Alt).png",
+    "[Succès Étoilé] Fuji Kiseki": "Fuji_Kiseki_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
