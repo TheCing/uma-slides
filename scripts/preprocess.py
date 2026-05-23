@@ -98,6 +98,7 @@ DEFAULT_COSTUME = {
 ALT_ART = {
     "[Vampire Makeover!] Rice Shower": "Rice_Shower_(Alt).png",
     "[Succès Étoilé] Fuji Kiseki": "Fuji_Kiseki_(Alt).png",
+    "[Precise Chocolatier] Eishin Flash": "Eishin_Flash_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
