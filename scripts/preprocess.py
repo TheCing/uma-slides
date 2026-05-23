@@ -106,6 +106,9 @@ ALT_ART = {
     "[Precise Chocolatier] Eishin Flash": "Eishin_Flash_(Alt).png",
     "[Rouge Caroler] Biwa Hayahide": "Biwa_Hayahide_(Alt).png",
     "[Archer by Moonlight] Symboli Rudolf": "Symboli_Rudolf_(Alt).png",
+    "[Sunlight Bouquet] Mayano Top Gun": "Mayano_Top_Gun_(Alt).png",
+    "[Hopp'n♪Happy Heart] Special Week": "Special_Week_(Alt).png",
+    "[Kukulkan Warrior] El Condor Pasa": "El_Condor_Pasa_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
