@@ -1,7 +1,7 @@
 # 2nd Taurus Cup (CM13) — Oshi's Champion Awardees
 
 **Track:** Tokyo Turf 2400m  
-**Winners:** 10
+**Winners:** 9
 
 ---
 
@@ -29,21 +29,21 @@
 
 > 勝利のレシピ通りです
 
-### 4. Naivora
-
-**Uma:** [Princess of Pink] Kawakami Princess  
-**Time:** 2:21.4  
-**Stats:** 1200 / 1037 / 1016 / 679 / 713 (Total: 4645)  
-
-> THAT'S MY PRINCESS!! 👊
-
-### 5. Cata
+### 4. Cata
 
 **Uma:** [Archer by Moonlight] Symboli Rudolf  
 **Time:** 2:22.4  
 **Stats:** 1171 / 900 / 1058 / 781 / 959 (Total: 4869)  
 
 > The mad lad did it!
+
+### 5. TsukiAva
+
+**Uma:** [Shooting Star Revue] Fuji Kiseki  
+**Time:** 2:22.3  
+**Stats:** 1200 / 877 / 1054 / 602 / 1048 (Total: 4781)  
+
+> Pacers are not dead!!!
 
 ### 6. Excelt
 
@@ -53,15 +53,7 @@
 
 > All Path of Glory Leads to Overlord.
 
-### 7. Arveen
-
-**Uma:** [Beyond the Horizon] Tokai Teio  
-**Time:** 2:22.0  
-**Stats:** 1200 / 948 / 1037 / 525 / 914 (Total: 4624)  
-
-> hachimi hachimi hachimi
-
-### 8. Dyllyn
+### 7. Dyllyn
 
 **Uma:** [Line Breakthrough] Mejiro Palmer  
 **Time:** 2:21.9  
@@ -69,7 +61,7 @@
 
 > MEJIRO PALMER IS BEST GIRL
 
-### 9. Kaioo
+### 8. Kaioo
 
 **Uma:** [pf. Winning Equation...] Biwa Hayahide  
 **Time:** 2:21.6  
@@ -77,11 +69,11 @@
 
 > Biwa the goat, needs more respect
 
-### 10. TsukiAva
+### 9. Tiphxodia
 
-**Uma:** [Shooting Star Revue] Fuji Kiseki  
-**Time:** 2:22.3  
-**Stats:** 1200 / 877 / 1054 / 602 / 1048 (Total: 4781)  
+**Uma:** [El☆Número 1] El Condor Pasa  
+**Time:** 2:20.6  
+**Stats:** 1200 / 851 / 1057 / 649 / 1200 (Total: 4957)  
 
-> Pacers are not dead!!!
+> If you lock in, you can do anything
 

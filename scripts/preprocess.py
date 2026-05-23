@@ -115,7 +115,7 @@ ALT_ART = {
 # Use when the player submitted their data under a different name and fuzzy
 # matching would fail (case-insensitive lookup).
 IGN_ALIASES = {
-    "mahoneyos": "Mitchell",  
+    "mahoneyos": "Mitchell",
 }
 
 
@@ -154,31 +154,78 @@ def load_overrides(event_id, project_root):
 COL_OSHI_QUOTE_V2 = 'Optional - Finals - Winner - Oshi Award Quote (in case you end up winning one)'
 
 
-def _normalize_v2(finals_df, podium_df):
+def _normalize_v2(finals_df, podium_df, stats_df=None):
     """CM13+ form schema dropped 'Finals - Winner - Name', winner-time, and the
-    oshi flag. Reconstruct v1-equivalent columns from CSV + podium so the rest
-    of the pipeline runs unchanged.
+    oshi flag. Reconstruct v1-equivalent columns from CSV + podium + statsheet
+    so the rest of the pipeline runs unchanged.
 
-    - Winning ace + time: derived from podium parquet (is_user=True, placement=1)
-      matched to CSV IGN via exact / alias / fuzzy trainer_name lookup.
-    - Oshi flag: 'Yes' iff the v2 oshi-quote field is non-empty (deliberate opt-in).
-    - Quote: copied from the v2 quote column into the canonical COL_QUOTE.
+    Winning ace + time resolution order per CSV IGN:
+      1. Podium parquet `is_user=True, placement=1` matched to IGN via exact /
+         alias / fuzzy trainer_name lookup.
+      2. (Rescue) Statsheet parquet `is_user=True, ign=IGN` — the stat-screen
+         OCR independently confirms the submitter and their declared trainee.
+         This catches cases where the in-game name on the podium screenshot
+         differs from the IGN typed into the form (so podium OCR set
+         is_user=False on the actual winning row). Time is then pulled from
+         podium `placement=1, trainee_name=name` if uniquely available.
+
+    Oshi flag: 'Yes' iff the v2 oshi-quote field is non-empty (deliberate opt-in).
+    Quote: copied from the v2 quote column into the canonical COL_QUOTE.
     """
     user_wins = podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
     by_trainer = {}
+    consumed_rowids = set()
     for _, r in user_wins.iterrows():
         k = str(r["trainer_name"]).strip().lower()
         if k and k not in by_trainer:
             by_trainer[k] = (r["trainee_name"], r["time"] if pd.notna(r["time"]) else "")
+            if pd.notna(r["row_id"]):
+                consumed_rowids.add(int(r["row_id"]))
+
+    # Stat-verified rescue map: ign -> trainee_name from statsheet's own OCR.
+    # Statsheet OCR matches the stat-screen header against the CSV IGN
+    # directly, so is_user=True there is independent ground truth even when
+    # the podium OCR couldn't link the post-race trainer name back to the IGN.
+    stat_rescue = {}
+    if stats_df is not None and "is_user" in stats_df.columns and "ign" in stats_df.columns:
+        verified = stats_df[stats_df["is_user"] == True]
+        if "name" in verified.columns:
+            grouped = verified.groupby(verified["ign"].astype(str).str.strip().str.lower())["name"]
+            for ign_l, names in grouped:
+                uniq = {str(n) for n in names if pd.notna(n) and str(n).strip()}
+                if len(uniq) == 1:
+                    stat_rescue[ign_l] = next(iter(uniq))
+
+    # Time-from-podium lookup keyed by trainee_name. We accept any placement=1
+    # row even where is_user=False since the rescue is already gated on the
+    # statsheet match — this keeps the pool uniqueness rule honest.
+    podium_p1 = podium_df[podium_df["placement"] == 1]
+
+    def podium_proof(trainee, used_rowids):
+        """Return (time, claimed_rowid, found) for an unclaimed placement=1
+        podium row matching `trainee`. `found=True` means at least one
+        unclaimed row exists (proof the win actually occurred). Time + rowid
+        are only returned when exactly one unclaimed candidate remains —
+        otherwise the win is real but unattributable, so leave time blank."""
+        rows = podium_p1[
+            (podium_p1["trainee_name"] == trainee)
+            & (~podium_p1["row_id"].isin(used_rowids))
+        ]
+        if rows.empty:
+            return "", None, False
+        timed = rows[rows["time"].notna()]
+        if len(timed) == 1:
+            return str(timed.iloc[0]["time"]), int(timed.iloc[0]["row_id"]), True
+        return "", None, True
 
     def lookup(ign):
         ign_l = str(ign).strip().lower()
         alias = resolve_alias(ign)
         alias_l = alias.lower() if alias else None
         if ign_l in by_trainer:
-            return by_trainer[ign_l]
+            return (*by_trainer[ign_l], "podium")
         if alias_l and alias_l in by_trainer:
-            return by_trainer[alias_l]
+            return (*by_trainer[alias_l], "podium")
         for k, v in by_trainer.items():
             if (
                 k.startswith(ign_l[:3])
@@ -186,13 +233,36 @@ def _normalize_v2(finals_df, podium_df):
                 or k in ign_l
                 or ign_l in k
             ):
-                return v
-        return (None, None)
+                return (*v, "podium")
+        return (None, None, None)
 
     out = finals_df.copy()
     names, times = [], []
+    rescued_igns = []
+    skipped_no_podium = []
+    # Seed rescue's used_rowids with rows already claimed by pass-1 podium
+    # matches, so a rescued IGN never inherits another confirmed winner's time.
+    used_rowids = set(consumed_rowids)
     for ign in out[COL_IGN]:
-        n, t = lookup(ign)
+        n, t, src = lookup(ign)
+        if not n:
+            ign_l = str(ign).strip().lower()
+            if ign_l in stat_rescue:
+                candidate = stat_rescue[ign_l]
+                rescued_t, claimed_rowid, has_podium = podium_proof(candidate, used_rowids)
+                # Two-part verification: statsheet says X won Y, AND there
+                # exists at least one unclaimed placement=1 podium row for Y
+                # (the actual race-result screenshot, not someone else's
+                # already-claimed win). If exactly one unclaimed row remains
+                # we attribute its time; otherwise leave time blank but still
+                # accept the rescue so uniqueness checks include this claim.
+                if has_podium:
+                    if claimed_rowid is not None:
+                        used_rowids.add(claimed_rowid)
+                    n, t, src = candidate, rescued_t, "statsheet"
+                    rescued_igns.append((ign, n, t or "(no time)"))
+                else:
+                    skipped_no_podium.append((ign, candidate))
         names.append(n)
         times.append(t)
     out[COL_WINNER_NAME] = names
@@ -205,7 +275,14 @@ def _normalize_v2(finals_df, podium_df):
     out[COL_QUOTE] = quote_series
     out[COL_OSHI] = quote_series.apply(lambda q: "Yes" if q else "No")
 
-    print(f"[v2 normalize] Mapped {sum(1 for n in names if n)}/{len(names)} CSV rows to a podium winning ace")
+    print(f"[v2 normalize] Mapped {sum(1 for n in names if n)}/{len(names)} CSV rows to a winning ace")
+    print(f"[v2 normalize] Statsheet rescue: {len(rescued_igns)} ign(s) recovered via stat-screen OCR")
+    for ign, n, t in rescued_igns:
+        print(f"  rescued: {ign} -> {n} (time {t})")
+    if skipped_no_podium:
+        print(f"[v2 normalize] Skipped {len(skipped_no_podium)} statsheet-only candidate(s) with no unclaimed placement=1 podium row:")
+        for ign, n in skipped_no_podium:
+            print(f"  unverified: {ign} -> {n}")
     print(f"[v2 normalize] Oshi-quote-claim signal present on {(quote_series != '').sum()} rows")
     return out
 
@@ -292,7 +369,7 @@ def main():
     print(f"Loaded {len(finals_df)} CSV rows, {len(podium_df)} podium rows, {len(stats_df)} stat rows")
 
     if cfg.get("schema") == "v2":
-        finals_df = _normalize_v2(finals_df, podium_df)
+        finals_df = _normalize_v2(finals_df, podium_df, stats_df)
 
     # --- Candidate pool: strict CSV-side filter (Step 1) ---
     # League=Graded, Result=1st, SubmitPodium present, SubmitStat present.

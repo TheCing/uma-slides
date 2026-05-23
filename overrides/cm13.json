@@ -1,10 +1,10 @@
 {
   "overrides": [
     {
-      "ign": "TsukiAva",
-      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
-      "time": "2:22.3",
-      "reason": "Podium OCR linked the row to 'TsukiAva@43RB' as is_user=False, so v2-normalize skipped them. CSV pool-eligible (Graded/A-Finals/1st, screenshots present) and oshi-quote filled. Stats found in statsheet under ign='TsukiAva'. Time taken from podium row."
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "time": "2:20.6",
+      "reason": "Podium OCR failed to read the post-race screen for this submission, so no podium row could be linked to Tiphxodia (only Origami's B-Finals ECP win appears in podium parquet). Statsheet independently confirms is_user=True ign=Tiphxodia name=ECP at SS+ rank, and CSV row is Graded/A-Finals/1st with screenshots and oshi quote present. Time hand-entered from user-supplied screenshot."
     }
   ],
   "patches": []

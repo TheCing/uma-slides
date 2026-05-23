@@ -247,6 +247,41 @@
   transition: all 0.2s;
 }
 
+.discord-btn {
+  border-color: rgba(88, 101, 242, 0.45);
+  color: rgba(180, 190, 255, 0.85);
+}
+.discord-btn:hover:not(:disabled) {
+  background: rgba(88, 101, 242, 0.18);
+  color: #fff;
+  border-color: rgba(88, 101, 242, 0.85);
+}
+.discord-btn.discord-busy {
+  border-color: rgba(88, 101, 242, 0.85);
+  color: rgba(200, 210, 255, 1);
+}
+.discord-btn.discord-success {
+  border-color: rgba(76, 217, 100, 0.85);
+  color: rgba(160, 240, 180, 1);
+  background: rgba(76, 217, 100, 0.12);
+}
+.discord-btn.discord-error {
+  border-color: rgba(240, 90, 90, 0.85);
+  color: rgba(255, 170, 170, 1);
+  background: rgba(240, 90, 90, 0.12);
+}
+.discord-btn .spin {
+  animation: discord-spin 0.9s linear infinite;
+}
+.discord-btn .discord-progress {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+@keyframes discord-spin {
+  to { transform: rotate(360deg); }
+}
+
 .nav-btn:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.4);

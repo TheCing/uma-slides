@@ -6,26 +6,30 @@ const STAT_CONFIG = [
   { key: 'wit',     label: 'Wit',     cls: 'wit' },
 ]
 
-function getGrade(value) {
-  if (value >= 1200) return 'S'
-  if (value >= 1100) return 'A+'
-  if (value >= 1000) return 'A'
-  if (value >= 900)  return 'B+'
-  if (value >= 800)  return 'B'
-  if (value >= 700)  return 'C+'
-  if (value >= 600)  return 'C'
-  if (value >= 500)  return 'D+'
-  if (value >= 400)  return 'D'
-  if (value >= 300)  return 'E+'
-  if (value >= 200)  return 'E'
-  if (value >= 150)  return 'F+'
-  if (value >= 100)  return 'F'
-  if (value >= 50)   return 'G+'
-  return 'G'
+const base = import.meta.env.BASE_URL
+
+// Mirrors uma-tools-1 HorseDef.tsx#rankForStat — canonical in-game tier
+// indices for status-rank icons (ui_statusrank_NN.png).
+function rankForStat(x) {
+  if (x > 1200) {
+    // Over-cap (with breakthroughs). Approximation; we only ever ship icons
+    // through index 19, so anything higher clamps below.
+    return Math.min(18 + Math.floor((x - 1200) / 100) * 10 + Math.floor(x / 10) % 10, 19)
+  }
+  if (x >= 1150) return 17 // SS+
+  if (x >= 1100) return 16 // SS
+  if (x >= 400)  return 8 + Math.floor((x - 400) / 100)
+  return Math.max(0, Math.floor(x / 50))
 }
 
-function gradeBase(grade) {
-  return grade.replace('+', '')
+const RANK_LABELS = [
+  'G', 'G+', 'F', 'F+', 'E', 'E+', 'D', 'D+',
+  'C', 'C+', 'B', 'B+', 'A', 'A+', 'S', 'S+',
+  'SS', 'SS+', 'UG', 'UF',
+]
+
+function rankIconSrc(idx) {
+  return `${base}statusrank/ui_statusrank_${String(idx).padStart(2, '0')}.png`
 }
 
 export function UmaStatsBar({ stats }) {
@@ -35,13 +39,20 @@ export function UmaStatsBar({ stats }) {
     <div class="uma-stats-bar">
       {STAT_CONFIG.map(({ key, label, cls }) => {
         const val = stats?.[key] ?? 0
-        const grade = getGrade(val)
+        const idx = rankForStat(val)
+        const grade = RANK_LABELS[idx] ?? '?'
         const pct = Math.min(val / maxStat, 1)
 
         return (
           <div class="uma-stat" key={key}>
             <div class="uma-stat-header">
-              <span class={`uma-grade uma-grade-${gradeBase(grade)}`}>{grade}</span>
+              <img
+                class="uma-grade-icon"
+                src={rankIconSrc(idx)}
+                alt={grade}
+                title={grade}
+                draggable={false}
+              />
               <span class="uma-stat-label">{label}</span>
             </div>
             <div class="uma-stat-bar-track">

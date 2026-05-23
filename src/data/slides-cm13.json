@@ -58,22 +58,6 @@
       "full_art_image": "umas/Eishin_Flash_(Alt).png"
     },
     {
-      "ign": "Naivora",
-      "trainee_name": "[Princess of Pink] Kawakami Princess",
-      "uma_image": "umas/[Princess of Pink] Kawakami Princess.png",
-      "time": "2:21.4",
-      "result": "1st",
-      "quote": "THAT'S MY PRINCESS!! 👊",
-      "stats": {
-        "speed": 1200,
-        "stamina": 1037,
-        "power": 1016,
-        "guts": 679,
-        "wit": 713
-      },
-      "full_art_image": "umas/Kawakami_Princess_(Race).png"
-    },
-    {
       "ign": "Cata",
       "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
       "uma_image": "umas/[Archer by Moonlight] Symboli Rudolf.png",
@@ -90,6 +74,22 @@
       "full_art_image": "umas/Symboli_Rudolf_(Alt).png"
     },
     {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
+      "time": "2:22.3",
+      "result": "1st",
+      "quote": "Pacers are not dead!!!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 877,
+        "power": 1054,
+        "guts": 602,
+        "wit": 1048
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+    },
+    {
       "ign": "Excelt",
       "trainee_name": "[O Sole Suo!] T.M. Opera O",
       "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
@@ -104,22 +104,6 @@
         "wit": 1123
       },
       "full_art_image": "umas/T.M._Opera_O_(Race).png"
-    },
-    {
-      "ign": "Arveen",
-      "trainee_name": "[Beyond the Horizon] Tokai Teio",
-      "uma_image": "umas/[Beyond the Horizon] Tokai Teio.png",
-      "time": "2:22.0",
-      "result": "1st",
-      "quote": "hachimi hachimi hachimi",
-      "stats": {
-        "speed": 1200,
-        "stamina": 948,
-        "power": 1037,
-        "guts": 525,
-        "wit": 914
-      },
-      "full_art_image": "umas/Tokai_Teio_(Race).png"
     },
     {
       "ign": "Dyllyn",
@@ -154,20 +138,20 @@
       "full_art_image": "umas/Biwa_Hayahide_(Race).png"
     },
     {
-      "ign": "TsukiAva",
-      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
-      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
-      "time": "2:22.3",
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "uma_image": "umas/[El☆Número 1] El Condor Pasa.png",
+      "time": "2:20.6",
       "result": "1st",
-      "quote": "Pacers are not dead!!!",
+      "quote": "If you lock in, you can do anything",
       "stats": {
         "speed": 1200,
-        "stamina": 877,
-        "power": 1054,
-        "guts": 602,
-        "wit": 1048
+        "stamina": 851,
+        "power": 1057,
+        "guts": 649,
+        "wit": 1200
       },
-      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+      "full_art_image": "umas/El_Condor_Pasa_(Race).png"
     }
   ]
 }

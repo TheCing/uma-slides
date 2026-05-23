@@ -3,6 +3,8 @@ import { THEMES } from '../themes/registry'
 import { TocSlide } from '../themes/toc/TocSlide'
 import { findSlideIndex, buildHash } from '../utils/route'
 
+const discordEnabled = import.meta.env.DEV && !!import.meta.env.VITE_DISCORD_WEBHOOK_URL
+
 export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, onSlideChange }) {
   const allTraineeNames = useMemo(() => slides.map(s => s.trainee_name), [slides])
   const initialIndex = useMemo(() => findSlideIndex(slides, initialIgnSlug), [slides, initialIgnSlug])
@@ -12,8 +14,11 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
   const [direction, setDirection] = useState(null)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [postState, setPostState] = useState({ status: 'idle', progress: null })
   const stageRef = useRef(null)
+  const slideStageRef = useRef(null)
   const total = slides.length
+  const discordOn = discordEnabled
 
   // Push current slide IGN into the URL hash whenever it changes.
   useEffect(() => {
@@ -53,6 +58,57 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
       document.exitFullscreen()
     }
   }, [])
+
+  const postCurrent = useCallback(async () => {
+    if (!discordOn || postState.status !== 'idle') return
+    const target = slideStageRef.current
+    if (!target) return
+    setPostState({ status: 'busy', progress: { phase: 'posting', i: 0, total: 1 } })
+    try {
+      const { postSlide } = await import('../lib/discord')
+      await postSlide({ slide: slides[displayIndex], event, stageEl: target })
+      setPostState({ status: 'success', progress: null })
+    } catch (e) {
+      console.error('[discord] post failed', e)
+      setPostState({ status: 'error', progress: null, message: String(e?.message || e) })
+    }
+    setTimeout(() => setPostState({ status: 'idle', progress: null }), 2500)
+  }, [discordOn, postState.status, slides, displayIndex, event])
+
+  const postAll = useCallback(async () => {
+    if (!discordOn || postState.status !== 'idle') return
+    const realSlides = slides.filter((s) => !s._layout)
+    if (!realSlides.length) return
+    if (!window.confirm(`Post all ${realSlides.length} awards to Discord as separate forum threads?`)) return
+    setPostState({ status: 'busy', progress: { phase: 'capturing', i: 0, total: realSlides.length } })
+    const { postAllSlides, captureSlide } = await import('../lib/discord')
+    const captureFor = async (slide) => {
+      const targetIndex = slides.findIndex((s) => s.ign === slide.ign && !s._layout)
+      setDisplayIndex(targetIndex)
+      setIndex(targetIndex)
+      await new Promise((r) => setTimeout(r, 700))
+      return captureSlide(slideStageRef.current)
+    }
+    try {
+      const results = await postAllSlides({
+        slides: realSlides,
+        event,
+        captureFor,
+        onProgress: (p) => setPostState({ status: 'busy', progress: p }),
+      })
+      const failed = results.filter((r) => !r.ok)
+      if (failed.length) {
+        console.warn('[discord] some posts failed', failed)
+        setPostState({ status: 'error', progress: null, message: `${failed.length}/${results.length} failed` })
+      } else {
+        setPostState({ status: 'success', progress: null, message: `${results.length} posted` })
+      }
+    } catch (e) {
+      console.error('[discord] bulk post failed', e)
+      setPostState({ status: 'error', progress: null, message: String(e?.message || e) })
+    }
+    setTimeout(() => setPostState({ status: 'idle', progress: null }), 4000)
+  }, [discordOn, postState.status, slides, event])
 
   const copyLink = useCallback(async () => {
     try {
@@ -119,7 +175,7 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
           </svg>
         )}
       </button>
-      <div class="slide-stage">
+      <div class="slide-stage" ref={slideStageRef}>
         <div class={`slide-transition ${transClass}`} key={displayIndex}>
           {isToc ? (
             <TocSlide event={event} eventId={eventId} winners={realWinners} />
@@ -156,6 +212,48 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
             <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
           </svg>
         </button>
+        {discordOn && !isToc && (
+          <button
+            class={`nav-btn discord-btn discord-${postState.status}`}
+            onClick={postCurrent}
+            disabled={postState.status !== 'idle'}
+            title="Post this slide to Discord"
+          >
+            {postState.status === 'busy' ? (
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" class="spin">
+                <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
+              </svg>
+            ) : postState.status === 'success' ? (
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22H3.46c-1.356 0-2.46-1.104-2.46-2.472V2.472C1 1.104 2.104 0 3.46 0h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524a9.787 9.787 0 0 0-3.612-1.152 10.13 10.13 0 0 0-2.424.024c-.072 0-.132.012-.204.024-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zM8.52 11.94c0 .684.504 1.236 1.116 1.236.624 0 1.116-.552 1.116-1.236.012-.684-.492-1.236-1.116-1.236-.612 0-1.116.552-1.116 1.236zm3.996 0c0 .684.504 1.236 1.116 1.236.624 0 1.116-.552 1.116-1.236 0-.684-.492-1.236-1.116-1.236-.612 0-1.116.552-1.116 1.236z" />
+              </svg>
+            )}
+          </button>
+        )}
+        {discordOn && isToc && realWinners.length > 0 && (
+          <button
+            class={`nav-btn discord-btn discord-${postState.status}`}
+            onClick={postAll}
+            disabled={postState.status !== 'idle'}
+            title={`Post all ${realWinners.length} awards to Discord`}
+          >
+            {postState.status === 'busy' && postState.progress ? (
+              <span class="discord-progress">
+                {postState.progress.phase === 'done'
+                  ? '✓'
+                  : `${(postState.progress.i ?? 0) + 1}/${postState.progress.total}`}
+              </span>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22H3.46c-1.356 0-2.46-1.104-2.46-2.472V2.472C1 1.104 2.104 0 3.46 0h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524a9.787 9.787 0 0 0-3.612-1.152 10.13 10.13 0 0 0-2.424.024c-.072 0-.132.012-.204.024-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zM8.52 11.94c0 .684.504 1.236 1.116 1.236.624 0 1.116-.552 1.116-1.236.012-.684-.492-1.236-1.116-1.236-.612 0-1.116.552-1.116 1.236zm3.996 0c0 .684.504 1.236 1.116 1.236.624 0 1.116-.552 1.116-1.236 0-.684-.492-1.236-1.116-1.236-.612 0-1.116.552-1.116 1.236z" />
+              </svg>
+            )}
+          </button>
+        )}
         <button
           class="nav-btn back-btn"
           onClick={() => { window.location.hash = buildHash(eventId) }}

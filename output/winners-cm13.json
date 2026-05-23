@@ -46,20 +46,6 @@
       "quote": "勝利のレシピ通りです"
     },
     {
-      "ign": "Naivora",
-      "trainee_name": "[Princess of Pink] Kawakami Princess",
-      "base_name": "Kawakami Princess",
-      "time": "2:21.4",
-      "stats": {
-        "speed": 1200,
-        "stamina": 1037,
-        "power": 1016,
-        "guts": 679,
-        "wit": 713
-      },
-      "quote": "THAT'S MY PRINCESS!! 👊"
-    },
-    {
       "ign": "Cata",
       "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
       "base_name": "Symboli Rudolf",
@@ -74,6 +60,20 @@
       "quote": "The mad lad did it!"
     },
     {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "2:22.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 877,
+        "power": 1054,
+        "guts": 602,
+        "wit": 1048
+      },
+      "quote": "Pacers are not dead!!!"
+    },
+    {
       "ign": "Excelt",
       "trainee_name": "[O Sole Suo!] T.M. Opera O",
       "base_name": "T.M. Opera O",
@@ -86,20 +86,6 @@
         "wit": 1123
       },
       "quote": "All Path of Glory Leads to Overlord."
-    },
-    {
-      "ign": "Arveen",
-      "trainee_name": "[Beyond the Horizon] Tokai Teio",
-      "base_name": "Tokai Teio",
-      "time": "2:22.0",
-      "stats": {
-        "speed": 1200,
-        "stamina": 948,
-        "power": 1037,
-        "guts": 525,
-        "wit": 914
-      },
-      "quote": "hachimi hachimi hachimi"
     },
     {
       "ign": "Dyllyn",
@@ -130,18 +116,18 @@
       "quote": "Biwa the goat, needs more respect"
     },
     {
-      "ign": "TsukiAva",
-      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
-      "base_name": "Fuji Kiseki",
-      "time": "2:22.3",
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "2:20.6",
       "stats": {
         "speed": 1200,
-        "stamina": 877,
-        "power": 1054,
-        "guts": 602,
-        "wit": 1048
+        "stamina": 851,
+        "power": 1057,
+        "guts": 649,
+        "wit": 1200
       },
-      "quote": "Pacers are not dead!!!"
+      "quote": "If you lock in, you can do anything"
     }
   ]
 }
