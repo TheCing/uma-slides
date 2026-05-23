@@ -70,7 +70,8 @@
         "power": 1127,
         "guts": 502,
         "wit": 1044
-      }
+      },
+      "full_art_image": "umas/Yaeno_Muteki_(Race).png"
     },
     {
       "ign": "abstractshrimp",
@@ -165,8 +166,7 @@
         "power": 1200,
         "guts": 627,
         "wit": 1131
-      },
-      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+      }
     },
     {
       "ign": "NEXGENEEZY",

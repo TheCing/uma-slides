@@ -25,9 +25,9 @@ EVENT_CONFIG = {
         "distance": "Sprint",
         "surface": "Turf",
         "track": "Chukyo 1200m",
-        "finals_csv": "data/cm9_finals.csv",
-        "statsheet": "data/cm9_finals_statsheet_1.parquet",
-        "podium": "data/cm9_finals_podium_1.parquet",
+        "finals_csv": "events/cm9/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm9/data/statsheet.parquet",
+        "podium": "events/cm9/data/podium.parquet",
     },
     "CM10": {
         "name": "Aquarius Cup",
@@ -36,9 +36,9 @@ EVENT_CONFIG = {
         "distance": "Mile",
         "surface": "Dirt",
         "track": "Tokyo Dirt 1600m",
-        "finals_csv": "data/cm10_finals.csv",
-        "statsheet": "data/cm10_finals_statsheet_0.parquet",
-        "podium": "data/cm10_finals_podium_0.parquet",
+        "finals_csv": "events/cm10/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm10/data/statsheet.parquet",
+        "podium": "events/cm10/data/podium.parquet",
     },
     "CM11": {
         "name": "Pisces Cup",
@@ -47,10 +47,9 @@ EVENT_CONFIG = {
         "distance": "Long",
         "surface": "Turf",
         "track": "Hanshin Turf 3200m",
-        "finals_csv": "sheet_cache_merged_1.csv",
-        "statsheet": "cm11_finals_statsheet_0.parquet",
-        "podium": "cm11_finals_podium_0.parquet",
-        "local": True,
+        "finals_csv": "events/cm11/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm11/data/statsheet.parquet",
+        "podium": "events/cm11/data/podium.parquet",
     },
     "CM12": {
         "name": "Aries Cup",
@@ -93,12 +92,20 @@ LEAGUE_GRADED_PREFIX = "Graded"
 DEFAULT_COSTUME = {
     "Rice Shower": "[Rosy Dreams] Rice Shower",
     "Fuji Kiseki": "[Shooting Star Revue] Fuji Kiseki",
+    "Biwa Hayahide": "[pf. Winning Equation...] Biwa Hayahide",
+    "El Condor Pasa": "[El☆Número 1] El Condor Pasa",
+    "Mayano Top Gun": "[Scramble☆Zone] Mayano Top Gun",
+    "Special Week": "[Special Dreamer] Special Week",
+    "Symboli Rudolf": "[Emperor's Path] Symboli Rudolf",
+    "Tokai Teio": "[Beyond the Horizon] Tokai Teio",
 }
 
 ALT_ART = {
     "[Vampire Makeover!] Rice Shower": "Rice_Shower_(Alt).png",
     "[Succès Étoilé] Fuji Kiseki": "Fuji_Kiseki_(Alt).png",
     "[Precise Chocolatier] Eishin Flash": "Eishin_Flash_(Alt).png",
+    "[Rouge Caroler] Biwa Hayahide": "Biwa_Hayahide_(Alt).png",
+    "[Archer by Moonlight] Symboli Rudolf": "Symboli_Rudolf_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.

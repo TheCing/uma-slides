@@ -38,7 +38,8 @@
         "power": 0,
         "guts": 0,
         "wit": 0
-      }
+      },
+      "full_art_image": "umas/Hishi_Akebono_(Race).png"
     },
     {
       "ign": "LMaximus",
@@ -69,7 +70,8 @@
         "power": 1002,
         "guts": 428,
         "wit": 898
-      }
+      },
+      "full_art_image": "umas/Tamamo_Cross_(Race).png"
     },
     {
       "ign": "arc999",
@@ -84,7 +86,8 @@
         "power": 906,
         "guts": 550,
         "wit": 766
-      }
+      },
+      "full_art_image": "umas/Gold_City_(Race).png"
     },
     {
       "ign": "Confound",

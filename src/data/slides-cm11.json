@@ -22,8 +22,7 @@
         "power": 1073,
         "guts": 797,
         "wit": 745
-      },
-      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+      }
     },
     {
       "ign": "ran5z",
@@ -38,8 +37,7 @@
         "power": 1200,
         "guts": 723,
         "wit": 995
-      },
-      "full_art_image": "umas/Special_Week_(Race).png"
+      }
     },
     {
       "ign": "MahoneyOs",
@@ -102,7 +100,7 @@
         "guts": 529,
         "wit": 884
       },
-      "full_art_image": "umas/Symboli_Rudolf_(Race).png"
+      "full_art_image": "umas/Symboli_Rudolf_(Alt).png"
     },
     {
       "ign": "Cawiar",
@@ -134,7 +132,7 @@
         "guts": 518,
         "wit": 1062
       },
-      "full_art_image": "umas/Biwa_Hayahide_(Race).png"
+      "full_art_image": "umas/Biwa_Hayahide_(Alt).png"
     },
     {
       "ign": "Poyo",
@@ -197,7 +195,8 @@
         "power": 983,
         "guts": 576,
         "wit": 1107
-      }
+      },
+      "full_art_image": "umas/Hishi_Amazon_(Race).png"
     },
     {
       "ign": "Tiphxodia",
@@ -212,7 +211,8 @@
         "power": 843,
         "guts": 690,
         "wit": 1105
-      }
+      },
+      "full_art_image": "umas/El_Condor_Pasa_(Race).png"
     }
   ]
 }
