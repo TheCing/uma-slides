@@ -1,7 +1,7 @@
 # Gemini Cup (CM14) — Oshi's Champion Awardees
 
 **Track:** Tokyo Turf 1600m  
-**Winners:** 17
+**Winners:** 22
 
 ---
 
@@ -13,7 +13,15 @@
 
 > GO MY CHIYO
 
-### 2. SynBlaue
+### 2. blipblip/shauce
+
+**Uma:** [New Year ♪ New Urara!] Haru Urara  
+**Time:** 1:31.6  
+**Stats:** 1200 / 547 / 1122 / 1078 / 1010 (Total: 4957)  
+
+> URARA NEVER GAVE UP SO I NEVER DID RAAAAAAA
+
+### 3. SynBlaue
 
 **Uma:** [Chiffon-Wrapped Mummy] Super Creek  
 **Time:** 1:30.8  
@@ -21,7 +29,15 @@
 
 > from a once-in-a-lifetime meeting, to an enduring path together
 
-### 3. PiggyMcbacon
+### 4. Hines
+
+**Uma:** [Scramble☆Zone] Mayano Top Gun  
+**Time:** 1:29.9  
+**Stats:** 1200 / 640 / 1088 / 957 / 1037 (Total: 4922)  
+
+> Mayano believer (still a jobber)
+
+### 5. PiggyMcbacon
 
 **Uma:** [Maverick] Narita Brian  
 **Time:** 1:31.3  
@@ -29,7 +45,15 @@
 
 > my end maru didnt win :(
 
-### 4. Nao Nao
+### 6. Chia
+
+**Uma:** [Down the Line] Mejiro Ryan  
+**Time:** 1:30.4  
+**Stats:** 1195 / 551 / 998 / 870 / 1191 (Total: 4805)  
+
+> my favourite umamusume is mejiro
+
+### 7. Nao Nao
 
 **Uma:** [Gilded Shrine to Glory] Kitasan Black  
 **Time:** 1:30.1  
@@ -37,7 +61,7 @@
 
 > Kitasan Besto Uma.
 
-### 5. Nokialol
+### 8. Nokialol
 
 **Uma:** [Frontline Elegance] Mejiro McQueen  
 **Time:** 1:31.5  
@@ -45,7 +69,15 @@
 
 > an oshi player can only feed on other oshi players
 
-### 6. X-ite_SDF
+### 9. neo.
+
+**Uma:** [El☆Número 1] El Condor Pasa  
+**Time:** 1:31.3  
+**Stats:** 1200 / 688 / 1200 / 719 / 968 (Total: 4775)  
+
+> My pasa has 7.4% wr this CM...
+
+### 10. X-ite_SDF
 
 **Uma:** [Tach-nology] Agnes Tachyon  
 **Time:** 1:31.5  
@@ -53,15 +85,7 @@
 
 > Do you believe in Corner Con?
 
-### 7. Excelt
-
-**Uma:** [Blazed Head, Covered Fists] Yaeno Muteki  
-**Time:** 1:30.4  
-**Stats:** 1160 / 545 / 1169 / 956 / 995 (Total: 4825)  
-
-> Osu! She deserves more attention than what she currently gets.
-
-### 8. Aero
+### 11. Aero
 
 **Uma:** [Get to Winning!] Winning Ticket  
 **Time:** 1:29.9  
@@ -69,7 +93,7 @@
 
 > Here's the Winning Ticket!
 
-### 9. Tappu
+### 12. Tappu
 
 **Uma:** [Noble Seamair] Fine Motion  
 **Time:** 1:30.5  
@@ -77,7 +101,7 @@
 
 > Paddy Power
 
-### 10. Izuru
+### 13. Izuru
 
 **Uma:** [Rosy Dreams] Rice Shower  
 **Time:** 1:30.4  
@@ -85,7 +109,7 @@
 
 > This CM shit is easy
 
-### 11. vintus
+### 14. vintus
 
 **Uma:** [Autumn Cosmos] Gold City  
 **Time:** 1:30.7  
@@ -93,7 +117,7 @@
 
 > Dreams don’t die unless you quit.
 
-### 12. Thasdron
+### 15. Thasdron
 
 **Uma:** [Peak Joy] Tokai Teio  
 **Time:** 1:30.7  
@@ -101,7 +125,23 @@
 
 > The Triple Fracture Wins
 
-### 13. Golden
+### 16. manan
+
+**Uma:** [Shooting Star Revue] Fuji Kiseki  
+**Time:** 1:31.6  
+**Stats:** 1089 / 610 / 1150 / 921 / 1109 (Total: 4879)  
+
+> Fuji-san is cute
+
+### 17. timen125
+
+**Uma:** [O Sole Suo!] T.M. Opera O  
+**Time:** 1:30.7  
+**Stats:** 1188 / 617 / 1200 / 875 / 1083 (Total: 4963)  
+
+> opera + 2 keen gg ~Teiemu opera oo~
+
+### 18. Golden
 
 **Uma:** [Edomurasaki] Inari One  
 **Time:** 1:31.6  
@@ -109,7 +149,7 @@
 
 > Guts is so peak
 
-### 14. DadSmoocher
+### 19. DadSmoocher
 
 **Uma:** [Lucky Tidings] Matikanefukukitaru  
 **Time:** 1:31.6  
@@ -117,7 +157,7 @@
 
 > Finals were her 7th win :)
 
-### 15. Kai Aiya
+### 20. Kai Aiya
 
 **Uma:** [Poinsettia Ribbon] Nice Nature  
 **Time:** 1:30.2  
@@ -125,7 +165,7 @@
 
 > I Can Win Sometimes, Right?
 
-### 16. chrissyneko
+### 21. chrissyneko
 
 **Uma:** [Ma Chérie of the New Moon] Curren Chan  
 **Time:** 1:30.0  
@@ -133,7 +173,7 @@
 
 > #lookatcurren
 
-### 17. Amyr
+### 22. Amyr
 
 **Uma:** [Jokester ☆ Vibes] Tosen Jordan  
 **Time:** 1:31.4  

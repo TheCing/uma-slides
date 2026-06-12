@@ -18,6 +18,20 @@
       "quote": "GO MY CHIYO"
     },
     {
+      "ign": "blipblip/shauce",
+      "trainee_name": "[New Year ♪ New Urara!] Haru Urara",
+      "base_name": "Haru Urara",
+      "time": "1:31.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 547,
+        "power": 1122,
+        "guts": 1078,
+        "wit": 1010
+      },
+      "quote": "URARA NEVER GAVE UP SO I NEVER DID RAAAAAAA"
+    },
+    {
       "ign": "SynBlaue",
       "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
       "base_name": "Super Creek",
@@ -32,6 +46,20 @@
       "quote": "from a once-in-a-lifetime meeting, to an enduring path together"
     },
     {
+      "ign": "Hines",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "1:29.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 640,
+        "power": 1088,
+        "guts": 957,
+        "wit": 1037
+      },
+      "quote": "Mayano believer (still a jobber)"
+    },
+    {
       "ign": "PiggyMcbacon",
       "trainee_name": "[Maverick] Narita Brian",
       "base_name": "Narita Brian",
@@ -44,6 +72,20 @@
         "wit": 1010
       },
       "quote": "my end maru didnt win :("
+    },
+    {
+      "ign": "Chia",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "base_name": "Mejiro Ryan",
+      "time": "1:30.4",
+      "stats": {
+        "speed": 1195,
+        "stamina": 551,
+        "power": 998,
+        "guts": 870,
+        "wit": 1191
+      },
+      "quote": "my favourite umamusume is mejiro"
     },
     {
       "ign": "Nao Nao",
@@ -74,6 +116,20 @@
       "quote": "an oshi player can only feed on other oshi players"
     },
     {
+      "ign": "neo.",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 688,
+        "power": 1200,
+        "guts": 719,
+        "wit": 968
+      },
+      "quote": "My pasa has 7.4% wr this CM..."
+    },
+    {
       "ign": "X-ite_SDF",
       "trainee_name": "[Tach-nology] Agnes Tachyon",
       "base_name": "Agnes Tachyon",
@@ -86,20 +142,6 @@
         "wit": 1135
       },
       "quote": "Do you believe in Corner Con?"
-    },
-    {
-      "ign": "Excelt",
-      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
-      "base_name": "Yaeno Muteki",
-      "time": "1:30.4",
-      "stats": {
-        "speed": 1160,
-        "stamina": 545,
-        "power": 1169,
-        "guts": 956,
-        "wit": 995
-      },
-      "quote": "Osu! She deserves more attention than what she currently gets."
     },
     {
       "ign": "Aero",
@@ -170,6 +212,34 @@
         "wit": 1072
       },
       "quote": "The Triple Fracture Wins"
+    },
+    {
+      "ign": "manan",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "1:31.6",
+      "stats": {
+        "speed": 1089,
+        "stamina": 610,
+        "power": 1150,
+        "guts": 921,
+        "wit": 1109
+      },
+      "quote": "Fuji-san is cute"
+    },
+    {
+      "ign": "timen125",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "1:30.7",
+      "stats": {
+        "speed": 1188,
+        "stamina": 617,
+        "power": 1200,
+        "guts": 875,
+        "wit": 1083
+      },
+      "quote": "opera + 2 keen gg ~Teiemu opera oo~"
     },
     {
       "ign": "Golden",

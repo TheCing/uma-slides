@@ -178,15 +178,20 @@ def load_overrides(event_id, project_root):
 
     Patch entries: any of {time, quote, stats, trainee_name, uma_image} —
     these overwrite the corresponding fields on the slide whose ign matches.
+
+    Exclusion entries: list of {trainee_name?, ign?, reason?}. An auto-derived
+    award is dropped when its winner-name matches an excluded `trainee_name`
+    (case-insensitive) or its IGN matches an excluded `ign`. Use for meta /
+    "free-win" picks that win en masse and aren't genuine oshi achievements.
     """
     path = project_root / "overrides" / f"{event_id.lower()}.json"
     if not path.exists():
-        return [], []
+        return [], [], []
     with open(path) as f:
         data = json.load(f)
     if isinstance(data, list):
-        return data, []
-    return data.get("overrides", []), data.get("patches", [])
+        return data, [], []
+    return data.get("overrides", []), data.get("patches", []), data.get("exclusions", [])
 
 
 COL_OSHI_QUOTE_V2 = 'Optional - Finals - Winner - Oshi Award Quote (in case you end up winning one)'
@@ -437,69 +442,78 @@ def main():
     if cfg.get("schema") == "v2":
         finals_df = _normalize_v2(finals_df, podium_df, stats_df)
 
-    # --- Candidate pool: strict CSV-side filter (Step 1) ---
-    # League=Graded, Result=1st, SubmitPodium present, SubmitStat present.
-    # Then count declared-winner names; uniques are umas declared by exactly
-    # one qualified 1st-place player (uniqueness is CSV-side, not podium-side).
-    pool_filter = (
-        (finals_df[COL_RESULT] == "1st")
-        & finals_df[COL_LEAGUE].astype(str).str.startswith(LEAGUE_GRADED_PREFIX)
-        & finals_df[COL_PODIUM_UPLOAD].notna()
+    # --- Award rule: unique among OSHI claimants -------------------------
+    # The "Oshi's Champion" award goes to a player iff they are the SOLE
+    # person who both (a) claimed a given uma as their oshi (oshi=Yes) and
+    # (b) won finals (1st, Graded) with it. Uniqueness is measured over the
+    # oshi-claim universe — every 1st-place Graded oshi=Yes claim with a
+    # derived winner-name, across BOTH A and B finals — so a B-finals
+    # oshi-claimant still contests an A-finals award, while non-oshi
+    # co-winners never dilute it. Winning with a popular/meta uma is common;
+    # this award is about the oshi claim, not raw race results.
+    graded = finals_df[COL_LEAGUE].astype(str).str.startswith(LEAGUE_GRADED_PREFIX)
+    first = finals_df[COL_RESULT] == "1st"
+    named = finals_df[COL_WINNER_NAME].notna()
+    oshi_yes = finals_df[COL_OSHI] == "Yes"
+
+    claim_universe = finals_df[graded & first & named & oshi_yes]
+    claim_counts = claim_universe[COL_WINNER_NAME].value_counts()
+    unique_winner_names = set(claim_counts[claim_counts == 1].index)
+    print(f"Oshi-claim universe (1st/Graded/oshi=Yes, A+B finals): {len(claim_universe)}")
+    contested = claim_counts[claim_counts > 1]
+    print(f"Sole-claimant umas: {len(unique_winner_names)} | contested (no award): {len(contested)}")
+
+    # Hidden-collision guard: an oshi=Yes claim whose winner-name derivation
+    # failed (null) is invisible to the count above. Recover its uma from the
+    # player's own stat-screen / 1st-place podium (is_user=True ground truth)
+    # and demote any award it actually contests.
+    own_stats = stats_df[stats_df["is_user"] == True] if "is_user" in stats_df.columns else stats_df.iloc[0:0]
+    own_wins = (
+        podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
+        if "is_user" in podium_df.columns else podium_df.iloc[0:0]
     )
-    if COL_FINALS_GROUP in finals_df.columns:
-        pool_filter &= (finals_df[COL_FINALS_GROUP] == "A Finals")
-    if COL_STAT_UPLOAD_2 in finals_df.columns:
-        pool_filter &= (
-            finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
-        )
-    else:
-        pool_filter &= finals_df[COL_STAT_UPLOAD_1].notna()
-    candidate_pool = finals_df[pool_filter & finals_df[COL_WINNER_NAME].notna()].copy()
-    print(f"Strict candidate pool (Graded/1st/SubmitPodium/SubmitStat): {len(candidate_pool)}")
-
-    declared_counts = candidate_pool[COL_WINNER_NAME].value_counts()
-    unique_winner_names = set(declared_counts[declared_counts == 1].index)
-    print(f"Unique declared winners (count==1 in pool): {len(unique_winner_names)}")
-
-    # --- Criteria-aware collision guard ---
-    # An award is valid only if exactly ONE trainer meets every criterion
-    # (own uma + 1st A-Finals Graded + submitted stats & podium). The CSV-side
-    # declared_counts above can miss a co-claimant whose winner-name derivation
-    # returned null — that hidden claimant would otherwise hand the surviving
-    # claimant a false "unique" award. Re-check rows that pass all CSV criteria
-    # but have no derived winner-name against statsheet/podium ground truth
-    # (own-uma stats screenshot + own-uma 1st-place podium) and demote any uma
-    # they actually contest.
-    unresolved = finals_df[pool_filter & finals_df[COL_WINNER_NAME].isna()]
-    own_stats = stats_df[stats_df["is_user"] == True]
-    own_wins = podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
-    hidden_collisions = set()
-    for _, urow in unresolved.iterrows():
+    null_oshi = finals_df[graded & first & oshi_yes & finals_df[COL_WINNER_NAME].isna()]
+    for _, urow in null_oshi.iterrows():
         uign = str(urow[COL_IGN])
         ualias = resolve_alias(uign)
         cands = {uign.lower()} | ({ualias.lower()} if ualias else set())
-        claimed = set()
+        recovered = set()
         for s in own_stats.itertuples():
             if str(s.ign).lower() in cands and pd.notna(s.name):
-                claimed.add(str(s.name).strip())
+                recovered.add(str(s.name).strip())
         for p in own_wins.itertuples():
             if str(p.trainer_name).lower() in cands and pd.notna(p.trainee_name):
-                claimed.add(str(p.trainee_name).strip())
-        for nm in claimed:
+                recovered.add(str(p.trainee_name).strip())
+        for nm in recovered:
             if nm in unique_winner_names:
-                hidden_collisions.add(nm)
-                print(f"  COLLISION: '{nm}' also fully-claimed by {uign} "
-                      f"(winner-name derivation failed) — demoting award")
-    if hidden_collisions:
-        unique_winner_names -= hidden_collisions
-        print(f"Demoted {len(hidden_collisions)} contested uma(s) after criteria-aware check; "
-              f"unique winners now: {len(unique_winner_names)}")
+                unique_winner_names.discard(nm)
+                print(f"  COLLISION: '{nm}' also oshi-claimed by {uign} "
+                      f"(winner-name derivation failed) — no award")
 
-    # --- Step 2: apply oshi=Yes last so non-oshi unique winners drop out ---
-    oshi_unique = candidate_pool[
-        (candidate_pool[COL_OSHI] == "Yes")
-        & candidate_pool[COL_WINNER_NAME].isin(unique_winner_names)
-    ]
+    # Award pool: the sole claimant must also clear the full evidentiary bar —
+    # A-Finals + podium screenshot + stat screenshot.
+    isA = (finals_df[COL_FINALS_GROUP] == "A Finals") if COL_FINALS_GROUP in finals_df.columns else pd.Series(True, index=finals_df.index)
+    if COL_STAT_UPLOAD_2 in finals_df.columns:
+        stat_ok = finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
+    else:
+        stat_ok = finals_df[COL_STAT_UPLOAD_1].notna()
+    award_filter = graded & first & named & oshi_yes & isA & finals_df[COL_PODIUM_UPLOAD].notna() & stat_ok
+    award_pool = finals_df[award_filter].copy()
+
+    # Manual exclusions (meta / free-win picks that win en masse).
+    overrides, patches, exclusions = load_overrides(args.event, project_root)
+    excluded_names = {str(e.get("trainee_name", "")).strip().lower() for e in exclusions if e.get("trainee_name")}
+    excluded_igns = {str(e.get("ign", "")).strip().lower() for e in exclusions if e.get("ign")}
+
+    oshi_unique = award_pool[award_pool[COL_WINNER_NAME].isin(unique_winner_names)].copy()
+    if excluded_names or excluded_igns:
+        drop = (
+            oshi_unique[COL_WINNER_NAME].astype(str).str.strip().str.lower().isin(excluded_names)
+            | oshi_unique[COL_IGN].astype(str).str.strip().str.lower().isin(excluded_igns)
+        )
+        for _, r in oshi_unique[drop].iterrows():
+            print(f"  EXCLUDED {r[COL_IGN]} -> {r[COL_WINNER_NAME]} (manual exclusion)")
+        oshi_unique = oshi_unique[~drop]
     print(f"Oshi-claiming unique winners: {len(oshi_unique)}")
 
     # Podium reference (for time lookup + diagnostics; no longer drives uniqueness)
@@ -630,7 +644,6 @@ def main():
             "stats": stats,
         })
 
-    overrides, patches = load_overrides(args.event, project_root)
     for ov in overrides:
         ign = ov["ign"]
         trainee = ov["trainee_name"]

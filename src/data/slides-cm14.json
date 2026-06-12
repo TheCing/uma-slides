@@ -26,6 +26,22 @@
       "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
     },
     {
+      "ign": "blipblip/shauce",
+      "trainee_name": "[New Year ♪ New Urara!] Haru Urara",
+      "uma_image": "umas/[New Year ♪ New Urara!] Haru Urara.png",
+      "time": "1:31.6",
+      "result": "1st",
+      "quote": "URARA NEVER GAVE UP SO I NEVER DID RAAAAAAA",
+      "stats": {
+        "speed": 1200,
+        "stamina": 547,
+        "power": 1122,
+        "guts": 1078,
+        "wit": 1010
+      },
+      "full_art_image": "umas/Haru_Urara_(Race).png"
+    },
+    {
       "ign": "SynBlaue",
       "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
       "uma_image": "umas/[Chiffon-Wrapped Mummy] Super Creek.png",
@@ -43,6 +59,22 @@
       "full_art_image": "umas/Super_Creek_(Alt).png"
     },
     {
+      "ign": "Hines",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "uma_image": "umas/[Scramble☆Zone] Mayano Top Gun.png",
+      "time": "1:29.9",
+      "result": "1st",
+      "quote": "Mayano believer (still a jobber)",
+      "stats": {
+        "speed": 1200,
+        "stamina": 640,
+        "power": 1088,
+        "guts": 957,
+        "wit": 1037
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+    },
+    {
       "ign": "PiggyMcbacon",
       "trainee_name": "[Maverick] Narita Brian",
       "uma_image": "umas/[Maverick] Narita Brian.png",
@@ -57,6 +89,21 @@
         "wit": 1010
       },
       "full_art_image": "umas/Narita_Brian_(Race).png"
+    },
+    {
+      "ign": "Chia",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "uma_image": "umas/[Down the Line] Mejiro Ryan.png",
+      "time": "1:30.4",
+      "result": "1st",
+      "quote": "my favourite umamusume is mejiro",
+      "stats": {
+        "speed": 1195,
+        "stamina": 551,
+        "power": 998,
+        "guts": 870,
+        "wit": 1191
+      }
     },
     {
       "ign": "Nao Nao",
@@ -91,6 +138,22 @@
       "full_art_image": "umas/Mejiro_McQueen_(Race).png"
     },
     {
+      "ign": "neo.",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "uma_image": "umas/[El☆Número 1] El Condor Pasa.png",
+      "time": "1:31.3",
+      "result": "1st",
+      "quote": "My pasa has 7.4% wr this CM...",
+      "stats": {
+        "speed": 1200,
+        "stamina": 688,
+        "power": 1200,
+        "guts": 719,
+        "wit": 968
+      },
+      "full_art_image": "umas/El_Condor_Pasa_(Race).png"
+    },
+    {
       "ign": "X-ite_SDF",
       "trainee_name": "[Tach-nology] Agnes Tachyon",
       "uma_image": "umas/[Tach-nology] Agnes Tachyon.png",
@@ -105,22 +168,6 @@
         "wit": 1135
       },
       "full_art_image": "umas/Agnes_Tachyon_(Race).png"
-    },
-    {
-      "ign": "Excelt",
-      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
-      "uma_image": "umas/[Blazed Head, Covered Fists] Yaeno Muteki.png",
-      "time": "1:30.4",
-      "result": "1st",
-      "quote": "Osu! She deserves more attention than what she currently gets.",
-      "stats": {
-        "speed": 1160,
-        "stamina": 545,
-        "power": 1169,
-        "guts": 956,
-        "wit": 995
-      },
-      "full_art_image": "umas/Yaeno_Muteki_(Race).png"
     },
     {
       "ign": "Aero",
@@ -201,6 +248,38 @@
         "wit": 1072
       },
       "full_art_image": "umas/Tokai_Teio_(Race).png"
+    },
+    {
+      "ign": "manan",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
+      "time": "1:31.6",
+      "result": "1st",
+      "quote": "Fuji-san is cute",
+      "stats": {
+        "speed": 1089,
+        "stamina": 610,
+        "power": 1150,
+        "guts": 921,
+        "wit": 1109
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+    },
+    {
+      "ign": "timen125",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
+      "time": "1:30.7",
+      "result": "1st",
+      "quote": "opera + 2 keen gg ~Teiemu opera oo~",
+      "stats": {
+        "speed": 1188,
+        "stamina": 617,
+        "power": 1200,
+        "guts": 875,
+        "wit": 1083
+      },
+      "full_art_image": "umas/T.M._Opera_O_(Race).png"
     },
     {
       "ign": "Golden",

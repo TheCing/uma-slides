@@ -21,5 +21,11 @@
       "full_art_compact": true,
       "reason": "Super_Creek_(Alt).png is only available from the Bilibili wiki at 510x1133 \u2014 too small for the full-bleed (width:100%) hero layout, which upscales it blurry/oversized. Compact layout keeps it height-constrained and crisp."
     }
+  ],
+  "exclusions": [
+    {
+      "trainee_name": "[Wild Frontier] Taiki Shuttle",
+      "reason": "Meta / free-win pick this CM \u2014 17 finals winners (8 is_user=True). Cedric was the sole oshi-claimant so the rule flags him as a unique winner, but winning with the format-defining meta uma isn't an oshi achievement. Excluded by hand-checked list."
+    }
   ]
 }
