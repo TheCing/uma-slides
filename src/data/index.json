@@ -34,6 +34,13 @@
       "icon": "taurus_icon.png",
       "file": "slides-cm13.json",
       "slideCount": 9
+    },
+    {
+      "id": "CM14",
+      "name": "Gemini Cup",
+      "icon": "gemini_icon.png",
+      "file": "slides-cm14.json",
+      "slideCount": 15
     }
   ]
 }

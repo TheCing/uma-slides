@@ -36,6 +36,11 @@ src/assets/vite.svg
 .cursor/
 src/data/slides-cafe*.json
 src/themes/cafe/
+tmp/
+
+# Python
+__pycache__/
+*.pyc
 
 # Raw Google Forms response exports (transient working files)
 src/data/*Responses*.csv

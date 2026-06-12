@@ -74,6 +74,18 @@ EVENT_CONFIG = {
         "podium": "events/cm13/data/podium.parquet",
         "schema": "v2",
     },
+    "CM14": {
+        "name": "Gemini Cup",
+        "icon": "gemini_icon.png",
+        "theme": "uma",
+        "distance": "Mile",
+        "surface": "Turf",
+        "track": "Tokyo Turf 1600m",
+        "finals_csv": "events/cm14/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm14/data/statsheet.parquet",
+        "podium": "events/cm14/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -97,7 +109,7 @@ DEFAULT_COSTUME = {
     "Mayano Top Gun": "[Scramble☆Zone] Mayano Top Gun",
     "Special Week": "[Special Dreamer] Special Week",
     "Symboli Rudolf": "[Emperor's Path] Symboli Rudolf",
-    "Tokai Teio": "[Beyond the Horizon] Tokai Teio",
+    "Tokai Teio": "[Peak Joy] Tokai Teio",
 }
 
 ALT_ART = {
@@ -109,6 +121,8 @@ ALT_ART = {
     "[Sunlight Bouquet] Mayano Top Gun": "Mayano_Top_Gun_(Alt).png",
     "[Hopp'n♪Happy Heart] Special Week": "Special_Week_(Alt).png",
     "[Kukulkan Warrior] El Condor Pasa": "El_Condor_Pasa_(Alt).png",
+    "[Chiffon-Wrapped Mummy] Super Creek": "Super_Creek_(Alt).png",
+    "[Beyond the Horizon] Tokai Teio": "Tokai_Teio_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
@@ -122,6 +136,28 @@ IGN_ALIASES = {
 def resolve_alias(ign):
     """Return the aliased trainer name for an IGN, or None."""
     return IGN_ALIASES.get(str(ign).lower())
+
+
+def _clean_quote(text):
+    """Strip surrounding quote characters a user may have wrapped their quote in.
+
+    The slide component already renders enclosing quotation marks, so a quote
+    submitted as ``"like this"`` would otherwise display double-quoted. Only the
+    wrapping pair is removed, and only when the inner text doesn't itself contain
+    that quote char (so legit quotes like ``"a" and "b"`` are left intact).
+    """
+    if not text:
+        return ""
+    s = str(text).strip()
+    pairs = {'"': '"', "'": "'", "\u201c": "\u201d", "\u2018": "\u2019"}
+    while len(s) >= 2:
+        for lq, rq in pairs.items():
+            if s[0] == lq and s[-1] == rq and lq not in s[1:-1] and rq not in s[1:-1]:
+                s = s[1:-1].strip()
+                break
+        else:
+            break
+    return s
 
 
 def load_overrides(event_id, project_root):
@@ -152,6 +188,32 @@ def load_overrides(event_id, project_root):
 
 
 COL_OSHI_QUOTE_V2 = 'Optional - Finals - Winner - Oshi Award Quote (in case you end up winning one)'
+
+# CM14+ renamed the per-winner columns from "Winner" to "Own Winner" (the form
+# now also collects "Opponent Winner" data). Map those variants back onto the
+# canonical names the rest of the pipeline expects so v2 handling is unchanged.
+V2_COLUMN_ALIASES = {
+    'Optional - Finals - Own Winner - Oshi Award Quote (in case you end up winning one)': COL_OSHI_QUOTE_V2,
+    'Optional - Finals - Own Winner - Screenshot - Stat Screen (First Image)': COL_STAT_UPLOAD_1,
+    'Optional - Finals - Own Winner - Screenshot - Stat Screen (Second Image)': COL_STAT_UPLOAD_2,
+}
+
+
+def canonicalize_v2_columns(df):
+    """Rename CM14+ 'Own Winner' columns to the canonical 'Winner' names.
+
+    Only renames when the source column exists and the canonical target isn't
+    already present, so it's safe to call on any event's CSV (idempotent).
+    """
+    rename = {
+        src: dst
+        for src, dst in V2_COLUMN_ALIASES.items()
+        if src in df.columns and dst not in df.columns
+    }
+    if rename:
+        df = df.rename(columns=rename)
+        print(f"[v2 columns] Canonicalized {len(rename)} 'Own Winner' column(s): {sorted(rename.values())}")
+    return df
 
 
 def _normalize_v2(finals_df, podium_df, stats_df=None):
@@ -357,6 +419,8 @@ def main():
 
     csv_path = Path(args.csv).expanduser().resolve() if args.csv else (data_base / cfg["finals_csv"])
     finals_df = pd.read_csv(csv_path)
+    if cfg.get("schema") == "v2":
+        finals_df = canonicalize_v2_columns(finals_df)
 
     if args.csv_only:
         print(f"Loaded {len(finals_df)} CSV rows from {csv_path}")
@@ -395,6 +459,40 @@ def main():
     unique_winner_names = set(declared_counts[declared_counts == 1].index)
     print(f"Unique declared winners (count==1 in pool): {len(unique_winner_names)}")
 
+    # --- Criteria-aware collision guard ---
+    # An award is valid only if exactly ONE trainer meets every criterion
+    # (own uma + 1st A-Finals Graded + submitted stats & podium). The CSV-side
+    # declared_counts above can miss a co-claimant whose winner-name derivation
+    # returned null — that hidden claimant would otherwise hand the surviving
+    # claimant a false "unique" award. Re-check rows that pass all CSV criteria
+    # but have no derived winner-name against statsheet/podium ground truth
+    # (own-uma stats screenshot + own-uma 1st-place podium) and demote any uma
+    # they actually contest.
+    unresolved = finals_df[pool_filter & finals_df[COL_WINNER_NAME].isna()]
+    own_stats = stats_df[stats_df["is_user"] == True]
+    own_wins = podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
+    hidden_collisions = set()
+    for _, urow in unresolved.iterrows():
+        uign = str(urow[COL_IGN])
+        ualias = resolve_alias(uign)
+        cands = {uign.lower()} | ({ualias.lower()} if ualias else set())
+        claimed = set()
+        for s in own_stats.itertuples():
+            if str(s.ign).lower() in cands and pd.notna(s.name):
+                claimed.add(str(s.name).strip())
+        for p in own_wins.itertuples():
+            if str(p.trainer_name).lower() in cands and pd.notna(p.trainee_name):
+                claimed.add(str(p.trainee_name).strip())
+        for nm in claimed:
+            if nm in unique_winner_names:
+                hidden_collisions.add(nm)
+                print(f"  COLLISION: '{nm}' also fully-claimed by {uign} "
+                      f"(winner-name derivation failed) — demoting award")
+    if hidden_collisions:
+        unique_winner_names -= hidden_collisions
+        print(f"Demoted {len(hidden_collisions)} contested uma(s) after criteria-aware check; "
+              f"unique winners now: {len(unique_winner_names)}")
+
     # --- Step 2: apply oshi=Yes last so non-oshi unique winners drop out ---
     oshi_unique = candidate_pool[
         (candidate_pool[COL_OSHI] == "Yes")
@@ -412,7 +510,7 @@ def main():
     for _, row in oshi_unique.iterrows():
         ign = row[COL_IGN]
         csv_trainee = row[COL_WINNER_NAME]
-        quote = row[COL_QUOTE] if pd.notna(row[COL_QUOTE]) else ""
+        quote = _clean_quote(row[COL_QUOTE]) if pd.notna(row[COL_QUOTE]) else ""
         csv_time = row[COL_WINNER_TIME] if COL_WINNER_TIME in row and pd.notna(row[COL_WINNER_TIME]) else ""
         alias = resolve_alias(ign)
         ign_candidates = [ign] + ([alias] if alias else [])
@@ -541,7 +639,7 @@ def main():
         if not csv_row.empty:
             cr = csv_row.iloc[0]
             if pd.notna(cr[COL_QUOTE]):
-                csv_quote = cr[COL_QUOTE]
+                csv_quote = _clean_quote(cr[COL_QUOTE])
             if COL_WINNER_TIME in csv_row.columns and pd.notna(cr[COL_WINNER_TIME]):
                 csv_time = cr[COL_WINNER_TIME]
         if trainee in claimed_umas:

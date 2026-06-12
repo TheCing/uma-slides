@@ -1,0 +1,253 @@
+{
+  "event": {
+    "name": "Gemini Cup",
+    "id": "CM14",
+    "icon": "gemini_icon.png",
+    "theme": "uma",
+    "distance": "Mile",
+    "surface": "Turf",
+    "track": "Tokyo Turf 1600m"
+  },
+  "slides": [
+    {
+      "ign": "Senk0",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "1:30.1",
+      "result": "1st",
+      "quote": "GO MY CHIYO",
+      "stats": {
+        "speed": 1157,
+        "stamina": 425,
+        "power": 950,
+        "guts": 961,
+        "wit": 1060
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "SynBlaue",
+      "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
+      "uma_image": "umas/[Chiffon-Wrapped Mummy] Super Creek.png",
+      "time": "1:30.8",
+      "result": "1st",
+      "quote": "from a once-in-a-lifetime meeting, to an enduring path together",
+      "stats": {
+        "speed": 1200,
+        "stamina": 562,
+        "power": 1088,
+        "guts": 828,
+        "wit": 943
+      },
+      "full_art_image": "umas/Super_Creek_(Alt).png"
+    },
+    {
+      "ign": "PiggyMcbacon",
+      "trainee_name": "[Maverick] Narita Brian",
+      "uma_image": "umas/[Maverick] Narita Brian.png",
+      "time": "1:31.3",
+      "result": "1st",
+      "quote": "my end maru didnt win :(",
+      "stats": {
+        "speed": 1200,
+        "stamina": 444,
+        "power": 1127,
+        "guts": 1123,
+        "wit": 1010
+      },
+      "full_art_image": "umas/Narita_Brian_(Race).png"
+    },
+    {
+      "ign": "Nao Nao",
+      "trainee_name": "[Gilded Shrine to Glory] Kitasan Black",
+      "uma_image": "umas/[Gilded Shrine to Glory] Kitasan Black.png",
+      "time": "1:30.1",
+      "result": "1st",
+      "quote": "Kitasan Besto Uma.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 622,
+        "power": 1121,
+        "guts": 625,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Kitasan_Black_(Race).png"
+    },
+    {
+      "ign": "Nokialol",
+      "trainee_name": "[Frontline Elegance] Mejiro McQueen",
+      "uma_image": "umas/[Frontline Elegance] Mejiro McQueen.png",
+      "time": "1:31.5",
+      "result": "1st",
+      "quote": "an oshi player can only feed on other oshi players",
+      "stats": {
+        "speed": 1200,
+        "stamina": 781,
+        "power": 1151,
+        "guts": 479,
+        "wit": 1054
+      },
+      "full_art_image": "umas/Mejiro_McQueen_(Race).png"
+    },
+    {
+      "ign": "X-ite_SDF",
+      "trainee_name": "[Tach-nology] Agnes Tachyon",
+      "uma_image": "umas/[Tach-nology] Agnes Tachyon.png",
+      "time": "1:31.5",
+      "result": "1st",
+      "quote": "Do you believe in Corner Con?",
+      "stats": {
+        "speed": 1200,
+        "stamina": 451,
+        "power": 1040,
+        "guts": 972,
+        "wit": 1135
+      },
+      "full_art_image": "umas/Agnes_Tachyon_(Race).png"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "uma_image": "umas/[Blazed Head, Covered Fists] Yaeno Muteki.png",
+      "time": "1:30.4",
+      "result": "1st",
+      "quote": "Osu! She deserves more attention than what she currently gets.",
+      "stats": {
+        "speed": 1160,
+        "stamina": 545,
+        "power": 1169,
+        "guts": 956,
+        "wit": 995
+      },
+      "full_art_image": "umas/Yaeno_Muteki_(Race).png"
+    },
+    {
+      "ign": "Aero",
+      "trainee_name": "[Get to Winning!] Winning Ticket",
+      "uma_image": "umas/[Get to Winning!] Winning Ticket.png",
+      "time": "1:29.9",
+      "result": "1st",
+      "quote": "Here's the Winning Ticket!",
+      "stats": {
+        "speed": 1189,
+        "stamina": 611,
+        "power": 1122,
+        "guts": 931,
+        "wit": 962
+      },
+      "full_art_image": "umas/Winning_Ticket_(Race).png"
+    },
+    {
+      "ign": "Tappu",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "uma_image": "umas/[Noble Seamair] Fine Motion.png",
+      "time": "1:30.5",
+      "result": "1st",
+      "quote": "Paddy Power",
+      "stats": {
+        "speed": 1145,
+        "stamina": 597,
+        "power": 1200,
+        "guts": 681,
+        "wit": 1170
+      },
+      "full_art_image": "umas/Fine_Motion_(Race).png"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "uma_image": "umas/[Rosy Dreams] Rice Shower.png",
+      "time": "1:30.4",
+      "result": "1st",
+      "quote": "This CM shit is easy",
+      "stats": {
+        "speed": 1200,
+        "stamina": 648,
+        "power": 1200,
+        "guts": 611,
+        "wit": 973
+      },
+      "full_art_image": "umas/Rice_Shower_(Race).png"
+    },
+    {
+      "ign": "vintus",
+      "trainee_name": "[Autumn Cosmos] Gold City",
+      "uma_image": "umas/[Autumn Cosmos] Gold City.png",
+      "time": "1:30.7",
+      "result": "1st",
+      "quote": "Dreams don’t die unless you quit.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 718,
+        "power": 1103,
+        "guts": 867,
+        "wit": 990
+      },
+      "full_art_image": "umas/Gold_City_(Race).png"
+    },
+    {
+      "ign": "Thasdron",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "uma_image": "umas/[Peak Joy] Tokai Teio.png",
+      "time": "1:30.7",
+      "result": "1st",
+      "quote": "The Triple Fracture Wins",
+      "stats": {
+        "speed": 1200,
+        "stamina": 630,
+        "power": 1005,
+        "guts": 939,
+        "wit": 1072
+      },
+      "full_art_image": "umas/Tokai_Teio_(Race).png"
+    },
+    {
+      "ign": "Golden",
+      "trainee_name": "[Edomurasaki] Inari One",
+      "uma_image": "umas/[Edomurasaki] Inari One.png",
+      "time": "1:31.6",
+      "result": "1st",
+      "quote": "Guts is so peak",
+      "stats": {
+        "speed": 1200,
+        "stamina": 606,
+        "power": 1073,
+        "guts": 1006,
+        "wit": 1078
+      },
+      "full_art_image": "umas/Inari_One_(Race).png"
+    },
+    {
+      "ign": "DadSmoocher",
+      "trainee_name": "[Lucky Tidings] Matikanefukukitaru",
+      "uma_image": "umas/[Lucky Tidings] Matikanefukukitaru.png",
+      "time": "1:31.6",
+      "result": "1st",
+      "quote": "Finals were her 7th win :)",
+      "stats": {
+        "speed": 1200,
+        "stamina": 686,
+        "power": 1143,
+        "guts": 612,
+        "wit": 1162
+      },
+      "full_art_image": "umas/Matikanefukukitaru_(Race).png"
+    },
+    {
+      "ign": "Kai Aiya",
+      "trainee_name": "[Poinsettia Ribbon] Nice Nature",
+      "uma_image": "umas/[Poinsettia Ribbon] Nice Nature.png",
+      "time": "1:30.2",
+      "result": "1st",
+      "quote": "I Can Win Sometimes, Right?",
+      "stats": {
+        "speed": 1195,
+        "stamina": 543,
+        "power": 1160,
+        "guts": 1129,
+        "wit": 1185
+      },
+      "full_art_image": "umas/Nice_Nature_(Race).png"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "event": "CM14",
+  "name": "Gemini Cup",
+  "track": "Tokyo Turf 1600m",
+  "winners": [
+    {
+      "ign": "Senk0",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "base_name": "Sakura Chiyono O",
+      "time": "1:30.1",
+      "stats": {
+        "speed": 1157,
+        "stamina": 425,
+        "power": 950,
+        "guts": 961,
+        "wit": 1060
+      },
+      "quote": "GO MY CHIYO"
+    },
+    {
+      "ign": "SynBlaue",
+      "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
+      "base_name": "Super Creek",
+      "time": "1:30.8",
+      "stats": {
+        "speed": 1200,
+        "stamina": 562,
+        "power": 1088,
+        "guts": 828,
+        "wit": 943
+      },
+      "quote": "from a once-in-a-lifetime meeting, to an enduring path together"
+    },
+    {
+      "ign": "PiggyMcbacon",
+      "trainee_name": "[Maverick] Narita Brian",
+      "base_name": "Narita Brian",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 444,
+        "power": 1127,
+        "guts": 1123,
+        "wit": 1010
+      },
+      "quote": "my end maru didnt win :("
+    },
+    {
+      "ign": "Nao Nao",
+      "trainee_name": "[Gilded Shrine to Glory] Kitasan Black",
+      "base_name": "Kitasan Black",
+      "time": "1:30.1",
+      "stats": {
+        "speed": 1200,
+        "stamina": 622,
+        "power": 1121,
+        "guts": 625,
+        "wit": 1200
+      },
+      "quote": "Kitasan Besto Uma."
+    },
+    {
+      "ign": "Nokialol",
+      "trainee_name": "[Frontline Elegance] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "1:31.5",
+      "stats": {
+        "speed": 1200,
+        "stamina": 781,
+        "power": 1151,
+        "guts": 479,
+        "wit": 1054
+      },
+      "quote": "an oshi player can only feed on other oshi players"
+    },
+    {
+      "ign": "X-ite_SDF",
+      "trainee_name": "[Tach-nology] Agnes Tachyon",
+      "base_name": "Agnes Tachyon",
+      "time": "1:31.5",
+      "stats": {
+        "speed": 1200,
+        "stamina": 451,
+        "power": 1040,
+        "guts": 972,
+        "wit": 1135
+      },
+      "quote": "Do you believe in Corner Con?"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "base_name": "Yaeno Muteki",
+      "time": "1:30.4",
+      "stats": {
+        "speed": 1160,
+        "stamina": 545,
+        "power": 1169,
+        "guts": 956,
+        "wit": 995
+      },
+      "quote": "Osu! She deserves more attention than what she currently gets."
+    },
+    {
+      "ign": "Aero",
+      "trainee_name": "[Get to Winning!] Winning Ticket",
+      "base_name": "Winning Ticket",
+      "time": "1:29.9",
+      "stats": {
+        "speed": 1189,
+        "stamina": 611,
+        "power": 1122,
+        "guts": 931,
+        "wit": 962
+      },
+      "quote": "Here's the Winning Ticket!"
+    },
+    {
+      "ign": "Tappu",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "base_name": "Fine Motion",
+      "time": "1:30.5",
+      "stats": {
+        "speed": 1145,
+        "stamina": 597,
+        "power": 1200,
+        "guts": 681,
+        "wit": 1170
+      },
+      "quote": "Paddy Power"
+    },
+    {
+      "ign": "Izuru",
+      "trainee_name": "[Rosy Dreams] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:30.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 648,
+        "power": 1200,
+        "guts": 611,
+        "wit": 973
+      },
+      "quote": "This CM shit is easy"
+    },
+    {
+      "ign": "vintus",
+      "trainee_name": "[Autumn Cosmos] Gold City",
+      "base_name": "Gold City",
+      "time": "1:30.7",
+      "stats": {
+        "speed": 1200,
+        "stamina": 718,
+        "power": 1103,
+        "guts": 867,
+        "wit": 990
+      },
+      "quote": "Dreams don’t die unless you quit."
+    },
+    {
+      "ign": "Thasdron",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "1:30.7",
+      "stats": {
+        "speed": 1200,
+        "stamina": 630,
+        "power": 1005,
+        "guts": 939,
+        "wit": 1072
+      },
+      "quote": "The Triple Fracture Wins"
+    },
+    {
+      "ign": "Golden",
+      "trainee_name": "[Edomurasaki] Inari One",
+      "base_name": "Inari One",
+      "time": "1:31.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 606,
+        "power": 1073,
+        "guts": 1006,
+        "wit": 1078
+      },
+      "quote": "Guts is so peak"
+    },
+    {
+      "ign": "DadSmoocher",
+      "trainee_name": "[Lucky Tidings] Matikanefukukitaru",
+      "base_name": "Matikanefukukitaru",
+      "time": "1:31.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 686,
+        "power": 1143,
+        "guts": 612,
+        "wit": 1162
+      },
+      "quote": "Finals were her 7th win :)"
+    },
+    {
+      "ign": "Kai Aiya",
+      "trainee_name": "[Poinsettia Ribbon] Nice Nature",
+      "base_name": "Nice Nature",
+      "time": "1:30.2",
+      "stats": {
+        "speed": 1195,
+        "stamina": 543,
+        "power": 1160,
+        "guts": 1129,
+        "wit": 1185
+      },
+      "quote": "I Can Win Sometimes, Right?"
+    }
+  ]
+}
