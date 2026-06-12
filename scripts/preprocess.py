@@ -8,6 +8,7 @@ Usage:
 """
 
 import argparse
+import difflib
 import json
 import os
 import re
@@ -138,6 +139,28 @@ IGN_ALIASES = {
 def resolve_alias(ign):
     """Return the aliased trainer name for an IGN, or None."""
     return IGN_ALIASES.get(str(ign).lower())
+
+
+def ign_matches(a, b):
+    """Robustly decide whether two IGN strings refer to the same player.
+
+    Handles OCR-split identities (e.g. form 'Arklaine' vs podium 'Arkline')
+    via exact match, alias, long-substring containment, or a high string
+    similarity ratio. The 0.86 threshold accepts a 1-char insert/typo on a
+    typical IGN while rejecting unrelated short names (e.g. 'neo.' vs 'neon').
+    """
+    al = str(a).strip().lower()
+    bl = str(b).strip().lower()
+    if not al or not bl:
+        return False
+    if al == bl:
+        return True
+    alias_a, alias_b = resolve_alias(a), resolve_alias(b)
+    if (alias_a and alias_a.lower() == bl) or (alias_b and alias_b.lower() == al):
+        return True
+    if len(al) >= 4 and len(bl) >= 4 and (al in bl or bl in al):
+        return True
+    return difflib.SequenceMatcher(None, al, bl).ratio() >= 0.86
 
 
 def _clean_quote(text):
@@ -442,70 +465,74 @@ def main():
     if cfg.get("schema") == "v2":
         finals_df = _normalize_v2(finals_df, podium_df, stats_df)
 
-    # --- Award rule: unique among OSHI claimants -------------------------
-    # The "Oshi's Champion" award goes to a player iff they are the SOLE
-    # person who both (a) claimed a given uma as their oshi (oshi=Yes) and
-    # (b) won finals (1st, Graded) with it. Uniqueness is measured over the
-    # oshi-claim universe — every 1st-place Graded oshi=Yes claim with a
-    # derived winner-name, across BOTH A and B finals — so a B-finals
-    # oshi-claimant still contests an A-finals award, while non-oshi
-    # co-winners never dilute it. Winning with a popular/meta uma is common;
-    # this award is about the oshi claim, not raw race results.
+    # --- Award rule: sole oshi-claiming A-Finals winner ------------------
+    # Criteria (ALL required): filled an Oshi Quote, placed 1st in A-Finals
+    # Graded, and submitted both a stat screenshot and a podium screenshot
+    # ("valid"). The award goes to a player iff they are the ONLY one meeting
+    # every criterion for that uma. Deliberately IGNORED as competitors (they
+    # never block an award):
+    #   - opponent (non-submitter) winners, in A or B finals
+    #   - any B-Finals winner, whether "valid" or manually reported
+    #   - own "valid" winners who didn't fill the Oshi Quote
     graded = finals_df[COL_LEAGUE].astype(str).str.startswith(LEAGUE_GRADED_PREFIX)
     first = finals_df[COL_RESULT] == "1st"
-    named = finals_df[COL_WINNER_NAME].notna()
     oshi_yes = finals_df[COL_OSHI] == "Yes"
-
-    claim_universe = finals_df[graded & first & named & oshi_yes]
-    claim_counts = claim_universe[COL_WINNER_NAME].value_counts()
-    unique_winner_names = set(claim_counts[claim_counts == 1].index)
-    print(f"Oshi-claim universe (1st/Graded/oshi=Yes, A+B finals): {len(claim_universe)}")
-    contested = claim_counts[claim_counts > 1]
-    print(f"Sole-claimant umas: {len(unique_winner_names)} | contested (no award): {len(contested)}")
-
-    # Hidden-collision guard: an oshi=Yes claim whose winner-name derivation
-    # failed (null) is invisible to the count above. Recover its uma from the
-    # player's own stat-screen / 1st-place podium (is_user=True ground truth)
-    # and demote any award it actually contests.
-    own_stats = stats_df[stats_df["is_user"] == True] if "is_user" in stats_df.columns else stats_df.iloc[0:0]
-    own_wins = (
-        podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
-        if "is_user" in podium_df.columns else podium_df.iloc[0:0]
-    )
-    null_oshi = finals_df[graded & first & oshi_yes & finals_df[COL_WINNER_NAME].isna()]
-    for _, urow in null_oshi.iterrows():
-        uign = str(urow[COL_IGN])
-        ualias = resolve_alias(uign)
-        cands = {uign.lower()} | ({ualias.lower()} if ualias else set())
-        recovered = set()
-        for s in own_stats.itertuples():
-            if str(s.ign).lower() in cands and pd.notna(s.name):
-                recovered.add(str(s.name).strip())
-        for p in own_wins.itertuples():
-            if str(p.trainer_name).lower() in cands and pd.notna(p.trainee_name):
-                recovered.add(str(p.trainee_name).strip())
-        for nm in recovered:
-            if nm in unique_winner_names:
-                unique_winner_names.discard(nm)
-                print(f"  COLLISION: '{nm}' also oshi-claimed by {uign} "
-                      f"(winner-name derivation failed) — no award")
-
-    # Award pool: the sole claimant must also clear the full evidentiary bar —
-    # A-Finals + podium screenshot + stat screenshot.
     isA = (finals_df[COL_FINALS_GROUP] == "A Finals") if COL_FINALS_GROUP in finals_df.columns else pd.Series(True, index=finals_df.index)
     if COL_STAT_UPLOAD_2 in finals_df.columns:
         stat_ok = finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
     else:
         stat_ok = finals_df[COL_STAT_UPLOAD_1].notna()
-    award_filter = graded & first & named & oshi_yes & isA & finals_df[COL_PODIUM_UPLOAD].notna() & stat_ok
-    award_pool = finals_df[award_filter].copy()
+    valid = finals_df[COL_PODIUM_UPLOAD].notna() & stat_ok
+
+    candidates = finals_df[graded & first & oshi_yes & isA & valid].copy()
+    print(f"Award candidates (oshi+1st+A-Finals+Graded+valid): {len(candidates)}")
+
+    # Uniqueness counts the form-declared winner name.
+    declared = candidates[candidates[COL_WINNER_NAME].notna()]
+    declared_counts = declared[COL_WINNER_NAME].value_counts()
+    unique_winner_names = set(declared_counts[declared_counts == 1].index)
+    winner_ign_by_uma = {}
+    for _, r in declared.iterrows():
+        winner_ign_by_uma.setdefault(str(r[COL_WINNER_NAME]), r[COL_IGN])
+
+    # OCR-split collision guard: a candidate's form-derived winner name can be
+    # wrong (fuzzy mis-match) or blank when the stat-screen OCR failed, while
+    # their OWN is_user=True podium win (the post-race screenshot) names the
+    # uma correctly — even if the podium spelled their IGN differently
+    # ('Arklaine' form vs 'Arkline' podium). For every candidate, recover that
+    # ground-truth uma and, if it's a sole-claimant award held by someone
+    # else, demote it (two valid A-Finals oshi claimants => no award).
+    own_wins = (
+        podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
+        if "is_user" in podium_df.columns else podium_df.iloc[0:0]
+    )
+    own_stats = stats_df[stats_df["is_user"] == True] if "is_user" in stats_df.columns else stats_df.iloc[0:0]
+
+    def _truth_uma(ign):
+        for p in own_wins.itertuples():
+            if pd.notna(p.trainee_name) and ign_matches(ign, p.trainer_name):
+                return str(p.trainee_name).strip()
+        for s in own_stats.itertuples():
+            if pd.notna(s.name) and str(s.name).strip() and ign_matches(ign, s.ign):
+                return str(s.name).strip()
+        return None
+
+    for _, r in candidates.iterrows():
+        ign = r[COL_IGN]
+        truth = _truth_uma(ign)
+        if truth and truth in unique_winner_names and winner_ign_by_uma.get(truth) not in (None, ign):
+            unique_winner_names.discard(truth)
+            print(f"  COLLISION: '{truth}' also won by {ign} "
+                  f"(OCR-mis-derived/blank form name) — no award")
+
+    print(f"Sole-claimant umas: {len(unique_winner_names)}")
 
     # Manual exclusions (meta / free-win picks that win en masse).
     overrides, patches, exclusions = load_overrides(args.event, project_root)
     excluded_names = {str(e.get("trainee_name", "")).strip().lower() for e in exclusions if e.get("trainee_name")}
     excluded_igns = {str(e.get("ign", "")).strip().lower() for e in exclusions if e.get("ign")}
 
-    oshi_unique = award_pool[award_pool[COL_WINNER_NAME].isin(unique_winner_names)].copy()
+    oshi_unique = declared[declared[COL_WINNER_NAME].isin(unique_winner_names)].copy()
     if excluded_names or excluded_igns:
         drop = (
             oshi_unique[COL_WINNER_NAME].astype(str).str.strip().str.lower().isin(excluded_names)
