@@ -54,6 +54,7 @@ export function UmaSlide({ slide, event, allTraineeNames }) {
   const displayName = getDisplayName(trainee_name, allTraineeNames || [])
   const imageUrl = full_art_image ? `${base}${full_art_image}` : `${base}${uma_image}`
   const useFullArtLayout = !!full_art_image && !full_art_compact
+  const smallFullArt = !!full_art_image && !!full_art_compact
 
   return (
     <div class="slide uma-slide">
@@ -100,7 +101,7 @@ export function UmaSlide({ slide, event, allTraineeNames }) {
         </div>
 
         {/* Character */}
-        <div class={`uma-character${useFullArtLayout ? ' full-art' : ''}`}>
+        <div class={`uma-character${useFullArtLayout ? ' full-art' : ''}${smallFullArt ? ' full-art-small' : ''}`}>
           <img class="char-ghost" src={imageUrl} alt="" draggable={false} />
           <img class="char-main" src={imageUrl} alt={trainee_name} draggable={false} />
         </div>

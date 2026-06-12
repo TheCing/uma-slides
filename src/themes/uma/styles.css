@@ -327,6 +327,26 @@
   bottom: -65%;
 }
 
+/* Small-source full art (e.g. low-res wiki renders): bigger than the
+   height-capped compact layout, but not the full-bleed hero crop. */
+.uma-character.full-art-small {
+  overflow: visible;
+}
+
+.uma-character.full-art-small .char-main {
+  height: 122%;
+  width: auto;
+  max-width: none;
+  margin-bottom: -32%;
+}
+
+.uma-character.full-art-small .char-ghost {
+  height: 130%;
+  width: auto;
+  right: -12%;
+  bottom: -28%;
+}
+
 /* ── Shimmer Overlay ─────────────────────────────────── */
 
 .uma-character::after {
