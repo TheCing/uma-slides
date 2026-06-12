@@ -130,32 +130,16 @@
 
 /* ── Grid of winner cards ────────────────────────────── */
 
+/* Column count is computed in TocSlide (--toc-cols) to keep portraits legible
+   across any deck size — ~2 rows for typical events, 3 rows past 18. */
 .toc-grid {
   display: grid;
   gap: clamp(10px, 1.2vw, 18px);
   align-content: stretch;
   min-height: 0;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--toc-cols, 5), minmax(0, 1fr));
   grid-auto-rows: minmax(0, 1fr);
 }
-
-/* Column count tuned to keep at most 2 rows so portraits stay legible. */
-.toc-grid.count-1,
-.toc-grid.count-2,
-.toc-grid.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.toc-grid.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.toc-grid.count-5,
-.toc-grid.count-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.toc-grid.count-7,
-.toc-grid.count-8 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.toc-grid.count-9,
-.toc-grid.count-10 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.toc-grid.count-11,
-.toc-grid.count-12 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.toc-grid.count-13,
-.toc-grid.count-14 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
-.toc-grid.count-15,
-.toc-grid.count-16 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 
 .toc-card {
   position: relative;

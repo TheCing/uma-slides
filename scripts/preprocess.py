@@ -110,6 +110,7 @@ DEFAULT_COSTUME = {
     "Special Week": "[Special Dreamer] Special Week",
     "Symboli Rudolf": "[Emperor's Path] Symboli Rudolf",
     "Tokai Teio": "[Peak Joy] Tokai Teio",
+    "Curren Chan": "[Fille Éclair] Curren Chan",
 }
 
 ALT_ART = {
@@ -123,6 +124,7 @@ ALT_ART = {
     "[Kukulkan Warrior] El Condor Pasa": "El_Condor_Pasa_(Alt).png",
     "[Chiffon-Wrapped Mummy] Super Creek": "Super_Creek_(Alt).png",
     "[Beyond the Horizon] Tokai Teio": "Tokai_Teio_(Alt).png",
+    "[Ma Chérie of the New Moon] Curren Chan": "Curren_Chan_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
@@ -652,24 +654,29 @@ def main():
         if alias:
             ign_candidates.append(alias)
 
-        stat_row = stats_df[
-            (stats_df["ign"].isin(ign_candidates)) & (stats_df["name"] == trainee)
-        ]
-        if stat_row.empty:
-            stat_row = stats_df[stats_df["ign"].isin(ign_candidates)]
-
-        if not stat_row.empty:
-            s = stat_row.iloc[0]
-            stats = {
-                "speed": int(s["Speed"]),
-                "stamina": int(s["Stamina"]),
-                "power": int(s["Power"]),
-                "guts": int(s["Guts"]),
-                "wit": int(s["Wit"]),
-            }
+        # Explicit stats win (used when the statsheet ign would expose a real
+        # name, or when no statsheet row exists). Otherwise look up by ign+name.
+        if isinstance(ov.get("stats"), dict):
+            stats = {k: int(ov["stats"].get(k, 0)) for k in ("speed", "stamina", "power", "guts", "wit")}
         else:
-            print(f"  OVERRIDE WARN {ign}: no stats found, using zeroes")
-            stats = {"speed": 0, "stamina": 0, "power": 0, "guts": 0, "wit": 0}
+            stat_row = stats_df[
+                (stats_df["ign"].isin(ign_candidates)) & (stats_df["name"] == trainee)
+            ]
+            if stat_row.empty:
+                stat_row = stats_df[stats_df["ign"].isin(ign_candidates)]
+
+            if not stat_row.empty:
+                s = stat_row.iloc[0]
+                stats = {
+                    "speed": int(s["Speed"]),
+                    "stamina": int(s["Stamina"]),
+                    "power": int(s["Power"]),
+                    "guts": int(s["Guts"]),
+                    "wit": int(s["Wit"]),
+                }
+            else:
+                print(f"  OVERRIDE WARN {ign}: no stats found, using zeroes")
+                stats = {"speed": 0, "stamina": 0, "power": 0, "guts": 0, "wit": 0}
 
         images_needed.add(trainee)
         slides.append({

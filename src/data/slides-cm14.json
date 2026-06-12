@@ -248,6 +248,38 @@
         "wit": 1185
       },
       "full_art_image": "umas/Nice_Nature_(Race).png"
+    },
+    {
+      "ign": "chrissyneko",
+      "trainee_name": "[Ma Chérie of the New Moon] Curren Chan",
+      "uma_image": "umas/[Ma Chérie of the New Moon] Curren Chan.png",
+      "time": "1:30.0",
+      "result": "1st",
+      "quote": "#lookatcurren",
+      "stats": {
+        "speed": 1200,
+        "stamina": 660,
+        "power": 1159,
+        "guts": 550,
+        "wit": 1083
+      },
+      "full_art_image": "umas/Curren_Chan_(Alt).png"
+    },
+    {
+      "ign": "Amyr",
+      "trainee_name": "[Jokester ☆ Vibes] Tosen Jordan",
+      "uma_image": "umas/[Jokester ☆ Vibes] Tosen Jordan.png",
+      "time": "1:31.4",
+      "result": "1st",
+      "quote": "Jordan is the bestest gyaru ever!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 587,
+        "power": 1096,
+        "guts": 1200,
+        "wit": 805
+      },
+      "full_art_image": "umas/Tosen_Jordan_(Race).png"
     }
   ]
 }

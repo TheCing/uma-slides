@@ -1,7 +1,7 @@
 # Gemini Cup (CM14) — Oshi's Champion Awardees
 
 **Track:** Tokyo Turf 1600m  
-**Winners:** 15
+**Winners:** 17
 
 ---
 
@@ -124,4 +124,20 @@
 **Stats:** 1195 / 543 / 1160 / 1129 / 1185 (Total: 5212)  
 
 > I Can Win Sometimes, Right?
+
+### 16. chrissyneko
+
+**Uma:** [Ma Chérie of the New Moon] Curren Chan  
+**Time:** 1:30.0  
+**Stats:** 1200 / 660 / 1159 / 550 / 1083 (Total: 4652)  
+
+> #lookatcurren
+
+### 17. Amyr
+
+**Uma:** [Jokester ☆ Vibes] Tosen Jordan  
+**Time:** 1:31.4  
+**Stats:** 1200 / 587 / 1096 / 1200 / 805 (Total: 4888)  
+
+> Jordan is the bestest gyaru ever!
 

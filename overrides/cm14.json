@@ -1,0 +1,19 @@
+{
+  "overrides": [
+    {
+      "ign": "chrissyneko",
+      "trainee_name": "[Ma Chérie of the New Moon] Curren Chan",
+      "time": "1:30.0",
+      "reason": "Podium OCR misread chrissyneko's A-Finals winning screen as trainer 'ApplePie' with is_user=False (podium row_id 643), so the Curren Chan win never linked back and the pipeline mis-derived their ace as the 9-way-contested [LOVE\u26064EVER] Smart Falcon, dropping them. Statsheet independently confirms is_user=True ign=chrissyneko name=[Ma Ch\u00e9rie of the New Moon] Curren Chan (the new Wedding alt, row 643), CSV row is Graded/A-Finals/1st with stat+podium uploads and oshi quote '#lookatcurren'. chrissyneko is the only is_user=True claimant of this uma. Confirmed by teammate. Time from the orphaned podium row / user screenshot."
+    },
+    {
+      "ign": "Amyr",
+      "trainee_name": "[Jokester \u2606 Vibes] Tosen Jordan",
+      "time": "1:31.4",
+      "quote": "Jordan is the bestest gyaru ever!",
+      "stats": { "speed": 1200, "stamina": 587, "power": 1096, "guts": 1200, "wit": 805 },
+      "reason": "Podium OCR misread the A-Finals winning screen's trainer name with is_user=False (podium row_id 92), so the Tosen Jordan win never linked back and the pipeline mis-derived the ace as [CODE: ICING] Mihono Bourbon, dropping it. The statsheet independently confirms is_user=True for [Jokester \u2606 Vibes] Tosen Jordan (row 92), CSV row is Graded/A-Finals/1st with stat+podium uploads and oshi quote present; sole is_user=True claimant. Display IGN 'Amyr' is the in-game name; stats inlined here so the form-side display name (a possible real name) stays out of the repo. Confirmed by team; time from the orphaned podium row / user screenshot."
+    }
+  ],
+  "patches": []
+}

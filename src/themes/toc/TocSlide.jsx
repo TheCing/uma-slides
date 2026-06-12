@@ -4,8 +4,23 @@ import './styles.css'
 
 const base = import.meta.env.BASE_URL
 
+// Column count tuned to keep portraits legible: ~2 rows for typical decks,
+// expanding to 3 rows past 18 so large fields (CM14 had 17) don't clip.
+function gridColumns(n) {
+  if (n <= 3) return 3
+  if (n === 4) return 2
+  if (n <= 6) return 3
+  if (n <= 8) return 4
+  if (n <= 10) return 5
+  if (n <= 12) return 6
+  if (n <= 14) return 7
+  if (n <= 16) return 8
+  return Math.ceil(n / (n > 18 ? 3 : 2))
+}
+
 export function TocSlide({ event, eventId, winners }) {
   const allTraineeNames = winners.map(w => w.trainee_name)
+  const columns = gridColumns(winners.length)
 
   const goToWinner = (ign) => (e) => {
     e.stopPropagation()
@@ -33,7 +48,7 @@ export function TocSlide({ event, eventId, winners }) {
           </div>
         </div>
 
-        <div class={`toc-grid count-${winners.length}`}>
+        <div class="toc-grid" style={{ '--toc-cols': columns }}>
           {winners.map((w) => {
             const displayName = getDisplayName(w.trainee_name, allTraineeNames)
             return (

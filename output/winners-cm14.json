@@ -212,6 +212,34 @@
         "wit": 1185
       },
       "quote": "I Can Win Sometimes, Right?"
+    },
+    {
+      "ign": "chrissyneko",
+      "trainee_name": "[Ma Chérie of the New Moon] Curren Chan",
+      "base_name": "Curren Chan",
+      "time": "1:30.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 660,
+        "power": 1159,
+        "guts": 550,
+        "wit": 1083
+      },
+      "quote": "#lookatcurren"
+    },
+    {
+      "ign": "Amyr",
+      "trainee_name": "[Jokester ☆ Vibes] Tosen Jordan",
+      "base_name": "Tosen Jordan",
+      "time": "1:31.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 587,
+        "power": 1096,
+        "guts": 1200,
+        "wit": 805
+      },
+      "quote": "Jordan is the bestest gyaru ever!"
     }
   ]
 }
