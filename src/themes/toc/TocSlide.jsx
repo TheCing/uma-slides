@@ -4,8 +4,9 @@ import './styles.css'
 
 const base = import.meta.env.BASE_URL
 
-// Column count tuned to keep portraits legible: ~2 rows for typical decks,
-// expanding to 3 rows past 18 so large fields (CM14 had 17) don't clip.
+// Column count tuned to keep portraits legible across ~2 rows. Large decks are
+// split into multiple TOC pages upstream (see app.jsx), so n here is the
+// per-page count (capped) rather than the full field.
 function gridColumns(n) {
   if (n <= 3) return 3
   if (n === 4) return 2
@@ -18,9 +19,10 @@ function gridColumns(n) {
   return Math.ceil(n / (n > 18 ? 3 : 2))
 }
 
-export function TocSlide({ event, eventId, winners }) {
+export function TocSlide({ event, eventId, winners, totalWinners, page = 0, pages = 1 }) {
   const allTraineeNames = winners.map(w => w.trainee_name)
   const columns = gridColumns(winners.length)
+  const headerCount = totalWinners ?? winners.length
 
   const goToWinner = (ign) => (e) => {
     e.stopPropagation()
@@ -44,7 +46,13 @@ export function TocSlide({ event, eventId, winners }) {
           <div class="toc-meta">
             <span>{event.track}</span>
             <span class="toc-meta-dot">•</span>
-            <span>{winners.length} {winners.length === 1 ? 'WINNER' : 'WINNERS'}</span>
+            <span>{headerCount} {headerCount === 1 ? 'WINNER' : 'WINNERS'}</span>
+            {pages > 1 && (
+              <>
+                <span class="toc-meta-dot">•</span>
+                <span>PAGE {page + 1} OF {pages}</span>
+              </>
+            )}
           </div>
         </div>
 

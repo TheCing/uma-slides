@@ -55,22 +55,29 @@ export function App() {
   const data = getEventData(event.file)
   if (!data) return null
 
-  // Synthetic table-of-contents slide that opens every event. Renders via the
+  // Synthetic table-of-contents slide(s) that open every event. Renders via the
   // 'toc' theme dispatch in SlideViewer; carries no IGN so the URL stays at
   // #/EVENTID when sitting on it (#/EVENTID/<ign> still deep-links to a winner).
-  const slidesWithToc = [
-    {
-      _layout: 'toc',
-      ign: '',
-      trainee_name: '',
-      uma_image: '',
-      time: '',
-      result: '',
-      quote: '',
-      stats: { speed: 0, stamina: 0, power: 0, guts: 0, wit: 0 },
-    },
-    ...data.slides,
-  ]
+  // Large decks split across multiple TOC pages so cards stay legible instead
+  // of shrinking; pages are balanced (e.g. 22 winners -> two pages of 11).
+  const TOC_MAX_PER_PAGE = 14
+  const winners = data.slides
+  const tocPageCount = Math.max(1, Math.ceil(winners.length / TOC_MAX_PER_PAGE))
+  const perPage = Math.ceil(winners.length / tocPageCount)
+  const tocSlides = Array.from({ length: tocPageCount }, (_, p) => ({
+    _layout: 'toc',
+    _tocPage: p,
+    _tocPages: tocPageCount,
+    _tocWinners: winners.slice(p * perPage, (p + 1) * perPage),
+    ign: '',
+    trainee_name: '',
+    uma_image: '',
+    time: '',
+    result: '',
+    quote: '',
+    stats: { speed: 0, stamina: 0, power: 0, guts: 0, wit: 0 },
+  }))
+  const slidesWithToc = [...tocSlides, ...data.slides]
 
   return (
     <SlideViewer

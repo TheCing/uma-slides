@@ -130,19 +130,24 @@
 
 /* ── Grid of winner cards ────────────────────────────── */
 
-/* Column count is computed in TocSlide (--toc-cols) to keep portraits legible
-   across any deck size — ~2 rows for typical events, 3 rows past 18. */
+/* Column count is computed in TocSlide (--toc-cols) to keep portraits legible.
+   Large decks are paginated upstream (app.jsx) so a page is at most ~2 rows,
+   which lets us vertically center the block in the available area for a
+   balanced look. Flex wrap (not grid) so an incomplete final row centers
+   instead of left-aligning with empty trailing slots. */
 .toc-grid {
-  display: grid;
-  gap: clamp(10px, 1.2vw, 18px);
-  align-content: stretch;
+  --toc-gap: clamp(10px, 1.2vw, 18px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: var(--toc-gap);
   min-height: 0;
-  grid-template-columns: repeat(var(--toc-cols, 5), minmax(0, 1fr));
-  grid-auto-rows: minmax(0, 1fr);
 }
 
 .toc-card {
   position: relative;
+  flex: 0 1 calc((100% - (var(--toc-cols, 5) - 1) * var(--toc-gap)) / var(--toc-cols, 5));
   display: flex;
   flex-direction: column;
   align-items: center;

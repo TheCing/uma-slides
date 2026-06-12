@@ -178,7 +178,14 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
       <div class="slide-stage" ref={slideStageRef}>
         <div class={`slide-transition ${transClass}`} key={displayIndex}>
           {isToc ? (
-            <TocSlide event={event} eventId={eventId} winners={realWinners} />
+            <TocSlide
+              event={event}
+              eventId={eventId}
+              winners={slide._tocWinners || realWinners}
+              totalWinners={realWinners.length}
+              page={slide._tocPage || 0}
+              pages={slide._tocPages || 1}
+            />
           ) : (
             <SlideComponent slide={slide} event={event} allTraineeNames={allTraineeNames} />
           )}
