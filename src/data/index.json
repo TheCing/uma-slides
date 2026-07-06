@@ -41,6 +41,13 @@
       "icon": "gemini_icon.png",
       "file": "slides-cm14.json",
       "slideCount": 22
+    },
+    {
+      "id": "CM15",
+      "name": "Cancer Cup",
+      "icon": "cancer_cup.png",
+      "file": "slides-cm15.json",
+      "slideCount": 19
     }
   ]
 }

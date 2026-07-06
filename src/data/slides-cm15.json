@@ -1,0 +1,310 @@
+{
+  "event": {
+    "name": "Cancer Cup",
+    "id": "CM15",
+    "icon": "cancer_cup.png",
+    "theme": "uma",
+    "distance": "Medium",
+    "surface": "Turf",
+    "track": "Hanshin Turf 2200m"
+  },
+  "slides": [
+    {
+      "ign": "Mattipus",
+      "trainee_name": "[Empress Road] Air Groove",
+      "uma_image": "umas/[Empress Road] Air Groove.png",
+      "time": "2:10.5",
+      "result": "1st",
+      "quote": "She escaped the bad puns",
+      "stats": {
+        "speed": 1200,
+        "stamina": 800,
+        "power": 1145,
+        "guts": 729,
+        "wit": 1061
+      },
+      "full_art_image": "umas/Air_Groove_(Race).png"
+    },
+    {
+      "ign": "veee",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "uma_image": "umas/[El☆Número 1] El Condor Pasa.png",
+      "time": "2:10.2",
+      "result": "1st",
+      "quote": "Double xoguri quad dom in finals vs PASA 🐦 TAIKI 🤠 GRASS 🌿 burgerGODS won 💪🦅",
+      "stats": {
+        "speed": 1166,
+        "stamina": 736,
+        "power": 1139,
+        "guts": 602,
+        "wit": 1148
+      },
+      "full_art_image": "umas/El_Condor_Pasa_(Race).png"
+    },
+    {
+      "ign": "Asiano_Pies",
+      "trainee_name": "[Starlight Beat] Oguri Cap",
+      "uma_image": "umas/[Starlight Beat] Oguri Cap.png",
+      "time": "2:11.0",
+      "result": "1st",
+      "quote": "Who needs Xoguri when OG OGURI HITS BETTER!!!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 823,
+        "power": 1200,
+        "guts": 647,
+        "wit": 930
+      }
+    },
+    {
+      "ign": "Drey",
+      "trainee_name": "[Sapphire Sojourn] Mejiro Dober",
+      "uma_image": "umas/[Sapphire Sojourn] Mejiro Dober.png",
+      "time": "2:10.0",
+      "result": "1st",
+      "quote": "In Heaven's stead, we smite Dominators.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 763,
+        "power": 1104,
+        "guts": 576,
+        "wit": 1198
+      }
+    },
+    {
+      "ign": "Snootbooping",
+      "trainee_name": "[Wild Top Gear] Vodka",
+      "uma_image": "umas/[Wild Top Gear] Vodka.png",
+      "time": "2:10.3",
+      "result": "1st",
+      "quote": "The Coolest and Number One",
+      "stats": {
+        "speed": 1200,
+        "stamina": 809,
+        "power": 1175,
+        "guts": 678,
+        "wit": 1003
+      },
+      "full_art_image": "umas/Vodka_(Race).png"
+    },
+    {
+      "ign": "Dojyaan",
+      "trainee_name": "[unsigned] Air Shakur",
+      "uma_image": "umas/[unsigned] Air Shakur.png",
+      "time": "2:11.0",
+      "result": "1st",
+      "quote": "Final Straight Demon beats Speed Carryover Devil apparently.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 901,
+        "power": 1030,
+        "guts": 498,
+        "wit": 930
+      }
+    },
+    {
+      "ign": "Fake Life",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "uma_image": "umas/[Sunlight Bouquet] Mayano Top Gun.png",
+      "time": "2:10.4",
+      "result": "1st",
+      "quote": "The smallest wiggling bastard to win it all",
+      "stats": {
+        "speed": 1200,
+        "stamina": 837,
+        "power": 1135,
+        "guts": 517,
+        "wit": 1008
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Alt).png"
+    },
+    {
+      "ign": "nemunyan",
+      "trainee_name": "[End of the Skies] Mejiro McQueen",
+      "uma_image": "umas/[End of the Skies] Mejiro McQueen.png",
+      "time": "",
+      "result": "1st",
+      "quote": "pakupaku desuwa",
+      "stats": {
+        "speed": 1200,
+        "stamina": 754,
+        "power": 1107,
+        "guts": 627,
+        "wit": 1144
+      },
+      "full_art_image": "umas/Mejiro_McQueen_(Race).png"
+    },
+    {
+      "ign": "Amasuro",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "uma_image": "umas/[LOVE☆4EVER] Smart Falcon.png",
+      "time": "2:10.6",
+      "result": "1st",
+      "quote": "A real Umadol crushes both CM and my actual Oshi",
+      "stats": {
+        "speed": 1200,
+        "stamina": 915,
+        "power": 1200,
+        "guts": 707,
+        "wit": 1110
+      }
+    },
+    {
+      "ign": "RLY.",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "uma_image": "umas/[King of Emeralds] King Halo.png",
+      "time": "2:11.0",
+      "result": "1st",
+      "quote": "I believed.",
+      "stats": {
+        "speed": 1155,
+        "stamina": 844,
+        "power": 1000,
+        "guts": 559,
+        "wit": 1123
+      },
+      "full_art_image": "umas/King_Halo_(Race).png"
+    },
+    {
+      "ign": "Herodotus",
+      "trainee_name": "[Creeping Shadow] Manhattan Cafe",
+      "uma_image": "umas/[Creeping Shadow] Manhattan Cafe.png",
+      "time": "2:09.3",
+      "result": "1st",
+      "quote": "Yes",
+      "stats": {
+        "speed": 1200,
+        "stamina": 744,
+        "power": 1166,
+        "guts": 534,
+        "wit": 982
+      },
+      "full_art_image": "umas/Manhattan_Cafe_(Race).png"
+    },
+    {
+      "ign": "Vyrabell",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "uma_image": "umas/[Crystalline] Mejiro Ardan.png",
+      "time": "2:10.8",
+      "result": "1st",
+      "quote": "My Queen deserves this win",
+      "stats": {
+        "speed": 1200,
+        "stamina": 763,
+        "power": 1088,
+        "guts": 511,
+        "wit": 1067
+      },
+      "full_art_image": "umas/Mejiro_Ardan_(Race).png"
+    },
+    {
+      "ign": "TTDP74",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "uma_image": "umas/[Line Breakthrough] Mejiro Palmer.png",
+      "time": "2:09.6",
+      "result": "1st",
+      "quote": "WEEEEEEEIIIIIIIII",
+      "stats": {
+        "speed": 1200,
+        "stamina": 799,
+        "power": 960,
+        "guts": 741,
+        "wit": 1040
+      },
+      "full_art_image": "umas/Mejiro_Palmer_(Race).png"
+    },
+    {
+      "ign": "Poyo",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "2:10.5",
+      "result": "1st",
+      "quote": "Spring's still in play!",
+      "stats": {
+        "speed": 1167,
+        "stamina": 834,
+        "power": 1096,
+        "guts": 677,
+        "wit": 1182
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
+      "time": "2:09.9",
+      "result": "1st",
+      "quote": "lucksacking finals lobby",
+      "stats": {
+        "speed": 1200,
+        "stamina": 681,
+        "power": 1151,
+        "guts": 537,
+        "wit": 1106
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+    },
+    {
+      "ign": "Nichaelas",
+      "trainee_name": "[Clippety-Tippety-Clop] Matikanetannhauser",
+      "uma_image": "umas/[Clippety-Tippety-Clop] Matikanetannhauser.png",
+      "time": "2:09.9",
+      "result": "1st",
+      "quote": "Lucky pace Xmas Oguri slayer",
+      "stats": {
+        "speed": 1200,
+        "stamina": 798,
+        "power": 1138,
+        "guts": 578,
+        "wit": 1017
+      }
+    },
+    {
+      "ign": "ChooChoo",
+      "trainee_name": "[MB-19890425] Mihono Bourbon",
+      "uma_image": "umas/[MB-19890425] Mihono Bourbon.png",
+      "time": "2:10.9",
+      "result": "1st",
+      "quote": "Meta? Never met her.",
+      "stats": {
+        "speed": 1187,
+        "stamina": 867,
+        "power": 1060,
+        "guts": 628,
+        "wit": 1033
+      }
+    },
+    {
+      "ign": "Neo-kun",
+      "trainee_name": "[Innocent Silence] Silence Suzuka",
+      "uma_image": "umas/[Innocent Silence] Silence Suzuka.png",
+      "time": "2:11.0",
+      "result": "1st",
+      "quote": "i love suzuka (& throne)",
+      "stats": {
+        "speed": 1200,
+        "stamina": 812,
+        "power": 1085,
+        "guts": 599,
+        "wit": 1130
+      },
+      "full_art_image": "umas/Silence_Suzuka_(Race).png"
+    },
+    {
+      "ign": "notworthabullet",
+      "trainee_name": "[Off the Line] Mejiro Dober",
+      "uma_image": "umas/[Off the Line] Mejiro Dober.png",
+      "time": "",
+      "result": "1st",
+      "quote": "Just hit all your gamble accelerations",
+      "stats": {
+        "speed": 1200,
+        "stamina": 774,
+        "power": 1200,
+        "guts": 508,
+        "wit": 968
+      }
+    }
+  ]
+}

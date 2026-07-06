@@ -1,0 +1,273 @@
+{
+  "event": "CM15",
+  "name": "Cancer Cup",
+  "track": "Hanshin Turf 2200m",
+  "winners": [
+    {
+      "ign": "Mattipus",
+      "trainee_name": "[Empress Road] Air Groove",
+      "base_name": "Air Groove",
+      "time": "2:10.5",
+      "stats": {
+        "speed": 1200,
+        "stamina": 800,
+        "power": 1145,
+        "guts": 729,
+        "wit": 1061
+      },
+      "quote": "She escaped the bad puns"
+    },
+    {
+      "ign": "veee",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "2:10.2",
+      "stats": {
+        "speed": 1166,
+        "stamina": 736,
+        "power": 1139,
+        "guts": 602,
+        "wit": 1148
+      },
+      "quote": "Double xoguri quad dom in finals vs PASA 🐦 TAIKI 🤠 GRASS 🌿 burgerGODS won 💪🦅"
+    },
+    {
+      "ign": "Asiano_Pies",
+      "trainee_name": "[Starlight Beat] Oguri Cap",
+      "base_name": "Oguri Cap",
+      "time": "2:11.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 823,
+        "power": 1200,
+        "guts": 647,
+        "wit": 930
+      },
+      "quote": "Who needs Xoguri when OG OGURI HITS BETTER!!!"
+    },
+    {
+      "ign": "Drey",
+      "trainee_name": "[Sapphire Sojourn] Mejiro Dober",
+      "base_name": "Mejiro Dober",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 763,
+        "power": 1104,
+        "guts": 576,
+        "wit": 1198
+      },
+      "quote": "In Heaven's stead, we smite Dominators."
+    },
+    {
+      "ign": "Snootbooping",
+      "trainee_name": "[Wild Top Gear] Vodka",
+      "base_name": "Vodka",
+      "time": "2:10.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 809,
+        "power": 1175,
+        "guts": 678,
+        "wit": 1003
+      },
+      "quote": "The Coolest and Number One"
+    },
+    {
+      "ign": "Dojyaan",
+      "trainee_name": "[unsigned] Air Shakur",
+      "base_name": "Air Shakur",
+      "time": "2:11.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 901,
+        "power": 1030,
+        "guts": 498,
+        "wit": 930
+      },
+      "quote": "Final Straight Demon beats Speed Carryover Devil apparently."
+    },
+    {
+      "ign": "Fake Life",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "2:10.4",
+      "stats": {
+        "speed": 1200,
+        "stamina": 837,
+        "power": 1135,
+        "guts": 517,
+        "wit": 1008
+      },
+      "quote": "The smallest wiggling bastard to win it all"
+    },
+    {
+      "ign": "nemunyan",
+      "trainee_name": "[End of the Skies] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 754,
+        "power": 1107,
+        "guts": 627,
+        "wit": 1144
+      },
+      "quote": "pakupaku desuwa"
+    },
+    {
+      "ign": "Amasuro",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "base_name": "Smart Falcon",
+      "time": "2:10.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 915,
+        "power": 1200,
+        "guts": 707,
+        "wit": 1110
+      },
+      "quote": "A real Umadol crushes both CM and my actual Oshi"
+    },
+    {
+      "ign": "RLY.",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "base_name": "King Halo",
+      "time": "2:11.0",
+      "stats": {
+        "speed": 1155,
+        "stamina": 844,
+        "power": 1000,
+        "guts": 559,
+        "wit": 1123
+      },
+      "quote": "I believed."
+    },
+    {
+      "ign": "Herodotus",
+      "trainee_name": "[Creeping Shadow] Manhattan Cafe",
+      "base_name": "Manhattan Cafe",
+      "time": "2:09.3",
+      "stats": {
+        "speed": 1200,
+        "stamina": 744,
+        "power": 1166,
+        "guts": 534,
+        "wit": 982
+      },
+      "quote": "Yes"
+    },
+    {
+      "ign": "Vyrabell",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "base_name": "Mejiro Ardan",
+      "time": "2:10.8",
+      "stats": {
+        "speed": 1200,
+        "stamina": 763,
+        "power": 1088,
+        "guts": 511,
+        "wit": 1067
+      },
+      "quote": "My Queen deserves this win"
+    },
+    {
+      "ign": "TTDP74",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "base_name": "Mejiro Palmer",
+      "time": "2:09.6",
+      "stats": {
+        "speed": 1200,
+        "stamina": 799,
+        "power": 960,
+        "guts": 741,
+        "wit": 1040
+      },
+      "quote": "WEEEEEEEIIIIIIIII"
+    },
+    {
+      "ign": "Poyo",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "base_name": "Sakura Chiyono O",
+      "time": "2:10.5",
+      "stats": {
+        "speed": 1167,
+        "stamina": 834,
+        "power": 1096,
+        "guts": 677,
+        "wit": 1182
+      },
+      "quote": "Spring's still in play!"
+    },
+    {
+      "ign": "TsukiAva",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "2:09.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 681,
+        "power": 1151,
+        "guts": 537,
+        "wit": 1106
+      },
+      "quote": "lucksacking finals lobby"
+    },
+    {
+      "ign": "Nichaelas",
+      "trainee_name": "[Clippety-Tippety-Clop] Matikanetannhauser",
+      "base_name": "Matikanetannhauser",
+      "time": "2:09.9",
+      "stats": {
+        "speed": 1200,
+        "stamina": 798,
+        "power": 1138,
+        "guts": 578,
+        "wit": 1017
+      },
+      "quote": "Lucky pace Xmas Oguri slayer"
+    },
+    {
+      "ign": "ChooChoo",
+      "trainee_name": "[MB-19890425] Mihono Bourbon",
+      "base_name": "Mihono Bourbon",
+      "time": "2:10.9",
+      "stats": {
+        "speed": 1187,
+        "stamina": 867,
+        "power": 1060,
+        "guts": 628,
+        "wit": 1033
+      },
+      "quote": "Meta? Never met her."
+    },
+    {
+      "ign": "Neo-kun",
+      "trainee_name": "[Innocent Silence] Silence Suzuka",
+      "base_name": "Silence Suzuka",
+      "time": "2:11.0",
+      "stats": {
+        "speed": 1200,
+        "stamina": 812,
+        "power": 1085,
+        "guts": 599,
+        "wit": 1130
+      },
+      "quote": "i love suzuka (& throne)"
+    },
+    {
+      "ign": "notworthabullet",
+      "trainee_name": "[Off the Line] Mejiro Dober",
+      "base_name": "Mejiro Dober",
+      "time": "",
+      "stats": {
+        "speed": 1200,
+        "stamina": 774,
+        "power": 1200,
+        "guts": 508,
+        "wit": 968
+      },
+      "quote": "Just hit all your gamble accelerations"
+    }
+  ]
+}
