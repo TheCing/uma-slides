@@ -124,6 +124,9 @@ DEFAULT_COSTUME = {
     "Symboli Rudolf": "[Emperor's Path] Symboli Rudolf",
     "Tokai Teio": "[Peak Joy] Tokai Teio",
     "Curren Chan": "[Fille Éclair] Curren Chan",
+    # notworthabullet won with the default [Off the Line]; keep the base (Race)
+    # art for it and give Drey's [Sapphire Sojourn] its own ALT_ART entry.
+    "Mejiro Dober": "[Off the Line] Mejiro Dober",
 }
 
 ALT_ART = {
@@ -136,6 +139,7 @@ ALT_ART = {
     "[Hopp'n♪Happy Heart] Special Week": "Special_Week_(Alt).png",
     "[Kukulkan Warrior] El Condor Pasa": "El_Condor_Pasa_(Alt).png",
     "[Chiffon-Wrapped Mummy] Super Creek": "Super_Creek_(Alt).png",
+    "[Sapphire Sojourn] Mejiro Dober": "Mejiro_Dober_(Alt).png",
     "[Beyond the Horizon] Tokai Teio": "Tokai_Teio_(Alt).png",
     "[Ma Chérie of the New Moon] Curren Chan": "Curren_Chan_(Alt).png",
 }
