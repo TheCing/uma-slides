@@ -54,7 +54,8 @@
         "power": 1200,
         "guts": 647,
         "wit": 930
-      }
+      },
+      "full_art_image": "umas/Oguri_Cap_(Race).png"
     },
     {
       "ign": "Drey",
@@ -69,7 +70,8 @@
         "power": 1104,
         "guts": 576,
         "wit": 1198
-      }
+      },
+      "full_art_image": "umas/Mejiro_Dober_(Race).png"
     },
     {
       "ign": "Snootbooping",
@@ -100,7 +102,8 @@
         "power": 1030,
         "guts": 498,
         "wit": 930
-      }
+      },
+      "full_art_image": "umas/Air_Shakur_(Race).png"
     },
     {
       "ign": "Fake Life",
@@ -147,7 +150,8 @@
         "power": 1200,
         "guts": 707,
         "wit": 1110
-      }
+      },
+      "full_art_image": "umas/Smart_Falcon_(Race).png"
     },
     {
       "ign": "RLY.",
@@ -258,7 +262,8 @@
         "power": 1138,
         "guts": 578,
         "wit": 1017
-      }
+      },
+      "full_art_image": "umas/Matikanetannhauser_(Race).png"
     },
     {
       "ign": "ChooChoo",
@@ -273,7 +278,8 @@
         "power": 1060,
         "guts": 628,
         "wit": 1033
-      }
+      },
+      "full_art_image": "umas/Mihono_Bourbon_(Race).png"
     },
     {
       "ign": "Neo-kun",
@@ -304,7 +310,8 @@
         "power": 1200,
         "guts": 508,
         "wit": 968
-      }
+      },
+      "full_art_image": "umas/Mejiro_Dober_(Race).png"
     }
   ]
 }
