@@ -38,6 +38,9 @@ src/data/slides-cafe*.json
 src/themes/cafe/
 tmp/
 
+# Local Claude notes documenting the private Cafe workflow (see CLAUDE.md)
+CLAUDE.md
+
 # Python
 __pycache__/
 *.pyc
