@@ -148,7 +148,7 @@ export function SlideViewer({ slides, event, eventId, initialIgnSlug, onBack, on
   const transClass = transitioning ? `slide-exit slide-exit-${direction}` : 'slide-enter'
 
   return (
-    <div class="slide-viewer" ref={stageRef}>
+    <div class="slide-viewer" data-event={eventId} ref={stageRef}>
       <button
         class="copy-link-btn"
         onClick={copyLink}

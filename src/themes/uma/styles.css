@@ -33,7 +33,39 @@
 
   --uma-shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
   --uma-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-  --uma-shadow-warm: 0 4px 20px rgba(255, 154, 60, 0.15);
+}
+
+/* ── Accent Ramp (per-event) ─────────────────────────── */
+
+/* The accent drives ribbons, headings, icons, card borders and glows across
+   both the uma and toc themes. Declared on .slide-viewer — not :root — so an
+   event can retarget it via [data-event]; a var() inside a custom property is
+   substituted against the element it's declared on, so the derived tokens
+   below must live on the same element as the primitives they read.
+   Stat-bar colors are deliberately NOT part of this ramp: speed/stamina/
+   power/guts/wit are fixed game colors and stay put on every event. */
+.slide-viewer {
+  --uma-accent: #ff9a3c;
+  --uma-accent-rgb: 255, 154, 60;
+  --uma-accent-bright: #ffb81c;
+  --uma-accent-light: #ffcd3c;
+  --uma-accent-deep: #f0932b;
+
+  --uma-accent-gradient: linear-gradient(
+    135deg,
+    var(--uma-accent) 0%,
+    var(--uma-accent-light) 100%
+  );
+  --uma-shadow-warm: 0 4px 20px rgba(var(--uma-accent-rgb), 0.15);
+}
+
+/* Leo Cup runs green (the Wit stat ramp) instead of the house orange. */
+.slide-viewer[data-event="CM16"] {
+  --uma-accent: #5cb85c;
+  --uma-accent-rgb: 92, 184, 92;
+  --uma-accent-bright: #7fd07f;
+  --uma-accent-light: #8fd460;
+  --uma-accent-deep: #43a047;
 }
 
 /* ── Slide Base ──────────────────────────────────────── */
@@ -69,12 +101,15 @@
   animation: horseshoeDrift 30s linear infinite;
 }
 
+/* Drifts by exactly one tile so the loop is seamless. Translating the layer
+   rather than animating background-position keeps this off the main thread —
+   background-position would repaint this filtered 4x-viewport layer per frame. */
 @keyframes horseshoeDrift {
   from {
-    background-position: 0 0;
+    transform: rotate(-45deg) translate(0, 0);
   }
   to {
-    background-position: 56px 56px;
+    transform: rotate(-45deg) translate(56px, 56px);
   }
 }
 
@@ -94,7 +129,7 @@
   right: -5%;
   background: radial-gradient(
     circle,
-    rgba(255, 154, 60, 0.15) 0%,
+    rgba(var(--uma-accent-rgb), 0.15) 0%,
     transparent 70%
   );
   animation: umaFloat 8s ease-in-out infinite;
@@ -169,7 +204,7 @@
   height: clamp(28px, 3vw, 42px);
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(255, 154, 60, 0.3);
+  border: 2px solid rgba(var(--uma-accent-rgb), 0.3);
   box-shadow: var(--uma-shadow-warm);
 }
 
@@ -195,7 +230,7 @@
   left: 0;
   right: 0;
   height: 10px;
-  background: #ffb81c;
+  background: var(--uma-accent-bright);
   z-index: 1;
   transform: skewX(-12deg);
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
@@ -203,7 +238,7 @@
 
 .uma-ribbon-main {
   position: relative;
-  background: var(--uma-orange);
+  background: var(--uma-accent);
   padding: 8px 32px;
   transform: skewX(-12deg);
   z-index: 2;
@@ -353,7 +388,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -362,18 +397,21 @@
     rgba(255, 255, 255, 0.25) 50%,
     transparent 100%
   );
+  transform: translateX(-100%);
   animation: umaShimmer 4s ease-in-out infinite;
   animation-delay: 1.5s;
   pointer-events: none;
   z-index: 2;
 }
 
+/* Sweeps with translateX rather than left: animating left reflows the slide
+   on every frame of the 4s loop. */
 @keyframes umaShimmer {
   0% {
-    left: -100%;
+    transform: translateX(-100%);
   }
   100% {
-    left: 200%;
+    transform: translateX(200%);
   }
 }
 
@@ -419,11 +457,11 @@
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -1px;
-  background: var(--uma-gradient-orange);
+  background: var(--uma-accent-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 3px 12px rgba(255, 154, 60, 0.25));
+  filter: drop-shadow(0 3px 12px rgba(var(--uma-accent-rgb), 0.25));
 }
 
 .uma-quote {
@@ -476,7 +514,7 @@
 
 .uma-track-item svg {
   flex-shrink: 0;
-  color: var(--uma-orange);
+  color: var(--uma-accent);
 }
 
 /* ── Stats Bar ───────────────────────────────────────── */
