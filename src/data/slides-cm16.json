@@ -1,0 +1,253 @@
+{
+  "event": {
+    "name": "Leo Cup",
+    "id": "CM16",
+    "icon": "leo_cup.png",
+    "theme": "uma",
+    "distance": "Sprint",
+    "surface": "Turf",
+    "track": "Nakayama Turf 1200m"
+  },
+  "slides": [
+    {
+      "ign": "Alexa",
+      "trainee_name": "[CODE: ICING] Mihono Bourbon",
+      "uma_image": "umas/[CODE: ICING] Mihono Bourbon.png",
+      "time": "1:07.8",
+      "result": "1st",
+      "quote": "Run as fast as you can",
+      "stats": {
+        "speed": 1200,
+        "stamina": 842,
+        "power": 1200,
+        "guts": 585,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Mihono_Bourbon_(Alt).png"
+    },
+    {
+      "ign": "Ethreall",
+      "trainee_name": "[Ashen Miracle] Oguri Cap",
+      "uma_image": "umas/[Ashen Miracle] Oguri Cap.png",
+      "time": "1:07.5",
+      "result": "1st",
+      "quote": "All these fake XOguri \"enjoyers\" around me smh",
+      "stats": {
+        "speed": 1200,
+        "stamina": 618,
+        "power": 1200,
+        "guts": 455,
+        "wit": 1117
+      },
+      "full_art_image": "umas/Oguri_Cap_(Alt).png"
+    },
+    {
+      "ign": "Victoria Secret",
+      "trainee_name": "[Hot☆Summer Night] Maruzensky",
+      "uma_image": "umas/[Hot☆Summer Night] Maruzensky.png",
+      "time": "1:06.8",
+      "result": "1st",
+      "quote": "Oshi is the best META",
+      "stats": {
+        "speed": 1200,
+        "stamina": 515,
+        "power": 1121,
+        "guts": 625,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Maruzensky_(Alt).png"
+    },
+    {
+      "ign": "robo",
+      "trainee_name": "[RUN! RUIN! LAUNCHER!] Gold Ship",
+      "uma_image": "umas/[RUN! RUIN! LAUNCHER!] Gold Ship.png",
+      "time": "1:07.1",
+      "result": "1st",
+      "quote": "i feel it in my bones",
+      "stats": {
+        "speed": 1200,
+        "stamina": 603,
+        "power": 1200,
+        "guts": 556,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Gold_Ship_(Alt).png"
+    },
+    {
+      "ign": "Malf",
+      "trainee_name": "[Reeling in the Big One] Seiun Sky",
+      "uma_image": "umas/[Reeling in the Big One] Seiun Sky.png",
+      "time": "1:08.4",
+      "result": "1st",
+      "quote": "Sprint G? Pace B? TSS in the career making me run Riko in a Sprint? Don't care, my first ever Ms. Victoria is my oshi, Lucky Pace Seiun brings it home.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 680,
+        "power": 1087,
+        "guts": 708,
+        "wit": 1040
+      },
+      "full_art_image": "umas/Seiun_Sky_(Race).png"
+    },
+    {
+      "ign": "Cheeseburger",
+      "trainee_name": "[Turbulent Blue] Meisho Doto",
+      "uma_image": "umas/[Turbulent Blue] Meisho Doto.png",
+      "time": "1:06.6",
+      "result": "1st",
+      "quote": "Three cheers for the Centennial Tempest",
+      "stats": {
+        "speed": 1200,
+        "stamina": 567,
+        "power": 1200,
+        "guts": 456,
+        "wit": 1105
+      },
+      "full_art_image": "umas/Meisho_Doto_(Race).png"
+    },
+    {
+      "ign": "Fnaa27",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "uma_image": "umas/[Stone-Piercing Blue] Grass Wonder.png",
+      "time": "1:07.3",
+      "result": "1st",
+      "quote": "G - S? my first MS. Victoria with Grass I have no regret.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 503,
+        "power": 1134,
+        "guts": 484,
+        "wit": 1073
+      },
+      "full_art_image": "umas/Grass_Wonder_(Race).png"
+    },
+    {
+      "ign": "Poyo",
+      "trainee_name": "[Strength in Full Bloom] Sakura Chiyono O",
+      "uma_image": "umas/[Strength in Full Bloom] Sakura Chiyono O.png",
+      "time": "1:06.7",
+      "result": "1st",
+      "quote": "We did it our way.",
+      "stats": {
+        "speed": 1165,
+        "stamina": 594,
+        "power": 1156,
+        "guts": 1017,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Sakura_Chiyono_O_(Race).png"
+    },
+    {
+      "ign": "SNSPT",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "uma_image": "umas/[Red Strife] Gold Ship.png",
+      "time": "1:08.0",
+      "result": "1st",
+      "quote": "She was in a good mood today",
+      "stats": {
+        "speed": 1200,
+        "stamina": 703,
+        "power": 1200,
+        "guts": 643,
+        "wit": 1070
+      },
+      "full_art_image": "umas/Gold_Ship_(Race).png"
+    },
+    {
+      "ign": "luminousx_777",
+      "trainee_name": "[Off the Line] Mejiro Dober",
+      "uma_image": "umas/[Off the Line] Mejiro Dober.png",
+      "time": "1:06.8",
+      "result": "1st",
+      "quote": "Dober is the best no matter the track, she is inevitable",
+      "stats": {
+        "speed": 1200,
+        "stamina": 491,
+        "power": 1166,
+        "guts": 799,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Mejiro_Dober_(Race).png"
+    },
+    {
+      "ign": "Seanydesu",
+      "trainee_name": "[Beyond the Horizon] Tokai Teio",
+      "uma_image": "umas/[Beyond the Horizon] Tokai Teio.png",
+      "time": "1:07.7",
+      "result": "1st",
+      "quote": "I won.",
+      "stats": {
+        "speed": 1200,
+        "stamina": 788,
+        "power": 1200,
+        "guts": 629,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Tokai_Teio_(Alt).png"
+    },
+    {
+      "ign": "Zera",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "uma_image": "umas/[Scramble☆Zone] Mayano Top Gun.png",
+      "time": "1:06.8",
+      "result": "1st",
+      "quote": "I wanted to run her as a front at first, but switched to pace. Maya didn’t get the memo, but it worked out anyways",
+      "stats": {
+        "speed": 1200,
+        "stamina": 638,
+        "power": 1200,
+        "guts": 482,
+        "wit": 1158
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Race).png"
+    },
+    {
+      "ign": "CJ",
+      "trainee_name": "[Fast as Lightning] Tamamo Cross",
+      "uma_image": "umas/[Fast as Lightning] Tamamo Cross.png",
+      "time": "1:07.3",
+      "result": "1st",
+      "quote": "White Lightning Extremely Cool",
+      "stats": {
+        "speed": 1200,
+        "stamina": 531,
+        "power": 1054,
+        "guts": 507,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Tamamo_Cross_(Race).png"
+    },
+    {
+      "ign": "Techo1000",
+      "trainee_name": "[Quercus Civilis] Air Groove",
+      "uma_image": "umas/[Quercus Civilis] Air Groove.png",
+      "time": "1:07.9",
+      "result": "1st",
+      "quote": "Air Groove my GOAT",
+      "stats": {
+        "speed": 1200,
+        "stamina": 452,
+        "power": 1200,
+        "guts": 597,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Air_Groove_(Race).png"
+    },
+    {
+      "ign": "4Queen",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "uma_image": "umas/[LOVE☆4EVER] Smart Falcon.png",
+      "time": "1:07.0",
+      "result": "1st",
+      "quote": "Strive to be the trainer that you oshi believes you are. Ikz!",
+      "stats": {
+        "speed": 1200,
+        "stamina": 697,
+        "power": 1200,
+        "guts": 672,
+        "wit": 1200
+      },
+      "full_art_image": "umas/Smart_Falcon_(Race).png"
+    }
+  ]
+}

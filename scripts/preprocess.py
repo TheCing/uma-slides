@@ -99,6 +99,18 @@ EVENT_CONFIG = {
         "podium": "events/cm15/data/podium.parquet",
         "schema": "v2",
     },
+    "CM16": {
+        "name": "Leo Cup",
+        "icon": "leo_cup.png",
+        "theme": "uma",
+        "distance": "Sprint",
+        "surface": "Turf",
+        "track": "Nakayama Turf 1200m",
+        "finals_csv": "events/cm16/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm16/data/statsheet.parquet",
+        "podium": "events/cm16/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -127,6 +139,19 @@ DEFAULT_COSTUME = {
     # notworthabullet won with the default [Off the Line]; keep the base (Race)
     # art for it and give Drey's [Sapphire Sojourn] its own ALT_ART entry.
     "Mejiro Dober": "[Off the Line] Mejiro Dober",
+    # Gold_Ship_(Race).png depicts [Red Strife] (used for it in CM9 + CM12);
+    # CM16's [RUN! RUIN! LAUNCHER!] gets its own ALT_ART entry.
+    "Gold Ship": "[Red Strife] Gold Ship",
+    # Mihono_Bourbon_(Race).png depicts [MB-19890425] (added for CM15);
+    # CM16's Valentine [CODE: ICING] gets its own ALT_ART entry.
+    "Mihono Bourbon": "[MB-19890425] Mihono Bourbon",
+    # Oguri_Cap_(Race).png depicts [Starlight Beat] (added for CM15);
+    # CM16's Christmas [Ashen Miracle] gets its own ALT_ART entry.
+    "Oguri Cap": "[Starlight Beat] Oguri Cap",
+    # Air_Groove_(Race).png depicts [Quercus Civilis] (added back in CM11).
+    # NOTE: CM15's [Empress Road] Air Groove is still pointed at this file and
+    # therefore shows the wrong costume; it needs its own Air_Groove_(Alt).png.
+    "Air Groove": "[Quercus Civilis] Air Groove",
 }
 
 ALT_ART = {
@@ -142,6 +167,10 @@ ALT_ART = {
     "[Sapphire Sojourn] Mejiro Dober": "Mejiro_Dober_(Alt).png",
     "[Beyond the Horizon] Tokai Teio": "Tokai_Teio_(Alt).png",
     "[Ma Chérie of the New Moon] Curren Chan": "Curren_Chan_(Alt).png",
+    "[RUN! RUIN! LAUNCHER!] Gold Ship": "Gold_Ship_(Alt).png",
+    "[Hot☆Summer Night] Maruzensky": "Maruzensky_(Alt).png",
+    "[CODE: ICING] Mihono Bourbon": "Mihono_Bourbon_(Alt).png",
+    "[Ashen Miracle] Oguri Cap": "Oguri_Cap_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.

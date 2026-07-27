@@ -26,7 +26,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "src" / "data"
 PUBLIC_DIR = PROJECT_ROOT / "public"
-DEFAULT_MDB = Path.home() / "Dev" / "uma-tools-1" / "master-global.mdb"
+DEFAULT_MDB = Path.home() / "Dev" / "uma-tools-1" / "docs" / "master.mdb"
 GT_URL = "https://gametora.com/images/umamusume/characters/chara_stand_{chara}_{card}.png"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 

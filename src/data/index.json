@@ -48,6 +48,13 @@
       "icon": "cancer_cup.png",
       "file": "slides-cm15.json",
       "slideCount": 19
+    },
+    {
+      "id": "CM16",
+      "name": "Leo Cup",
+      "icon": "leo_cup.png",
+      "file": "slides-cm16.json",
+      "slideCount": 15
     }
   ]
 }
