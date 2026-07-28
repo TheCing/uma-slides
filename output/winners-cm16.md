@@ -1,4 +1,4 @@
-# Leo Cup (CM16) — Oshi's Champion Awardees
+# Leo Cup II (CM16) — Oshi's Champion Awardees
 
 **Track:** Nakayama Turf 1200m  
 **Winners:** 15

@@ -100,7 +100,7 @@ EVENT_CONFIG = {
         "schema": "v2",
     },
     "CM16": {
-        "name": "Leo Cup",
+        "name": "Leo Cup II",
         "icon": "leo_cup.png",
         "theme": "uma",
         "distance": "Sprint",

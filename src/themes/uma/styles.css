@@ -59,7 +59,7 @@
   --uma-shadow-warm: 0 4px 20px rgba(var(--uma-accent-rgb), 0.15);
 }
 
-/* Leo Cup runs green (the Wit stat ramp) instead of the house orange. */
+/* Leo Cup II runs green (the Wit stat ramp) instead of the house orange. */
 .slide-viewer[data-event="CM16"] {
   --uma-accent: #5cb85c;
   --uma-accent-rgb: 92, 184, 92;
