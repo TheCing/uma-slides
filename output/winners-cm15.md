@@ -1,7 +1,7 @@
 # Cancer Cup (CM15) — Oshi's Champion Awardees
 
 **Track:** Hanshin Turf 2200m  
-**Winners:** 19
+**Winners:** 20
 
 ---
 
@@ -156,4 +156,12 @@
 **Stats:** 1200 / 774 / 1200 / 508 / 968 (Total: 4650)  
 
 > Just hit all your gamble accelerations
+
+### 20. Deetdee
+
+**Uma:** [Stone-Piercing Blue] Grass Wonder  
+**Time:** 2:10.3  
+**Stats:** 1200 / 864 / 1007 / 589 / 1010 (Total: 4670)  
+
+> No way this is an oshi award
 

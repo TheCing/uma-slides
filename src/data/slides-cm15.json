@@ -22,8 +22,7 @@
         "power": 1145,
         "guts": 729,
         "wit": 1061
-      },
-      "full_art_image": "umas/Air_Groove_(Race).png"
+      }
     },
     {
       "ign": "veee",
@@ -312,6 +311,22 @@
         "wit": 968
       },
       "full_art_image": "umas/Mejiro_Dober_(Race).png"
+    },
+    {
+      "ign": "Deetdee",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "uma_image": "umas/[Stone-Piercing Blue] Grass Wonder.png",
+      "time": "2:10.3",
+      "result": "1st",
+      "quote": "No way this is an oshi award",
+      "stats": {
+        "speed": 1200,
+        "stamina": 864,
+        "power": 1007,
+        "guts": 589,
+        "wit": 1010
+      },
+      "full_art_image": "umas/Grass_Wonder_(Race).png"
     }
   ]
 }
