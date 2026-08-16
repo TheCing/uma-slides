@@ -1,0 +1,273 @@
+{
+  "event": "CM17",
+  "name": "Virgo Cup II",
+  "track": "Oi Dirt 2000m",
+  "winners": [
+    {
+      "ign": "Mao",
+      "trainee_name": "[Peak Blue] Daiwa Scarlet",
+      "base_name": "Daiwa Scarlet",
+      "time": "2:02.4",
+      "stats": {
+        "speed": 1602,
+        "stamina": 911,
+        "power": 1212,
+        "guts": 791,
+        "wit": 762
+      },
+      "quote": "Daiwa #1 lucky pacer, eat the xOguris"
+    },
+    {
+      "ign": "enzo1029",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "base_name": "Mejiro Ardan",
+      "time": "2:02.8",
+      "stats": {
+        "speed": 1508,
+        "stamina": 918,
+        "power": 1074,
+        "guts": 665,
+        "wit": 1067
+      },
+      "quote": "rmb everyone, ur uma doesnt run out of stamina without ur consent"
+    },
+    {
+      "ign": "Oscar",
+      "trainee_name": "[Fair Lady of the Waves] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "2:01.2",
+      "stats": {
+        "speed": 1539,
+        "stamina": 996,
+        "power": 954,
+        "guts": 738,
+        "wit": 1134
+      },
+      "quote": "Another job well done."
+    },
+    {
+      "ign": "PD",
+      "trainee_name": "[Maverick] Narita Brian",
+      "base_name": "Narita Brian",
+      "time": "2:02.5",
+      "stats": {
+        "speed": 1614,
+        "stamina": 860,
+        "power": 1061,
+        "guts": 693,
+        "wit": 1103
+      },
+      "quote": "Dirt B, no worries"
+    },
+    {
+      "ign": "Chrll",
+      "trainee_name": "[End of the Skies] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "2:01.1",
+      "stats": {
+        "speed": 1519,
+        "stamina": 852,
+        "power": 995,
+        "guts": 880,
+        "wit": 1014
+      },
+      "quote": "Mind controlled debuffers to not take 564"
+    },
+    {
+      "ign": "Maximu",
+      "trainee_name": "[Hopp'n♪Happy Heart] Special Week",
+      "base_name": "Special Week",
+      "time": "2:01.8",
+      "stats": {
+        "speed": 1526,
+        "stamina": 773,
+        "power": 1302,
+        "guts": 653,
+        "wit": 733
+      },
+      "quote": "I love power card"
+    },
+    {
+      "ign": "BottlesMan",
+      "trainee_name": "[Reeling in the Big One] Seiun Sky",
+      "base_name": "Seiun Sky",
+      "time": "2:02.6",
+      "stats": {
+        "speed": 1540,
+        "stamina": 890,
+        "power": 1175,
+        "guts": 681,
+        "wit": 931
+      },
+      "quote": "The Sky still shines after the hardest battles!"
+    },
+    {
+      "ign": "Drey",
+      "trainee_name": "[Off the Line] Mejiro Dober",
+      "base_name": "Mejiro Dober",
+      "time": "2:01.0",
+      "stats": {
+        "speed": 1485,
+        "stamina": 574,
+        "power": 1138,
+        "guts": 597,
+        "wit": 985
+      },
+      "quote": "In Heaven's stead, we smite Dominators."
+    },
+    {
+      "ign": "Crkva",
+      "trainee_name": "[Kukulkan Warrior] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "2:02.3",
+      "stats": {
+        "speed": 1434,
+        "stamina": 840,
+        "power": 998,
+        "guts": 735,
+        "wit": 1205
+      },
+      "quote": "RAAAHHHH🦅🦅🦅🦅 (shoutout my pet bird Thorondor)"
+    },
+    {
+      "ign": "Knighted",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "2:02.0",
+      "stats": {
+        "speed": 1579,
+        "stamina": 846,
+        "power": 1078,
+        "guts": 632,
+        "wit": 1131
+      },
+      "quote": "ai_kopi"
+    },
+    {
+      "ign": "Hopeful Purveyor",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "2:02.6",
+      "stats": {
+        "speed": 1532,
+        "stamina": 814,
+        "power": 1210,
+        "guts": 688,
+        "wit": 1230
+      },
+      "quote": "Throughout Dirt and Medium, this Opera alone is the Honored One."
+    },
+    {
+      "ign": "ShadPrince",
+      "trainee_name": "[Empress Road] Air Groove",
+      "base_name": "Air Groove",
+      "time": "2:02.4",
+      "stats": {
+        "speed": 1601,
+        "stamina": 913,
+        "power": 1314,
+        "guts": 717,
+        "wit": 752
+      },
+      "quote": "Sprint. Mile. Medium. Long. Dirt. All 5 plats have now been claimed by the Empress."
+    },
+    {
+      "ign": "th33beat",
+      "trainee_name": "[Run & Win] Nice Nature",
+      "base_name": "Nice Nature",
+      "time": "2:02.6",
+      "stats": {
+        "speed": 1600,
+        "stamina": 965,
+        "power": 1210,
+        "guts": 756,
+        "wit": 833
+      },
+      "quote": "She can win sometimes, right?"
+    },
+    {
+      "ign": "Alu",
+      "trainee_name": "[Innocent Silence] Silence Suzuka",
+      "base_name": "Silence Suzuka",
+      "time": "2:01.6",
+      "stats": {
+        "speed": 1601,
+        "stamina": 839,
+        "power": 1202,
+        "guts": 785,
+        "wit": 922
+      },
+      "quote": "I stand alone among debuffers and XOguri's - victorious"
+    },
+    {
+      "ign": "Treeglare",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "base_name": "Yaeno Muteki",
+      "time": "2:01.9",
+      "stats": {
+        "speed": 1477,
+        "stamina": 914,
+        "power": 1207,
+        "guts": 777,
+        "wit": 992
+      },
+      "quote": "Ms. Victoria standing between two Oguris, peak"
+    },
+    {
+      "ign": "zae",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "base_name": "Gold Ship",
+      "time": "2:02.8",
+      "stats": {
+        "speed": 1379,
+        "stamina": 780,
+        "power": 1033,
+        "guts": 602,
+        "wit": 1217
+      },
+      "quote": "IN GOLDSHIP I TRUST"
+    },
+    {
+      "ign": "Wolfzee",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "base_name": "Grass Wonder",
+      "time": "2:02.4",
+      "stats": {
+        "speed": 1554,
+        "stamina": 892,
+        "power": 1015,
+        "guts": 645,
+        "wit": 1078
+      },
+      "quote": "There is no path before me, only in my wake."
+    },
+    {
+      "ign": "Gio",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "base_name": "Mejiro Palmer",
+      "time": "2:01.9",
+      "stats": {
+        "speed": 1454,
+        "stamina": 765,
+        "power": 1053,
+        "guts": 668,
+        "wit": 1017
+      },
+      "quote": "Mejiro Palmer"
+    },
+    {
+      "ign": "Israfiil",
+      "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
+      "base_name": "Super Creek",
+      "time": "2:01.2",
+      "stats": {
+        "speed": 1486,
+        "stamina": 807,
+        "power": 1152,
+        "guts": 685,
+        "wit": 721
+      },
+      "quote": "Hopefully I win I guess xdd"
+    }
+  ]
+}

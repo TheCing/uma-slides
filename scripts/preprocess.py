@@ -111,6 +111,18 @@ EVENT_CONFIG = {
         "podium": "events/cm16/data/podium.parquet",
         "schema": "v2",
     },
+    "CM17": {
+        "name": "Virgo Cup II",
+        "icon": "virgo_cup.png",
+        "theme": "uma",
+        "distance": "Medium",
+        "surface": "Dirt",
+        "track": "Oi Dirt 2000m",
+        "finals_csv": "events/cm17/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm17/data/statsheet.parquet",
+        "podium": "events/cm17/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -148,10 +160,18 @@ DEFAULT_COSTUME = {
     # Oguri_Cap_(Race).png depicts [Starlight Beat] (added for CM15);
     # CM16's Christmas [Ashen Miracle] gets its own ALT_ART entry.
     "Oguri Cap": "[Starlight Beat] Oguri Cap",
-    # Air_Groove_(Race).png depicts [Quercus Civilis] (added back in CM11).
-    # NOTE: CM15's [Empress Road] Air Groove is still pointed at this file and
-    # therefore shows the wrong costume; it needs its own Air_Groove_(Alt).png.
-    "Air Groove": "[Quercus Civilis] Air Groove",
+    # Air_Groove_(Race).png held the [Quercus Civilis] wedding art from CM11
+    # until CM17, when it was replaced with the real default. The wedding art
+    # moved to Air_Groove_(Alt).png and CM11/CM16 were repointed at it.
+    "Air Groove": "[Empress Road] Air Groove",
+    # Mejiro_McQueen_(Race).png depicts [Frontline Elegance] (added for CM14).
+    # NOTE: CM15's [End of the Skies] McQueen predates this pin and is still
+    # pointed at the (Race) file, so it shows the wrong costume.
+    "Mejiro McQueen": "[Frontline Elegance] Mejiro McQueen",
+    # Nice_Nature_(Race).png depicts the Christmas [Poinsettia Ribbon] — her
+    # actual default (card 106001) — despite first being used for CM12's
+    # [Run & Win]. NOTE: that CM12 slide still shows the wrong costume.
+    "Nice Nature": "[Poinsettia Ribbon] Nice Nature",
 }
 
 ALT_ART = {
@@ -171,6 +191,10 @@ ALT_ART = {
     "[Hot☆Summer Night] Maruzensky": "Maruzensky_(Alt).png",
     "[CODE: ICING] Mihono Bourbon": "Mihono_Bourbon_(Alt).png",
     "[Ashen Miracle] Oguri Cap": "Oguri_Cap_(Alt).png",
+    "[Quercus Civilis] Air Groove": "Air_Groove_(Alt).png",
+    "[Fair Lady of the Waves] Mejiro McQueen": "Mejiro_McQueen_(Alt).png",
+    "[End of the Skies] Mejiro McQueen": "Mejiro_McQueen_(Alt2).png",
+    "[Run & Win] Nice Nature": "Nice_Nature_(Alt).png",
 }
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
@@ -178,6 +202,10 @@ ALT_ART = {
 # matching would fail (case-insensitive lookup).
 IGN_ALIASES = {
     "mahoneyos": "Mitchell",
+    # CM17: podium OCR read the in-game name; confirmed same submission via
+    # podium.row_id 593 == CSV row 591 (+2 offset), and their statsheet row
+    # independently shows the same winning ace.
+    "hopeful purveyor": "Zurvan",
 }
 
 

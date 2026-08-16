@@ -1,0 +1,317 @@
+{
+  "event": {
+    "name": "Virgo Cup II",
+    "id": "CM17",
+    "icon": "virgo_cup.png",
+    "theme": "uma",
+    "distance": "Medium",
+    "surface": "Dirt",
+    "track": "Oi Dirt 2000m"
+  },
+  "slides": [
+    {
+      "ign": "Mao",
+      "trainee_name": "[Peak Blue] Daiwa Scarlet",
+      "uma_image": "umas/[Peak Blue] Daiwa Scarlet.png",
+      "time": "2:02.4",
+      "result": "1st",
+      "quote": "Daiwa #1 lucky pacer, eat the xOguris",
+      "stats": {
+        "speed": 1602,
+        "stamina": 911,
+        "power": 1212,
+        "guts": 791,
+        "wit": 762
+      },
+      "full_art_image": "umas/Daiwa_Scarlet_(Race).png"
+    },
+    {
+      "ign": "enzo1029",
+      "trainee_name": "[Crystalline] Mejiro Ardan",
+      "uma_image": "umas/[Crystalline] Mejiro Ardan.png",
+      "time": "2:02.8",
+      "result": "1st",
+      "quote": "rmb everyone, ur uma doesnt run out of stamina without ur consent",
+      "stats": {
+        "speed": 1508,
+        "stamina": 918,
+        "power": 1074,
+        "guts": 665,
+        "wit": 1067
+      },
+      "full_art_image": "umas/Mejiro_Ardan_(Race).png"
+    },
+    {
+      "ign": "Oscar",
+      "trainee_name": "[Fair Lady of the Waves] Mejiro McQueen",
+      "uma_image": "umas/[Fair Lady of the Waves] Mejiro McQueen.png",
+      "time": "2:01.2",
+      "result": "1st",
+      "quote": "Another job well done.",
+      "stats": {
+        "speed": 1539,
+        "stamina": 996,
+        "power": 954,
+        "guts": 738,
+        "wit": 1134
+      },
+      "full_art_image": "umas/Mejiro_McQueen_(Alt).png"
+    },
+    {
+      "ign": "PD",
+      "trainee_name": "[Maverick] Narita Brian",
+      "uma_image": "umas/[Maverick] Narita Brian.png",
+      "time": "2:02.5",
+      "result": "1st",
+      "quote": "Dirt B, no worries",
+      "stats": {
+        "speed": 1614,
+        "stamina": 860,
+        "power": 1061,
+        "guts": 693,
+        "wit": 1103
+      },
+      "full_art_image": "umas/Narita_Brian_(Race).png"
+    },
+    {
+      "ign": "Chrll",
+      "trainee_name": "[End of the Skies] Mejiro McQueen",
+      "uma_image": "umas/[End of the Skies] Mejiro McQueen.png",
+      "time": "2:01.1",
+      "result": "1st",
+      "quote": "Mind controlled debuffers to not take 564",
+      "stats": {
+        "speed": 1519,
+        "stamina": 852,
+        "power": 995,
+        "guts": 880,
+        "wit": 1014
+      },
+      "full_art_image": "umas/Mejiro_McQueen_(Alt2).png"
+    },
+    {
+      "ign": "Maximu",
+      "trainee_name": "[Hopp'n♪Happy Heart] Special Week",
+      "uma_image": "umas/[Hopp'n♪Happy Heart] Special Week.png",
+      "time": "2:01.8",
+      "result": "1st",
+      "quote": "I love power card",
+      "stats": {
+        "speed": 1526,
+        "stamina": 773,
+        "power": 1302,
+        "guts": 653,
+        "wit": 733
+      },
+      "full_art_image": "umas/Special_Week_(Alt).png"
+    },
+    {
+      "ign": "BottlesMan",
+      "trainee_name": "[Reeling in the Big One] Seiun Sky",
+      "uma_image": "umas/[Reeling in the Big One] Seiun Sky.png",
+      "time": "2:02.6",
+      "result": "1st",
+      "quote": "The Sky still shines after the hardest battles!",
+      "stats": {
+        "speed": 1540,
+        "stamina": 890,
+        "power": 1175,
+        "guts": 681,
+        "wit": 931
+      },
+      "full_art_image": "umas/Seiun_Sky_(Race).png"
+    },
+    {
+      "ign": "Drey",
+      "trainee_name": "[Off the Line] Mejiro Dober",
+      "uma_image": "umas/[Off the Line] Mejiro Dober.png",
+      "time": "2:01.0",
+      "result": "1st",
+      "quote": "In Heaven's stead, we smite Dominators.",
+      "stats": {
+        "speed": 1485,
+        "stamina": 574,
+        "power": 1138,
+        "guts": 597,
+        "wit": 985
+      },
+      "full_art_image": "umas/Mejiro_Dober_(Race).png"
+    },
+    {
+      "ign": "Crkva",
+      "trainee_name": "[Kukulkan Warrior] El Condor Pasa",
+      "uma_image": "umas/[Kukulkan Warrior] El Condor Pasa.png",
+      "time": "2:02.3",
+      "result": "1st",
+      "quote": "RAAAHHHH🦅🦅🦅🦅 (shoutout my pet bird Thorondor)",
+      "stats": {
+        "speed": 1434,
+        "stamina": 840,
+        "power": 998,
+        "guts": 735,
+        "wit": 1205
+      },
+      "full_art_image": "umas/El_Condor_Pasa_(Alt).png"
+    },
+    {
+      "ign": "Knighted",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "uma_image": "umas/[Sunlight Bouquet] Mayano Top Gun.png",
+      "time": "2:02.0",
+      "result": "1st",
+      "quote": "ai_kopi",
+      "stats": {
+        "speed": 1579,
+        "stamina": 846,
+        "power": 1078,
+        "guts": 632,
+        "wit": 1131
+      },
+      "full_art_image": "umas/Mayano_Top_Gun_(Alt).png"
+    },
+    {
+      "ign": "Hopeful Purveyor",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
+      "time": "2:02.6",
+      "result": "1st",
+      "quote": "Throughout Dirt and Medium, this Opera alone is the Honored One.",
+      "stats": {
+        "speed": 1532,
+        "stamina": 814,
+        "power": 1210,
+        "guts": 688,
+        "wit": 1230
+      },
+      "full_art_image": "umas/T.M._Opera_O_(Race).png"
+    },
+    {
+      "ign": "ShadPrince",
+      "trainee_name": "[Empress Road] Air Groove",
+      "uma_image": "umas/[Empress Road] Air Groove.png",
+      "time": "2:02.4",
+      "result": "1st",
+      "quote": "Sprint. Mile. Medium. Long. Dirt. All 5 plats have now been claimed by the Empress.",
+      "stats": {
+        "speed": 1601,
+        "stamina": 913,
+        "power": 1314,
+        "guts": 717,
+        "wit": 752
+      },
+      "full_art_image": "umas/Air_Groove_(Race).png"
+    },
+    {
+      "ign": "th33beat",
+      "trainee_name": "[Run & Win] Nice Nature",
+      "uma_image": "umas/[Run & Win] Nice Nature.png",
+      "time": "2:02.6",
+      "result": "1st",
+      "quote": "She can win sometimes, right?",
+      "stats": {
+        "speed": 1600,
+        "stamina": 965,
+        "power": 1210,
+        "guts": 756,
+        "wit": 833
+      },
+      "full_art_image": "umas/Nice_Nature_(Alt).png"
+    },
+    {
+      "ign": "Alu",
+      "trainee_name": "[Innocent Silence] Silence Suzuka",
+      "uma_image": "umas/[Innocent Silence] Silence Suzuka.png",
+      "time": "2:01.6",
+      "result": "1st",
+      "quote": "I stand alone among debuffers and XOguri's - victorious",
+      "stats": {
+        "speed": 1601,
+        "stamina": 839,
+        "power": 1202,
+        "guts": 785,
+        "wit": 922
+      },
+      "full_art_image": "umas/Silence_Suzuka_(Race).png"
+    },
+    {
+      "ign": "Treeglare",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "uma_image": "umas/[Blazed Head, Covered Fists] Yaeno Muteki.png",
+      "time": "2:01.9",
+      "result": "1st",
+      "quote": "Ms. Victoria standing between two Oguris, peak",
+      "stats": {
+        "speed": 1477,
+        "stamina": 914,
+        "power": 1207,
+        "guts": 777,
+        "wit": 992
+      },
+      "full_art_image": "umas/Yaeno_Muteki_(Race).png"
+    },
+    {
+      "ign": "zae",
+      "trainee_name": "[Red Strife] Gold Ship",
+      "uma_image": "umas/[Red Strife] Gold Ship.png",
+      "time": "2:02.8",
+      "result": "1st",
+      "quote": "IN GOLDSHIP I TRUST",
+      "stats": {
+        "speed": 1379,
+        "stamina": 780,
+        "power": 1033,
+        "guts": 602,
+        "wit": 1217
+      },
+      "full_art_image": "umas/Gold_Ship_(Race).png"
+    },
+    {
+      "ign": "Wolfzee",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "uma_image": "umas/[Stone-Piercing Blue] Grass Wonder.png",
+      "time": "2:02.4",
+      "result": "1st",
+      "quote": "There is no path before me, only in my wake.",
+      "stats": {
+        "speed": 1554,
+        "stamina": 892,
+        "power": 1015,
+        "guts": 645,
+        "wit": 1078
+      },
+      "full_art_image": "umas/Grass_Wonder_(Race).png"
+    },
+    {
+      "ign": "Gio",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "uma_image": "umas/[Line Breakthrough] Mejiro Palmer.png",
+      "time": "2:01.9",
+      "result": "1st",
+      "quote": "Mejiro Palmer",
+      "stats": {
+        "speed": 1454,
+        "stamina": 765,
+        "power": 1053,
+        "guts": 668,
+        "wit": 1017
+      },
+      "full_art_image": "umas/Mejiro_Palmer_(Race).png"
+    },
+    {
+      "ign": "Israfiil",
+      "trainee_name": "[Chiffon-Wrapped Mummy] Super Creek",
+      "uma_image": "umas/[Chiffon-Wrapped Mummy] Super Creek.png",
+      "time": "2:01.2",
+      "result": "1st",
+      "quote": "Hopefully I win I guess xdd",
+      "stats": {
+        "speed": 1486,
+        "stamina": 807,
+        "power": 1152,
+        "guts": 685,
+        "wit": 721
+      },
+      "full_art_image": "umas/Super_Creek_(Alt).png"
+    }
+  ]
+}

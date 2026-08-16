@@ -55,6 +55,13 @@
       "icon": "leo_cup.png",
       "file": "slides-cm16.json",
       "slideCount": 15
+    },
+    {
+      "id": "CM17",
+      "name": "Virgo Cup II",
+      "icon": "virgo_cup.png",
+      "file": "slides-cm17.json",
+      "slideCount": 19
     }
   ]
 }
