@@ -112,7 +112,7 @@ export function UmaSlide({ slide, event, allTraineeNames }) {
           <div class="uma-subtitle">
             <span>THE ONLY</span>
             <span>{displayName.toUpperCase()}</span>
-            <span>FINALS WINNER</span>
+            <span>FINALS OSHI WINNER</span>
           </div>
           {quote && <div class="uma-quote">"{quote}"</div>}
         </div>

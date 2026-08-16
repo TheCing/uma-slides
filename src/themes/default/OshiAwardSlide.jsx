@@ -38,7 +38,7 @@ export function OshiAwardSlide({ slide, event, allTraineeNames }) {
           <div class="subtitle">
             <span>THE ONLY</span>
             <span>{displayName.toUpperCase()}</span>
-            <span>FINALS WINNER</span>
+            <span>FINALS OSHI WINNER</span>
           </div>
           {quote && <div class="quote">"{quote}"</div>}
         </div>
