@@ -2,6 +2,8 @@
 
 Browser-based slideshow for Umamusume Virgo Cup "Oshi's Champion Awardee" presentations. Replaces the previous Canva workflow with an automated data pipeline and interactive viewer.
 
+**Live site: [thecing.github.io/uma-slides](https://thecing.github.io/uma-slides/)**
+
 ## Quick Start
 
 ```bash
@@ -116,7 +118,7 @@ Warm cream palette inspired by the Uma Musume in-game UI. Features Nunito + Quic
 
 ## Deployment
 
-Deployed to GitHub Pages via GitHub Actions on push to `main`. The Vite `base` is set to `/uma-slides/` for correct asset resolution.
+Deployed to [thecing.github.io/uma-slides](https://thecing.github.io/uma-slides/) via GitHub Actions on push to `main`. The Vite `base` is set to `/uma-slides/` for correct asset resolution.
 
 ## Tech Stack
 
