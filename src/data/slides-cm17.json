@@ -311,7 +311,8 @@
         "guts": 685,
         "wit": 721
       },
-      "full_art_image": "umas/Super_Creek_(Alt).png"
+      "full_art_image": "umas/Super_Creek_(Alt).png",
+      "full_art_compact": true
     }
   ]
 }

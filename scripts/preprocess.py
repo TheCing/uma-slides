@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+import struct
 import unicodedata
 import urllib.parse
 import pandas as pd
@@ -196,6 +197,40 @@ ALT_ART = {
     "[End of the Skies] Mejiro McQueen": "Mejiro_McQueen_(Alt2).png",
     "[Run & Win] Nice Nature": "Nice_Nature_(Alt).png",
 }
+
+# The .full-art layout sizes the render by width, so a narrower-than-usual
+# source grows proportionally taller and pushes the character's head out of
+# frame. Almost every art sits at ~0.57; anything below this cutoff gets the
+# height-capped .full-art-small layout instead. Derived from the file rather
+# than flagged per slide so a given art behaves the same in every event.
+COMPACT_ART_ASPECT = 0.50
+
+
+def png_aspect(path):
+    """Return width/height for a PNG read from its IHDR header, else None."""
+    try:
+        with open(path, "rb") as fh:
+            head = fh.read(24)
+    except OSError:
+        return None
+    if len(head) < 24 or head[:8] != b"\x89PNG\r\n\x1a\n":
+        return None
+    width, height = struct.unpack(">II", head[16:24])
+    return width / height if height else None
+
+
+def mark_compact_if_narrow(slide_entry, art_path):
+    """Flag narrow full art so the viewer uses the height-capped layout.
+
+    Skips slides whose full_art_compact was set explicitly by an override, so a
+    hand-tuned choice always wins over the measurement.
+    """
+    if "full_art_compact" in slide_entry:
+        return
+    aspect = png_aspect(art_path)
+    if aspect is not None and aspect < COMPACT_ART_ASPECT:
+        slide_entry["full_art_compact"] = True
+        print(f"    narrow art (aspect {aspect:.3f}) -> compact layout")
 
 # Maps survey IGN -> trainer_name as it appears in the podium/stats parquet.
 # Use when the player submitted their data under a different name and fuzzy
@@ -844,6 +879,7 @@ def main():
             if alt_path.exists():
                 slide_entry["full_art_image"] = f"umas/{ALT_ART[trainee]}"
                 print(f"  Full art assigned (alt): {trainee} -> {ALT_ART[trainee]}")
+                mark_compact_if_narrow(slide_entry, alt_path)
                 continue
 
         base_name = re.sub(r"\[.*?\]\s*", "", trainee).strip()
@@ -854,6 +890,7 @@ def main():
                 continue
             slide_entry["full_art_image"] = f"umas/{full_art_name}"
             print(f"  Full art assigned: {trainee} -> {full_art_name}")
+            mark_compact_if_narrow(slide_entry, full_art_path)
 
     print(f"\nGenerated {len(slides)} slides")
 
