@@ -68,6 +68,15 @@
   --uma-accent-deep: #43a047;
 }
 
+/* Virgo Cup II runs red (the Stamina stat ramp). */
+.slide-viewer[data-event="CM17"] {
+  --uma-accent: #ef5350;
+  --uma-accent-rgb: 239, 83, 80;
+  --uma-accent-bright: #f77066;
+  --uma-accent-light: #ff8a80;
+  --uma-accent-deep: #e53935;
+}
+
 /* ── Slide Base ──────────────────────────────────────── */
 
 .uma-slide {

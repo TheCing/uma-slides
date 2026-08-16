@@ -14,6 +14,13 @@ const STAT_LABELS = {
 
 const ACCENT_COLOR = 0xff8a3c
 
+// Mirrors the per-event accent overrides in themes/uma/styles.css so the embed
+// stripe matches the slide image it's posted alongside.
+const EVENT_ACCENT = {
+  CM16: 0x5cb85c,
+  CM17: 0xef5350,
+}
+
 function buildEmbed(slide, event) {
   const stats = slide.stats || {}
   const statsLine = Object.keys(STAT_LABELS)
@@ -30,7 +37,7 @@ function buildEmbed(slide, event) {
   return {
     title: slide.trainee_name,
     description: slide.quote ? `> *${slide.quote}*` : undefined,
-    color: ACCENT_COLOR,
+    color: EVENT_ACCENT[event?.id] ?? ACCENT_COLOR,
     author: { name: `${slide.ign} — Oshi's Champion Awardee` },
     footer: { text: `${event.name} • Moomoocows` },
     fields,
