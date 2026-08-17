@@ -132,7 +132,7 @@ export function UmaSlide({ slide, event, allTraineeNames }) {
               TIME: {time}
             </span>
           </div>
-          <UmaStatsBar stats={stats} />
+          <UmaStatsBar stats={stats} event={event} />
         </div>
       </div>
     </div>
