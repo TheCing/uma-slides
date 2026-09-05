@@ -17,6 +17,7 @@ import struct
 import unicodedata
 import urllib.parse
 import pandas as pd
+from collections import Counter
 from pathlib import Path
 
 EVENT_CONFIG = {
@@ -380,6 +381,36 @@ def canonicalize_v2_columns(df):
     return df
 
 
+def _derive_rowid_offset(finals_df, stats_df):
+    """Return the offset from a CSV row position to its parquet ``row``/``row_id``.
+
+    The parquets index the source spreadsheet (header + 1-based rows, so +2 in
+    every export so far) rather than the CSV's 0-based positions. Derive it from
+    statsheet rows whose IGN matches exactly one CSV row instead of hardcoding
+    it, so a future export with a different offset can't silently mis-scope
+    every submission. Returns None when there isn't a clear consensus, which
+    drops the caller back to name-based matching.
+    """
+    if stats_df is None or "row" not in stats_df.columns or "ign" not in stats_df.columns:
+        return None
+    pos = {}
+    for i, v in enumerate(finals_df[COL_IGN]):
+        pos.setdefault(str(v).strip().lower(), []).append(i)
+    votes = Counter()
+    for _, r in stats_df.iterrows():
+        if pd.isna(r["row"]):
+            continue
+        hits = pos.get(str(r["ign"]).strip().lower(), ())
+        if len(hits) == 1:
+            votes[int(r["row"]) - hits[0]] += 1
+    if not votes:
+        return None
+    offset, n = votes.most_common(1)[0]
+    if n / sum(votes.values()) < 0.9:
+        return None
+    return offset
+
+
 def _normalize_v2(finals_df, podium_df, stats_df=None):
     """CM13+ form schema dropped 'Finals - Winner - Name', winner-time, and the
     oshi flag. Reconstruct v1-equivalent columns from CSV + podium + statsheet
@@ -408,6 +439,42 @@ def _normalize_v2(finals_df, podium_df, stats_df=None):
             by_trainer[k] = (r["trainee_name"], r["time"] if pd.notna(r["time"]) else "")
             if pd.notna(r["row_id"]):
                 consumed_rowids.add(int(r["row_id"]))
+
+    # A submission's own winner has to be read out of ITS OWN uploaded stat
+    # screen. Keying on trainer_name across the whole podium table lets an
+    # in-game name collision hand one submitter another's win: CM18 had two
+    # trainers called "Dan" (submitters 'Dan' and 'DanFPS'), so IGN 'Dan' picked
+    # up DanFPS's Maruzensky instead of his own Inari One -- which additionally
+    # hid a real two-claimant collision on Inari One.
+    #
+    # The stat screen is the trustworthy anchor because its header carries the
+    # submitter's own IGN. The podium screenshot is not: its `is_user` flag is
+    # set per row by OCR and does mislabel opponents (CM16 row 136 marks
+    # Yashiro@UMAIDS's Mihono Bourbon as the submitter's), so podium data is
+    # only ever used here to look up a time for an already-established uma.
+    rowid_offset = _derive_rowid_offset(finals_df, stats_df)
+    stat_by_rowid = {}
+    if rowid_offset is not None and stats_df is not None and "row" in stats_df.columns:
+        own_stats_rows = (
+            stats_df[stats_df["is_user"] == True]
+            if "is_user" in stats_df.columns
+            else stats_df
+        )
+        for _, r in own_stats_rows.iterrows():
+            if pd.notna(r["row"]) and pd.notna(r["name"]) and str(r["name"]).strip():
+                stat_by_rowid.setdefault(
+                    int(r["row"]), (str(r["name"]).strip(), str(r.get("ign", "")).strip())
+                )
+
+    def own_row_time(rid, trainee):
+        """Time for `trainee` from this submission's own podium screenshot."""
+        if rid is None:
+            return ""
+        rows = podium_p1[
+            (podium_p1["row_id"] == rid) & (podium_p1["trainee_name"] == trainee)
+        ]
+        timed = rows[rows["time"].notna()]
+        return str(timed.iloc[0]["time"]) if len(timed) else ""
 
     # Authoritative own-winner map: ign -> trainee_name from the trainer's OWN
     # uploaded stat screen. The statsheet OCR reads the stat-screen header IGN
@@ -479,17 +546,29 @@ def _normalize_v2(finals_df, podium_df, stats_df=None):
     out = finals_df.copy()
     names, times = [], []
     stat_attributed = []
+    row_scoped = 0
     # Seed used_rowids with rows already claimed by exact podium matches, so a
     # statsheet-attributed IGN never inherits another confirmed winner's time.
     used_rowids = set(consumed_rowids)
-    for ign in out[COL_IGN]:
+    for pos_i, ign in enumerate(out[COL_IGN]):
         ign_l = str(ign).strip().lower()
         alias = resolve_alias(ign)
         alias_l = alias.lower() if alias else None
         n = t = None
+        rid = (pos_i + rowid_offset) if rowid_offset is not None else None
+        # 0. This submission's own stat screen, located by row rather than by
+        #    name, so no other trainer's screenshot can be mistaken for theirs.
+        row_hit = stat_by_rowid.get(rid) if rid is not None else None
+        if row_hit and (not row_hit[1] or ign_matches(ign, row_hit[1]) or (alias and ign_matches(alias, row_hit[1]))):
+            n = row_hit[0]
+            t = own_row_time(rid, n)
+            if not t:
+                t, claimed_rowid, _ = podium_proof(n, used_rowids)
+                if claimed_rowid is not None:
+                    used_rowids.add(claimed_rowid)
+            row_scoped += 1
         # 1. Exact/alias podium own-win.
-        hit = podium_exact(ign)
-        if hit is not None:
+        elif (hit := podium_exact(ign)) is not None:
             n, t = hit
         else:
             # 2. Authoritative statsheet own-winner (exact IGN match) -- the
@@ -531,6 +610,10 @@ def _normalize_v2(finals_df, podium_df, stats_df=None):
         out[COL_OSHI] = quote_series.apply(lambda q: "Yes" if q else "No")
 
     print(f"[v2 normalize] Mapped {sum(1 for n in names if n)}/{len(names)} CSV rows to a winning ace")
+    if rowid_offset is not None:
+        print(f"[v2 normalize] Row-scoped attributions: {row_scoped} (parquet row offset +{rowid_offset})")
+    else:
+        print("[v2 normalize] No consistent parquet row offset -- falling back to name matching")
     print(f"[v2 normalize] Statsheet-authoritative attributions: {len(stat_attributed)}")
     for ign, n, t in stat_attributed:
         print(f"  stat-winner: {ign} -> {n} (time {t})")

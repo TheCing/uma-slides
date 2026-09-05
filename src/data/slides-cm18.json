@@ -26,22 +26,6 @@
       "full_art_image": "umas/Biwa_Hayahide_(Race).png"
     },
     {
-      "ign": "Croix du Nord",
-      "trainee_name": "[Always Electrifying] Ines Fujin",
-      "uma_image": "umas/[Always Electrifying] Ines Fujin.png",
-      "time": "",
-      "result": "1st",
-      "quote": "Ines Fujin my beloved",
-      "stats": {
-        "speed": 1613,
-        "stamina": 583,
-        "power": 1125,
-        "guts": 606,
-        "wit": 915
-      },
-      "full_art_image": "umas/Ines_Fujin_(Race).png"
-    },
-    {
       "ign": "robo",
       "trainee_name": "[RUN! RUIN! LAUNCHER!] Gold Ship",
       "uma_image": "umas/[RUN! RUIN! LAUNCHER!] Gold Ship.png",
@@ -104,22 +88,6 @@
         "wit": 935
       },
       "full_art_image": "umas/Air_Shakur_(Race).png"
-    },
-    {
-      "ign": "Dan",
-      "trainee_name": "[Hot☆Summer Night] Maruzensky",
-      "uma_image": "umas/[Hot☆Summer Night] Maruzensky.png",
-      "time": "1:30.2",
-      "result": "1st",
-      "quote": "Got my Libra Platinum ☆. Thank you, Sexy One.",
-      "stats": {
-        "speed": 1642,
-        "stamina": 648,
-        "power": 1188,
-        "guts": 640,
-        "wit": 987
-      },
-      "full_art_image": "umas/Maruzensky_(Alt).png"
     },
     {
       "ign": "Zennr",
@@ -248,22 +216,6 @@
         "wit": 738
       },
       "full_art_image": "umas/King_Halo_(Race).png"
-    },
-    {
-      "ign": "DHOROT",
-      "trainee_name": "[Edomurasaki] Inari One",
-      "uma_image": "umas/[Edomurasaki] Inari One.png",
-      "time": "1:29.8",
-      "result": "1st",
-      "quote": "Make way for the great Inari!",
-      "stats": {
-        "speed": 1600,
-        "stamina": 626,
-        "power": 1239,
-        "guts": 542,
-        "wit": 1216
-      },
-      "full_art_image": "umas/Inari_One_(Race).png"
     },
     {
       "ign": "ScottPL",

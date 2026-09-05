@@ -1,0 +1,8 @@
+{
+  "exclusions": [
+    {
+      "ign": "Croix du Nord",
+      "reason": "Unverified win — excluded by hand-checked list. Croix du Nord meets every CSV criterion (Graded, self-reported 1st in A Finals, oshi question answered Yes, quote filled, both screenshots submitted) and her own stat screen confirms she built [Always Electrifying] Ines Fujin, but the stat screen only proves the build, not the result. Her podium screenshot produced no OCR output at all, and [Always Electrifying] Ines Fujin appears exactly once in the whole CM18 podium set — as InfinityJK's 4th place — so nothing in the data corroborates a 1st-place finish. She was the only one of the 23 otherwise-qualifying awardees with no podium row behind her, and correspondingly the only one with no time. Excluded on the evidence, not on the merits of the pick: restore this award if the podium screenshot is ever re-read successfully."
+    }
+  ]
+}

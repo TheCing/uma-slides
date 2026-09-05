@@ -1,7 +1,7 @@
 # Libra Cup II (CM18) — Oshi's Champion Awardees
 
 **Track:** Hanshin Turf 1600m  
-**Winners:** 25
+**Winners:** 22
 
 ---
 
@@ -13,15 +13,7 @@
 
 > finally the ACTUAL biwa main gets her oshi award <3
 
-### 2. Croix du Nord
-
-**Uma:** [Always Electrifying] Ines Fujin  
-**Time:**   
-**Stats:** 1613 / 583 / 1125 / 606 / 915 (Total: 4842)  
-
-> Ines Fujin my beloved
-
-### 3. robo
+### 2. robo
 
 **Uma:** [RUN! RUIN! LAUNCHER!] Gold Ship  
 **Time:** 1:31.7  
@@ -29,7 +21,7 @@
 
 > For me, it's Gold Ship. What a great umamusume.
 
-### 4. kasteai
+### 3. kasteai
 
 **Uma:** [Iron Ambition] Bamboo Memory  
 **Time:** 1:31.4  
@@ -37,7 +29,7 @@
 
 > When in doubt, run them down.
 
-### 5. NelsG
+### 4. NelsG
 
 **Uma:** [Jokester ☆ Vibes] Tosen Jordan  
 **Time:** 1:31.7  
@@ -45,7 +37,7 @@
 
 > No 3d Nail Art this time, sad
 
-### 6. Midnight
+### 5. Midnight
 
 **Uma:** [unsigned] Air Shakur  
 **Time:** 1:30.5  
@@ -53,15 +45,7 @@
 
 > Shakur = "Winner" if Gamble else Glue
 
-### 7. Dan
-
-**Uma:** [Hot☆Summer Night] Maruzensky  
-**Time:** 1:30.2  
-**Stats:** 1642 / 648 / 1188 / 640 / 987 (Total: 5105)  
-
-> Got my Libra Platinum ☆. Thank you, Sexy One.
-
-### 8. Zennr
+### 6. Zennr
 
 **Uma:** [New Year, Same Radiance!] T.M. Opera O  
 **Time:** 1:30.8  
@@ -69,7 +53,7 @@
 
 > Bask in my eloquence and stand proud to have raced me
 
-### 9. Spinorange
+### 7. Spinorange
 
 **Uma:** [Wild Top Gear] Vodka  
 **Time:** 1:31.5  
@@ -77,7 +61,7 @@
 
 > Is it by a whisker? Vodka?
 
-### 10. OSoverspike
+### 8. OSoverspike
 
 **Uma:** [Ma Chérie of the New Moon] Curren Chan  
 **Time:** 1:31.5  
@@ -85,7 +69,7 @@
 
 > There were so many people watching, yet all I could think about was the smile I'd put on your face when I crossed the finish line. Ehe, thank you for making me the cutest, Big Sis! ♪
 
-### 11. Dyllyn
+### 9. Dyllyn
 
 **Uma:** [Line Breakthrough] Mejiro Palmer  
 **Time:** 1:30.4  
@@ -93,7 +77,7 @@
 
 > Eat my dust, xOguri
 
-### 12. Levinity
+### 10. Levinity
 
 **Uma:** [End of the Skies] Mejiro McQueen  
 **Time:** 1:30.9  
@@ -101,7 +85,7 @@
 
 > absolute cinuma desuwa!!!
 
-### 13. Wecondo
+### 11. Wecondo
 
 **Uma:** [Fluttertail Spirit] Yamanin Zephyr  
 **Time:** 1:31.3  
@@ -109,7 +93,7 @@
 
 > Like a rushing gale... she runs, bending the air itself to her will.
 
-### 14. Clouded
+### 12. Clouded
 
 **Uma:** [Azure Amazon] Hishi Amazon  
 **Time:** 1:30.9  
@@ -117,7 +101,7 @@
 
 > Power of fast learner and mile s.
 
-### 15. Hyacia
+### 13. Hyacia
 
 **Uma:** [King of Emeralds] King Halo  
 **Time:** 1:31.4  
@@ -125,15 +109,7 @@
 
 > First Rate Trainers do not blame their Umas
 
-### 16. DHOROT
-
-**Uma:** [Edomurasaki] Inari One  
-**Time:** 1:29.8  
-**Stats:** 1600 / 626 / 1239 / 542 / 1216 (Total: 5223)  
-
-> Make way for the great Inari!
-
-### 17. ScottPL
+### 14. ScottPL
 
 **Uma:** [Emperor's Path] Symboli Rudolf  
 **Time:** 1:31.3  
@@ -141,7 +117,7 @@
 
 > I PLAY FOR OSHIS
 
-### 18. Gord
+### 15. Gord
 
 **Uma:** [Blazed Head, Covered Fists] Yaeno Muteki  
 **Time:** 1:30.3  
@@ -149,7 +125,7 @@
 
 > EFF CROSSFIRE
 
-### 19. Blizzard
+### 16. Blizzard
 
 **Uma:** [Natural Brilliance] Satono Diamond  
 **Time:** 1:31.7  
@@ -157,7 +133,7 @@
 
 > My jinx breaker.
 
-### 20. Breezy
+### 17. Breezy
 
 **Uma:** [Dream Deliverer] Winning Ticket  
 **Time:** 1:31.7  
@@ -165,7 +141,7 @@
 
 > Special delivery! Here's your sparkling dreams!
 
-### 21. Karate Pawn
+### 18. Karate Pawn
 
 **Uma:** [Fanatic♡Jiangshi] Agnes Digital  
 **Time:** 1:30.0  
@@ -173,7 +149,7 @@
 
 > NGHAJFHAGAJNVD!
 
-### 22. FiatLuxray
+### 19. FiatLuxray
 
 **Uma:** [Poinsettia Ribbon] Nice Nature  
 **Time:** 1:31.5  
@@ -181,7 +157,7 @@
 
 > mogged every end xoguri btw
 
-### 23. Fodderru
+### 20. Fodderru
 
 **Uma:** [Vampire Makeover!] Rice Shower  
 **Time:** 1:31.3  
@@ -189,7 +165,7 @@
 
 > I Rice, I Wok Hard, I See Success, I Sleep
 
-### 24. FalooslessFukuFan
+### 21. FalooslessFukuFan
 
 **Uma:** [Rising☆Fortune] Matikanefukukitaru  
 **Time:** 1:31.3  
@@ -197,7 +173,7 @@
 
 > Kit? Unique? Fortune? Nah, I'd win 🏇 (bday gift from fuku!!!)
 
-### 25. QuackersLeQuack
+### 22. QuackersLeQuack
 
 **Uma:** [Blossom in Learning] Sakura Bakushin O  
 **Time:** 1:30.6  
