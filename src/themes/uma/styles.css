@@ -77,6 +77,15 @@
   --uma-accent-deep: #e53935;
 }
 
+/* Libra Cup II runs purple (the house --uma-purple ramp). */
+.slide-viewer[data-event="CM18"] {
+  --uma-accent: #9b59b6;
+  --uma-accent-rgb: 155, 89, 182;
+  --uma-accent-bright: #b07cc6;
+  --uma-accent-light: #c39bd3;
+  --uma-accent-deep: #8e44ad;
+}
+
 /* ── Slide Base ──────────────────────────────────────── */
 
 .uma-slide {

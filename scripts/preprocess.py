@@ -124,6 +124,18 @@ EVENT_CONFIG = {
         "podium": "events/cm17/data/podium.parquet",
         "schema": "v2",
     },
+    "CM18": {
+        "name": "Libra Cup II",
+        "icon": "libra_cup.png",
+        "theme": "uma",
+        "distance": "Mile",
+        "surface": "Turf",
+        "track": "Hanshin Turf 1600m",
+        "finals_csv": "events/cm18/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm18/data/statsheet.parquet",
+        "podium": "events/cm18/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -166,13 +178,17 @@ DEFAULT_COSTUME = {
     # moved to Air_Groove_(Alt).png and CM11/CM16 were repointed at it.
     "Air Groove": "[Empress Road] Air Groove",
     # Mejiro_McQueen_(Race).png depicts [Frontline Elegance] (added for CM14).
-    # NOTE: CM15's [End of the Skies] McQueen predates this pin and is still
-    # pointed at the (Race) file, so it shows the wrong costume.
+    # CM15's [End of the Skies] McQueen was repointed at (Alt2) once that art
+    # arrived.
     "Mejiro McQueen": "[Frontline Elegance] Mejiro McQueen",
     # Nice_Nature_(Race).png depicts the Christmas [Poinsettia Ribbon] — her
     # actual default (card 106001) — despite first being used for CM12's
-    # [Run & Win]. NOTE: that CM12 slide still shows the wrong costume.
+    # [Run & Win], which was repointed at (Alt) once that art arrived.
     "Nice Nature": "[Poinsettia Ribbon] Nice Nature",
+    # Matikanefukukitaru_(Race).png depicts [Rising☆Fortune] (matches her
+    # thumbnail exactly; first used for CM10). NOTE: CM14's [Lucky Tidings]
+    # slide also points at this file, so it shows the wrong costume.
+    "Matikanefukukitaru": "[Rising☆Fortune] Matikanefukukitaru",
 }
 
 ALT_ART = {
@@ -241,6 +257,10 @@ IGN_ALIASES = {
     # podium.row_id 593 == CSV row 591 (+2 offset), and their statsheet row
     # independently shows the same winning ace.
     "hopeful purveyor": "Zurvan",
+    # CM18: podium OCR read the in-game name; podium.row_id 746 == CSV row 744
+    # (+2 offset) confirms this is the same submission, and it carries the only
+    # Graded-league Matikanefukukitaru win (kelpie's was Open league).
+    "falooslessfukufan": "Ive",
 }
 
 
@@ -327,11 +347,17 @@ def load_overrides(event_id, project_root):
 
 COL_OSHI_QUOTE_V2 = 'Optional - Finals - Winner - Oshi Award Quote (in case you end up winning one)'
 
+# CM18 reinstated an explicit oshi question, so the flag no longer has to be
+# inferred from "did they write a quote". Preferred when present.
+COL_OSHI_FLAG_V2 = 'Is the own winner uma an "oshi" uma?'
+
 # CM14+ renamed the per-winner columns from "Winner" to "Own Winner" (the form
 # now also collects "Opponent Winner" data). Map those variants back onto the
 # canonical names the rest of the pipeline expects so v2 handling is unchanged.
 V2_COLUMN_ALIASES = {
     'Optional - Finals - Own Winner - Oshi Award Quote (in case you end up winning one)': COL_OSHI_QUOTE_V2,
+    # CM18 dropped the "Optional - " prefix on the quote column.
+    'Finals - Own Winner - Oshi Award Quote (in case you end up winning one)': COL_OSHI_QUOTE_V2,
     'Optional - Finals - Own Winner - Screenshot - Stat Screen (First Image)': COL_STAT_UPLOAD_1,
     'Optional - Finals - Own Winner - Screenshot - Stat Screen (Second Image)': COL_STAT_UPLOAD_2,
 }
@@ -369,7 +395,8 @@ def _normalize_v2(finals_df, podium_df, stats_df=None):
          is_user=False on the actual winning row). Time is then pulled from
          podium `placement=1, trainee_name=name` if uniquely available.
 
-    Oshi flag: 'Yes' iff the v2 oshi-quote field is non-empty (deliberate opt-in).
+    Oshi flag: the explicit CM18+ question when the form asked it, otherwise
+    'Yes' iff the v2 oshi-quote field is non-empty (deliberate opt-in).
     Quote: copied from the v2 quote column into the canonical COL_QUOTE.
     """
     user_wins = podium_df[(podium_df["is_user"] == True) & (podium_df["placement"] == 1)]
@@ -491,7 +518,17 @@ def _normalize_v2(finals_df, podium_df, stats_df=None):
     else:
         quote_series = pd.Series([""] * len(out), index=out.index)
     out[COL_QUOTE] = quote_series
-    out[COL_OSHI] = quote_series.apply(lambda q: "Yes" if q else "No")
+    if COL_OSHI_FLAG_V2 in out.columns:
+        # Explicit answer beats inferring intent from a filled-in quote: a few
+        # players write a quote while answering "No", and they meant No.
+        flag = out[COL_OSHI_FLAG_V2].fillna("").astype(str).str.strip().str.lower()
+        out[COL_OSHI] = flag.apply(lambda v: "Yes" if v == "yes" else "No")
+        declined = int(((flag == "no") & (quote_series != "")).sum())
+        print(f"[v2 normalize] Using the explicit oshi question ({(flag == 'yes').sum()} yes)")
+        if declined:
+            print(f"[v2 normalize]   {declined} row(s) wrote a quote but answered No -- excluded")
+    else:
+        out[COL_OSHI] = quote_series.apply(lambda q: "Yes" if q else "No")
 
     print(f"[v2 normalize] Mapped {sum(1 for n in names if n)}/{len(names)} CSV rows to a winning ace")
     print(f"[v2 normalize] Statsheet-authoritative attributions: {len(stat_attributed)}")
@@ -767,6 +804,18 @@ def main():
             ]
             if stat_row.empty:
                 stat_row = stats_df[stats_df["ign"].isin(ign_candidates)]
+
+        if stat_row.empty:
+            # Stat-screen OCR sometimes truncates the IGN ('Blizzard' -> 'Blizz'),
+            # which no exact ign candidate can match. Pin the fuzzy match to the
+            # same uma and require a single hit so it can't grab someone else.
+            same_uma = stats_df[stats_df["name"] == trainee]
+            if has_user_flag:
+                same_uma = same_uma[same_uma["is_user"] == True]
+            fuzzy = same_uma[[ign_matches(ign, v) for v in same_uma["ign"]]]
+            if len(fuzzy) == 1:
+                stat_row = fuzzy
+                print(f"  Recovered {ign} stats via statsheet ign {fuzzy.iloc[0]['ign']!r}")
 
         if not stat_row.empty:
             s = stat_row.iloc[0]

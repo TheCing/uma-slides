@@ -1,0 +1,357 @@
+{
+  "event": "CM18",
+  "name": "Libra Cup II",
+  "track": "Hanshin Turf 1600m",
+  "winners": [
+    {
+      "ign": "kammie",
+      "trainee_name": "[pf. Winning Equation...] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "1:30.2",
+      "stats": {
+        "speed": 1602,
+        "stamina": 505,
+        "power": 1222,
+        "guts": 579,
+        "wit": 1179
+      },
+      "quote": "finally the ACTUAL biwa main gets her oshi award <3"
+    },
+    {
+      "ign": "Croix du Nord",
+      "trainee_name": "[Always Electrifying] Ines Fujin",
+      "base_name": "Ines Fujin",
+      "time": "",
+      "stats": {
+        "speed": 1613,
+        "stamina": 583,
+        "power": 1125,
+        "guts": 606,
+        "wit": 915
+      },
+      "quote": "Ines Fujin my beloved"
+    },
+    {
+      "ign": "robo",
+      "trainee_name": "[RUN! RUIN! LAUNCHER!] Gold Ship",
+      "base_name": "Gold Ship",
+      "time": "1:31.7",
+      "stats": {
+        "speed": 1547,
+        "stamina": 599,
+        "power": 1321,
+        "guts": 585,
+        "wit": 1002
+      },
+      "quote": "For me, it's Gold Ship. What a great umamusume."
+    },
+    {
+      "ign": "kasteai",
+      "trainee_name": "[Iron Ambition] Bamboo Memory",
+      "base_name": "Bamboo Memory",
+      "time": "1:31.4",
+      "stats": {
+        "speed": 1564,
+        "stamina": 555,
+        "power": 1199,
+        "guts": 712,
+        "wit": 1222
+      },
+      "quote": "When in doubt, run them down."
+    },
+    {
+      "ign": "NelsG",
+      "trainee_name": "[Jokester ☆ Vibes] Tosen Jordan",
+      "base_name": "Tosen Jordan",
+      "time": "1:31.7",
+      "stats": {
+        "speed": 1604,
+        "stamina": 545,
+        "power": 1251,
+        "guts": 722,
+        "wit": 1076
+      },
+      "quote": "No 3d Nail Art this time, sad"
+    },
+    {
+      "ign": "Midnight",
+      "trainee_name": "[unsigned] Air Shakur",
+      "base_name": "Air Shakur",
+      "time": "1:30.5",
+      "stats": {
+        "speed": 1509,
+        "stamina": 557,
+        "power": 1265,
+        "guts": 616,
+        "wit": 935
+      },
+      "quote": "Shakur = \"Winner\" if Gamble else Glue"
+    },
+    {
+      "ign": "Dan",
+      "trainee_name": "[Hot☆Summer Night] Maruzensky",
+      "base_name": "Maruzensky",
+      "time": "1:30.2",
+      "stats": {
+        "speed": 1642,
+        "stamina": 648,
+        "power": 1188,
+        "guts": 640,
+        "wit": 987
+      },
+      "quote": "Got my Libra Platinum ☆. Thank you, Sexy One."
+    },
+    {
+      "ign": "Zennr",
+      "trainee_name": "[New Year, Same Radiance!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "1:30.8",
+      "stats": {
+        "speed": 1571,
+        "stamina": 692,
+        "power": 1302,
+        "guts": 634,
+        "wit": 1133
+      },
+      "quote": "Bask in my eloquence and stand proud to have raced me"
+    },
+    {
+      "ign": "Spinorange",
+      "trainee_name": "[Wild Top Gear] Vodka",
+      "base_name": "Vodka",
+      "time": "1:31.5",
+      "stats": {
+        "speed": 1501,
+        "stamina": 581,
+        "power": 1072,
+        "guts": 678,
+        "wit": 1194
+      },
+      "quote": "Is it by a whisker? Vodka?"
+    },
+    {
+      "ign": "OSoverspike",
+      "trainee_name": "[Ma Chérie of the New Moon] Curren Chan",
+      "base_name": "Curren Chan",
+      "time": "1:31.5",
+      "stats": {
+        "speed": 1565,
+        "stamina": 544,
+        "power": 1215,
+        "guts": 599,
+        "wit": 1199
+      },
+      "quote": "There were so many people watching, yet all I could think about was the smile I'd put on your face when I crossed the finish line. Ehe, thank you for making me the cutest, Big Sis! ♪"
+    },
+    {
+      "ign": "Dyllyn",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "base_name": "Mejiro Palmer",
+      "time": "1:30.4",
+      "stats": {
+        "speed": 1600,
+        "stamina": 722,
+        "power": 1149,
+        "guts": 777,
+        "wit": 936
+      },
+      "quote": "Eat my dust, xOguri"
+    },
+    {
+      "ign": "Levinity",
+      "trainee_name": "[End of the Skies] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "1:30.9",
+      "stats": {
+        "speed": 1604,
+        "stamina": 616,
+        "power": 1265,
+        "guts": 618,
+        "wit": 1035
+      },
+      "quote": "absolute cinuma desuwa!!!"
+    },
+    {
+      "ign": "Wecondo",
+      "trainee_name": "[Fluttertail Spirit] Yamanin Zephyr",
+      "base_name": "Yamanin Zephyr",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1609,
+        "stamina": 659,
+        "power": 1223,
+        "guts": 672,
+        "wit": 1106
+      },
+      "quote": "Like a rushing gale... she runs, bending the air itself to her will."
+    },
+    {
+      "ign": "Clouded",
+      "trainee_name": "[Azure Amazon] Hishi Amazon",
+      "base_name": "Hishi Amazon",
+      "time": "1:30.9",
+      "stats": {
+        "speed": 1360,
+        "stamina": 519,
+        "power": 1303,
+        "guts": 605,
+        "wit": 1058
+      },
+      "quote": "Power of fast learner and mile s."
+    },
+    {
+      "ign": "Hyacia",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "base_name": "King Halo",
+      "time": "1:31.4",
+      "stats": {
+        "speed": 1515,
+        "stamina": 685,
+        "power": 1307,
+        "guts": 587,
+        "wit": 738
+      },
+      "quote": "First Rate Trainers do not blame their Umas"
+    },
+    {
+      "ign": "DHOROT",
+      "trainee_name": "[Edomurasaki] Inari One",
+      "base_name": "Inari One",
+      "time": "1:29.8",
+      "stats": {
+        "speed": 1600,
+        "stamina": 626,
+        "power": 1239,
+        "guts": 542,
+        "wit": 1216
+      },
+      "quote": "Make way for the great Inari!"
+    },
+    {
+      "ign": "ScottPL",
+      "trainee_name": "[Emperor's Path] Symboli Rudolf",
+      "base_name": "Symboli Rudolf",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1501,
+        "stamina": 654,
+        "power": 1272,
+        "guts": 660,
+        "wit": 980
+      },
+      "quote": "I PLAY FOR OSHIS"
+    },
+    {
+      "ign": "Gord",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "base_name": "Yaeno Muteki",
+      "time": "1:30.3",
+      "stats": {
+        "speed": 1484,
+        "stamina": 698,
+        "power": 1240,
+        "guts": 613,
+        "wit": 1300
+      },
+      "quote": "EFF CROSSFIRE"
+    },
+    {
+      "ign": "Blizzard",
+      "trainee_name": "[Natural Brilliance] Satono Diamond",
+      "base_name": "Satono Diamond",
+      "time": "1:31.7",
+      "stats": {
+        "speed": 1468,
+        "stamina": 594,
+        "power": 1142,
+        "guts": 604,
+        "wit": 974
+      },
+      "quote": "My jinx breaker."
+    },
+    {
+      "ign": "Breezy",
+      "trainee_name": "[Dream Deliverer] Winning Ticket",
+      "base_name": "Winning Ticket",
+      "time": "1:31.7",
+      "stats": {
+        "speed": 1482,
+        "stamina": 606,
+        "power": 1059,
+        "guts": 695,
+        "wit": 1073
+      },
+      "quote": "Special delivery! Here's your sparkling dreams!"
+    },
+    {
+      "ign": "Karate Pawn",
+      "trainee_name": "[Fanatic♡Jiangshi] Agnes Digital",
+      "base_name": "Agnes Digital",
+      "time": "1:30.0",
+      "stats": {
+        "speed": 1576,
+        "stamina": 545,
+        "power": 1275,
+        "guts": 694,
+        "wit": 1019
+      },
+      "quote": "NGHAJFHAGAJNVD!"
+    },
+    {
+      "ign": "FiatLuxray",
+      "trainee_name": "[Poinsettia Ribbon] Nice Nature",
+      "base_name": "Nice Nature",
+      "time": "1:31.5",
+      "stats": {
+        "speed": 1353,
+        "stamina": 549,
+        "power": 1341,
+        "guts": 610,
+        "wit": 1172
+      },
+      "quote": "mogged every end xoguri btw"
+    },
+    {
+      "ign": "Fodderru",
+      "trainee_name": "[Vampire Makeover!] Rice Shower",
+      "base_name": "Rice Shower",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1595,
+        "stamina": 652,
+        "power": 1206,
+        "guts": 602,
+        "wit": 942
+      },
+      "quote": "I Rice, I Wok Hard, I See Success, I Sleep"
+    },
+    {
+      "ign": "FalooslessFukuFan",
+      "trainee_name": "[Rising☆Fortune] Matikanefukukitaru",
+      "base_name": "Matikanefukukitaru",
+      "time": "1:31.3",
+      "stats": {
+        "speed": 1575,
+        "stamina": 556,
+        "power": 1211,
+        "guts": 528,
+        "wit": 1069
+      },
+      "quote": "Kit? Unique? Fortune? Nah, I'd win 🏇 (bday gift from fuku!!!)"
+    },
+    {
+      "ign": "QuackersLeQuack",
+      "trainee_name": "[Blossom in Learning] Sakura Bakushin O",
+      "base_name": "Sakura Bakushin O",
+      "time": "1:30.6",
+      "stats": {
+        "speed": 1550,
+        "stamina": 643,
+        "power": 1083,
+        "guts": 535,
+        "wit": 1246
+      },
+      "quote": "In Bakushin we trust"
+    }
+  ]
+}

@@ -62,6 +62,13 @@
       "icon": "virgo_cup.png",
       "file": "slides-cm17.json",
       "slideCount": 19
+    },
+    {
+      "id": "CM18",
+      "name": "Libra Cup II",
+      "icon": "libra_cup.png",
+      "file": "slides-cm18.json",
+      "slideCount": 25
     }
   ]
 }
