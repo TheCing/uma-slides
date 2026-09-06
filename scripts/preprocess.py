@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+import sqlite3
 import struct
 import unicodedata
 import urllib.parse
@@ -190,6 +191,15 @@ DEFAULT_COSTUME = {
     # thumbnail exactly; first used for CM10). NOTE: CM14's [Lucky Tidings]
     # slide also points at this file, so it shows the wrong costume.
     "Matikanefukukitaru": "[Rising☆Fortune] Matikanefukukitaru",
+    # Agnes_Digital_(Race).png depicts the [Full-Color Fangirling] idol outfit
+    # (card 101901); CM18's Halloween [Fanatic♡Jiangshi] has its own ALT_ART.
+    "Agnes Digital": "[Full-Color Fangirling] Agnes Digital",
+    # T.M._Opera_O_(Race).png depicts the [O Sole Suo!] crown-and-cape default
+    # (card 101501); CM18's [New Year, Same Radiance!] has its own ALT_ART.
+    "T.M. Opera O": "[O Sole Suo!] T.M. Opera O",
+    # Winning_Ticket_(Race).png depicts the [Get to Winning!] tracksuit default
+    # (card 103501); CM18's steampunk [Dream Deliverer] has its own ALT_ART.
+    "Winning Ticket": "[Get to Winning!] Winning Ticket",
 }
 
 ALT_ART = {
@@ -213,6 +223,9 @@ ALT_ART = {
     "[Fair Lady of the Waves] Mejiro McQueen": "Mejiro_McQueen_(Alt).png",
     "[End of the Skies] Mejiro McQueen": "Mejiro_McQueen_(Alt2).png",
     "[Run & Win] Nice Nature": "Nice_Nature_(Alt).png",
+    "[Fanatic♡Jiangshi] Agnes Digital": "Agnes_Digital_(Alt).png",
+    "[New Year, Same Radiance!] T.M. Opera O": "T.M._Opera_O_(Alt).png",
+    "[Dream Deliverer] Winning Ticket": "Winning_Ticket_(Alt).png",
 }
 
 # The .full-art layout sizes the render by width, so a narrower-than-usual
@@ -221,6 +234,54 @@ ALT_ART = {
 # height-capped .full-art-small layout instead. Derived from the file rather
 # than flagged per slide so a given art behaves the same in every event.
 COMPACT_ART_ASPECT = 0.50
+
+# Only used to lint costume/art agreement. Kept optional: when the DB isn't
+# there the lint is skipped rather than failing the run.
+MASTER_MDB = Path.home() / "Dev" / "uma-tools-1" / "docs" / "master.mdb"
+
+
+def warn_wrong_costume_art(slides):
+    """Warn when a slide serves the shared <Name>_(Race).png to a costume other
+    than the one that file actually depicts.
+
+    The (Race) fallback is keyed on the character alone, so an alt costume whose
+    character has no DEFAULT_COSTUME entry silently inherits the default
+    outfit's art -- which is how CM18 first shipped Agnes Digital, T.M. Opera O
+    and Winning Ticket wearing the wrong costume. Card ids ending in 01 are the
+    in-game default, so any other costume reaching the fallback needs an
+    explicit DEFAULT_COSTUME (this file depicts that costume) or ALT_ART (it has
+    its own art) decision instead of a silent guess.
+    """
+    if not MASTER_MDB.exists():
+        return
+    suspect = []
+    con = sqlite3.connect(MASTER_MDB)
+    try:
+        for s in slides:
+            art = s.get("full_art_image") or ""
+            if not art.endswith("_(Race).png"):
+                continue
+            trainee = s["trainee_name"]
+            row = con.execute(
+                'SELECT "index" FROM text_data WHERE category=4 AND text=?', (trainee,)
+            ).fetchone()
+            if not row or str(row[0]).endswith("01"):
+                continue
+            base = re.sub(r"\[.*?\]\s*", "", trainee).strip()
+            if DEFAULT_COSTUME.get(base) == trainee:
+                continue
+            suspect.append((s["ign"], trainee, row[0]))
+    finally:
+        con.close()
+    for ign, trainee, cid in suspect:
+        print(
+            f"  WARN wrong-costume art: {ign} -> {trainee} (card {cid} is an alt) "
+            f"is using the shared default art {art_basename(trainee)}"
+        )
+
+
+def art_basename(trainee):
+    return re.sub(r"\[.*?\]\s*", "", trainee).strip().replace(" ", "_") + "_(Race).png"
 
 
 def png_aspect(path):
@@ -1023,6 +1084,8 @@ def main():
             slide_entry["full_art_image"] = f"umas/{full_art_name}"
             print(f"  Full art assigned: {trainee} -> {full_art_name}")
             mark_compact_if_narrow(slide_entry, full_art_path)
+
+    warn_wrong_costume_art(slides)
 
     print(f"\nGenerated {len(slides)} slides")
 
