@@ -86,6 +86,15 @@
   --uma-accent-deep: #8e44ad;
 }
 
+/* Scorpio Cup II runs blue (the Speed stat ramp). */
+.slide-viewer[data-event="CM19"] {
+  --uma-accent: #5dade2;
+  --uma-accent-rgb: 93, 173, 226;
+  --uma-accent-bright: #76bbe8;
+  --uma-accent-light: #85c1e9;
+  --uma-accent-deep: #3498db;
+}
+
 /* ── Slide Base ──────────────────────────────────────── */
 
 .uma-slide {

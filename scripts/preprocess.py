@@ -138,6 +138,18 @@ EVENT_CONFIG = {
         "podium": "events/cm18/data/podium.parquet",
         "schema": "v2",
     },
+    "CM19": {
+        "name": "Scorpio Cup II",
+        "icon": "scorpio_cup.png",
+        "theme": "uma",
+        "distance": "Medium",
+        "surface": "Turf",
+        "track": "Kyoto Turf 2200m",
+        "finals_csv": "events/cm19/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm19/data/statsheet.parquet",
+        "podium": "events/cm19/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -282,6 +294,12 @@ def warn_wrong_costume_art(slides):
 
 def art_basename(trainee):
     return re.sub(r"\[.*?\]\s*", "", trainee).strip().replace(" ", "_") + "_(Race).png"
+
+
+def thumb_basename(trainee):
+    # "[Authentic / 1928] Gold City" -- a raw "/" becomes a directory on disk and
+    # a path separator in the URL, so the thumbnail 404s.
+    return trainee.replace("/", "-") + ".png"
 
 
 def png_aspect(path):
@@ -811,6 +829,24 @@ def main():
     )
     own_stats = stats_df[stats_df["is_user"] == True] if "is_user" in stats_df.columns else stats_df.iloc[0:0]
 
+    # Read the truth from the candidate's own submission when rows line up. The
+    # name-based fallback below matches IGNs fuzzily across every submission, so
+    # CM19's 'Jupiter' picked up Princeofjupiter's win and voided his award.
+    rowid_offset = _derive_rowid_offset(finals_df, stats_df)
+    pos_of = {idx: pos for pos, idx in enumerate(finals_df.index)}
+
+    def _truth_uma_own_row(idx):
+        if rowid_offset is None or "row" not in stats_df.columns:
+            return None
+        rid = pos_of[idx] + rowid_offset
+        for s in own_stats[own_stats["row"] == rid].itertuples():
+            if pd.notna(s.name) and str(s.name).strip():
+                return str(s.name).strip()
+        for p in podium_df[(podium_df["row_id"] == rid) & (podium_df["placement"] == 1)].itertuples():
+            if pd.notna(p.trainee_name):
+                return str(p.trainee_name).strip()
+        return None
+
     def _truth_uma(ign):
         for p in own_wins.itertuples():
             if pd.notna(p.trainee_name) and ign_matches(ign, p.trainer_name):
@@ -820,9 +856,9 @@ def main():
                 return str(s.name).strip()
         return None
 
-    for _, r in candidates.iterrows():
+    for idx, r in candidates.iterrows():
         ign = r[COL_IGN]
-        truth = _truth_uma(ign)
+        truth = _truth_uma_own_row(idx) or _truth_uma(ign)
         if truth and truth in unique_winner_names and winner_ign_by_uma.get(truth) not in (None, ign):
             unique_winner_names.discard(truth)
             print(f"  COLLISION: '{truth}' also won by {ign} "
@@ -979,7 +1015,7 @@ def main():
         slides.append({
             "ign": ign,
             "trainee_name": trainee,
-            "uma_image": f"umas/{trainee}.png",
+            "uma_image": f"umas/{thumb_basename(trainee)}",
             "time": time_val,
             "result": "1st",
             "quote": quote,
@@ -1037,7 +1073,7 @@ def main():
         slides.append({
             "ign": ign,
             "trainee_name": trainee,
-            "uma_image": f"umas/{trainee}.png",
+            "uma_image": f"umas/{thumb_basename(trainee)}",
             "time": ov.get("time") or csv_time,
             "result": "1st",
             "quote": ov.get("quote") or csv_quote,
@@ -1191,7 +1227,7 @@ def main():
         copied = 0
         for name in images_needed:
             src = umas_dir / f"{name}.png"
-            dst = umas_out / f"{name}.png"
+            dst = umas_out / thumb_basename(name)
             if src.exists():
                 shutil.copy2(src, dst)
                 copied += 1
@@ -1199,7 +1235,7 @@ def main():
                 print(f"  WARN image not found: {src.name}")
         print(f"Copied {copied}/{len(images_needed)} images to {umas_out}")
     else:
-        missing = [n for n in images_needed if not (umas_out / f"{n}.png").exists()]
+        missing = [n for n in images_needed if not (umas_out / thumb_basename(n)).exists()]
         if missing:
             print(f"  WARN {len(missing)} images not in public/umas/: {', '.join(missing)}")
         print(f"Skipped image copy (local mode, no --repo source)")

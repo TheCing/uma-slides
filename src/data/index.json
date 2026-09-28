@@ -69,6 +69,13 @@
       "icon": "libra_cup.png",
       "file": "slides-cm18.json",
       "slideCount": 22
+    },
+    {
+      "id": "CM19",
+      "name": "Scorpio Cup II",
+      "icon": "scorpio_cup.png",
+      "file": "slides-cm19.json",
+      "slideCount": 25
     }
   ]
 }

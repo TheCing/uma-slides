@@ -1,0 +1,357 @@
+{
+  "event": "CM19",
+  "name": "Scorpio Cup II",
+  "track": "Kyoto Turf 2200m",
+  "winners": [
+    {
+      "ign": "Maximu",
+      "trainee_name": "[Hopp'n♪Happy Heart] Special Week",
+      "base_name": "Special Week",
+      "time": "2:09.3",
+      "stats": {
+        "speed": 1561,
+        "stamina": 787,
+        "power": 1167,
+        "guts": 608,
+        "wit": 1114
+      },
+      "quote": "Agemasen to the devil"
+    },
+    {
+      "ign": "LeToucan",
+      "trainee_name": "[RUN! RUIN! LAUNCHER!] Gold Ship",
+      "base_name": "Gold Ship",
+      "time": "2:09.9",
+      "stats": {
+        "speed": 1540,
+        "stamina": 845,
+        "power": 1203,
+        "guts": 608,
+        "wit": 1201
+      },
+      "quote": "They don't want you to know this but Summer Goatship is actually OP"
+    },
+    {
+      "ign": "LuseLunam",
+      "trainee_name": "[unsigned] Air Shakur",
+      "base_name": "Air Shakur",
+      "time": "2:10.9",
+      "stats": {
+        "speed": 1481,
+        "stamina": 929,
+        "power": 952,
+        "guts": 683,
+        "wit": 1010
+      },
+      "quote": "airShakurWin = true  // IN OSHIS WE TRUST!! <3"
+    },
+    {
+      "ign": "kammie",
+      "trainee_name": "[Rouge Caroler] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "2:11.0",
+      "stats": {
+        "speed": 1630,
+        "stamina": 958,
+        "power": 1088,
+        "guts": 695,
+        "wit": 861
+      },
+      "quote": "BACK TO BACK BIWA WINS LETS GO"
+    },
+    {
+      "ign": "pugdog",
+      "trainee_name": "[Turbulent Blue] Meisho Doto",
+      "base_name": "Meisho Doto",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1612,
+        "stamina": 695,
+        "power": 1071,
+        "guts": 638,
+        "wit": 1097
+      },
+      "quote": "Awawa survived debuff hell"
+    },
+    {
+      "ign": "Linh124",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "base_name": "Kawakami Princess",
+      "time": "2:10.1",
+      "stats": {
+        "speed": 1600,
+        "stamina": 761,
+        "power": 1191,
+        "guts": 683,
+        "wit": 1006
+      },
+      "quote": "Believe in Princess magic (brute force)"
+    },
+    {
+      "ign": "neol",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "2:09.2",
+      "stats": {
+        "speed": 1614,
+        "stamina": 954,
+        "power": 1104,
+        "guts": 795,
+        "wit": 1079
+      },
+      "quote": "Let us drink hachimi"
+    },
+    {
+      "ign": "Lasercar",
+      "trainee_name": "[MB-19890425] Mihono Bourbon",
+      "base_name": "Mihono Bourbon",
+      "time": "2:09.6",
+      "stats": {
+        "speed": 1599,
+        "stamina": 828,
+        "power": 1208,
+        "guts": 680,
+        "wit": 989
+      },
+      "quote": "Go first. Also join BAKUSHIN please."
+    },
+    {
+      "ign": "Jellyx",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "base_name": "Grass Wonder",
+      "time": "2:10.2",
+      "stats": {
+        "speed": 1532,
+        "stamina": 917,
+        "power": 961,
+        "guts": 684,
+        "wit": 1200
+      },
+      "quote": "\"Where there's a will, there's a way.\" Come what may, I remained strong at heart."
+    },
+    {
+      "ign": "Zap",
+      "trainee_name": "[Authentic / 1928] Gold City",
+      "base_name": "Gold City",
+      "time": "2:10.7",
+      "stats": {
+        "speed": 1466,
+        "stamina": 885,
+        "power": 1080,
+        "guts": 776,
+        "wit": 1024
+      },
+      "quote": "Goldo City desu ... domo"
+    },
+    {
+      "ign": "6>Suri",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "base_name": "Mejiro Ryan",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1503,
+        "stamina": 980,
+        "power": 1204,
+        "guts": 672,
+        "wit": 890
+      },
+      "quote": "Finally winning as late surger main and bring all Victorias on 3 accounts"
+    },
+    {
+      "ign": "Princeofjupiter",
+      "trainee_name": "[Clippety-Tippety-Clop] Matikanetannhauser",
+      "base_name": "Matikanetannhauser",
+      "time": "2:09.2",
+      "stats": {
+        "speed": 1598,
+        "stamina": 746,
+        "power": 1188,
+        "guts": 669,
+        "wit": 958
+      },
+      "quote": "Shine bright, my star."
+    },
+    {
+      "ign": "rly.",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "base_name": "King Halo",
+      "time": "2:09.3",
+      "stats": {
+        "speed": 1400,
+        "stamina": 902,
+        "power": 1012,
+        "guts": 767,
+        "wit": 1135
+      },
+      "quote": "winning with a clean slate against a specialized uma for a track is funny"
+    },
+    {
+      "ign": "Doesnt_Matter",
+      "trainee_name": "[Frontline Elegance] Mejiro McQueen",
+      "base_name": "Mejiro McQueen",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1473,
+        "stamina": 833,
+        "power": 959,
+        "guts": 699,
+        "wit": 1153
+      },
+      "quote": "No way after losing all mant CMs (in some of them I got robbed, plus diabolical CM18 rng) I'm getting McQueen Victoria in end Xguri domain. All it took is FL+Med S+US+GW+4.7k \"raw\" SP."
+    },
+    {
+      "ign": "Arice12180",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "base_name": "Smart Falcon",
+      "time": "2:10.1",
+      "stats": {
+        "speed": 1557,
+        "stamina": 841,
+        "power": 1048,
+        "guts": 799,
+        "wit": 1079
+      },
+      "quote": "Tee-hee"
+    },
+    {
+      "ign": "Kaedenoki",
+      "trainee_name": "[Sunlight Bouquet] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "2:10.7",
+      "stats": {
+        "speed": 1527,
+        "stamina": 899,
+        "power": 891,
+        "guts": 658,
+        "wit": 1253
+      },
+      "quote": "i love umamusume U145"
+    },
+    {
+      "ign": "sheikhpickle",
+      "trainee_name": "[Flare] Aston Machan",
+      "base_name": "Aston Machan",
+      "time": "2:10.9",
+      "stats": {
+        "speed": 1509,
+        "stamina": 842,
+        "power": 1031,
+        "guts": 730,
+        "wit": 1163
+      },
+      "quote": "Queen Machan"
+    },
+    {
+      "ign": "Oyasumi",
+      "trainee_name": "[Meisterschaft] Eishin Flash",
+      "base_name": "Eishin Flash",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1510,
+        "stamina": 831,
+        "power": 1093,
+        "guts": 647,
+        "wit": 808
+      },
+      "quote": "Undefeated on turf and dirt I guess!"
+    },
+    {
+      "ign": "Pehfos",
+      "trainee_name": "[Butterfly Sting] Wonder Acute",
+      "base_name": "Wonder Acute",
+      "time": "2:10.7",
+      "stats": {
+        "speed": 1420,
+        "stamina": 840,
+        "power": 1035,
+        "guts": 674,
+        "wit": 975
+      },
+      "quote": "Hesitation is defeat"
+    },
+    {
+      "ign": "MCHamm",
+      "trainee_name": "[Line Breakthrough] Mejiro Palmer",
+      "base_name": "Mejiro Palmer",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1554,
+        "stamina": 1009,
+        "power": 1005,
+        "guts": 820,
+        "wit": 830
+      },
+      "quote": "Dirt C can still win! Wait... this wasn't a dirt cm?"
+    },
+    {
+      "ign": "DxD",
+      "trainee_name": "[CODE: ICING] Mihono Bourbon",
+      "base_name": "Mihono Bourbon",
+      "time": "2:09.3",
+      "stats": {
+        "speed": 1519,
+        "stamina": 876,
+        "power": 1108,
+        "guts": 820,
+        "wit": 1095
+      },
+      "quote": "No need for Med S"
+    },
+    {
+      "ign": "Tricky",
+      "trainee_name": "[Gilded Shrine to Glory] Kitasan Black",
+      "base_name": "Kitasan Black",
+      "time": "2:11.1",
+      "stats": {
+        "speed": 1607,
+        "stamina": 859,
+        "power": 1058,
+        "guts": 546,
+        "wit": 1072
+      },
+      "quote": "ITS A KITASAN BLACK FESTIVAL!!!!!!!!!!!!!"
+    },
+    {
+      "ign": "oolli",
+      "trainee_name": "[Innocent Silence] Silence Suzuka",
+      "base_name": "Silence Suzuka",
+      "time": "2:11.1",
+      "stats": {
+        "speed": 1587,
+        "stamina": 981,
+        "power": 869,
+        "guts": 835,
+        "wit": 1010
+      },
+      "quote": "Can I go for a run? My legs are itching to go!"
+    },
+    {
+      "ign": "Zephyr",
+      "trainee_name": "[Fluttertail Spirit] Yamanin Zephyr",
+      "base_name": "Yamanin Zephyr",
+      "time": "2:10.5",
+      "stats": {
+        "speed": 1604,
+        "stamina": 771,
+        "power": 1132,
+        "guts": 679,
+        "wit": 1056
+      },
+      "quote": "I named myself this before I knew about her lmao"
+    },
+    {
+      "ign": "FlanGG",
+      "trainee_name": "[Precise Chocolatier] Eishin Flash",
+      "base_name": "Eishin Flash",
+      "time": "2:10.0",
+      "stats": {
+        "speed": 1603,
+        "stamina": 690,
+        "power": 1226,
+        "guts": 538,
+        "wit": 912
+      },
+      "quote": "You can't make a dessert without breaking few xOguris"
+    }
+  ]
+}
