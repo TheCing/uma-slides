@@ -8,6 +8,9 @@
   background: linear-gradient(145deg, #fffbf5 0%, #fff3e0 40%, #fde8d0 100%);
   font-family: 'Quicksand', system-ui, sans-serif;
   color: #2c3e50;
+  /* The stage is often much shorter than the window, so vw/vh size the header
+     and cards against empty space and the two rows collide. Query the slide. */
+  container-type: size;
 }
 
 .toc-slide::after {
@@ -67,14 +70,14 @@
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
-  padding: clamp(28px, 4vh, 56px) clamp(36px, 5vw, 72px);
-  gap: clamp(20px, 3vh, 36px);
+  padding: clamp(10px, 4cqh, 56px) clamp(16px, 4.5cqw, 72px);
+  gap: clamp(8px, 2.5cqh, 36px);
 }
 
 .toc-badges {
   position: absolute;
-  top: clamp(20px, 3vh, 32px);
-  right: clamp(28px, 4vw, 48px);
+  top: clamp(10px, 3cqh, 32px);
+  right: clamp(14px, 3.5cqw, 48px);
   display: flex;
   align-items: center;
   gap: 18px;
@@ -82,7 +85,7 @@
 }
 
 .toc-badges img {
-  height: clamp(38px, 5vh, 56px);
+  height: clamp(22px, 7cqh, 56px);
   width: auto;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
 }
@@ -97,7 +100,7 @@
 .toc-eyebrow {
   font-family: 'Nunito', system-ui, sans-serif;
   font-weight: 800;
-  font-size: clamp(13px, 1.5vw, 18px);
+  font-size: clamp(10px, 1.6cqw, 18px);
   letter-spacing: 0.18em;
   color: var(--uma-accent);
   text-transform: uppercase;
@@ -106,7 +109,7 @@
 .toc-title {
   font-family: 'Nunito', system-ui, sans-serif;
   font-weight: 900;
-  font-size: clamp(40px, 6vw, 78px);
+  font-size: clamp(22px, 5.6cqw, 78px);
   line-height: 1;
   background: linear-gradient(
     135deg,
@@ -123,9 +126,9 @@
 .toc-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(6px, 1cqw, 12px);
   font-weight: 700;
-  font-size: clamp(13px, 1.4vw, 18px);
+  font-size: clamp(9px, 1.5cqw, 18px);
   letter-spacing: 0.12em;
   color: #5d6d7e;
   text-transform: uppercase;
@@ -144,7 +147,7 @@
    balanced look. Flex wrap (not grid) so an incomplete final row centers
    instead of left-aligning with empty trailing slots. */
 .toc-grid {
-  --toc-gap: clamp(10px, 1.2vw, 18px);
+  --toc-gap: clamp(6px, 1.2cqw, 18px);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -159,9 +162,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: clamp(4px, 0.6vh, 10px);
-  padding: clamp(6px, 1vh, 14px) clamp(6px, 0.9vw, 12px);
+  justify-content: flex-start;
+  gap: clamp(2px, 0.8cqh, 10px);
+  padding: clamp(4px, 1cqh, 14px) clamp(4px, 0.8cqw, 12px);
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(var(--uma-accent-rgb), 0.25);
   border-radius: 14px;
@@ -189,8 +192,8 @@
 /* Portrait scales by both viewport width AND height so multi-row decks
    (11+ winners) stay within the slide instead of clipping the bottom row. */
 .toc-portrait {
-  width: clamp(48px, min(7vw, 14vh), 128px);
-  height: clamp(48px, min(7vw, 14vh), 128px);
+  width: clamp(32px, min(8cqw, 16cqh), 128px);
+  height: clamp(32px, min(8cqw, 16cqh), 128px);
   border-radius: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, #fff3e0 0%, #fde8d0 100%);
@@ -219,25 +222,40 @@
 .toc-ign {
   font-family: 'Nunito', system-ui, sans-serif;
   font-weight: 800;
-  font-size: clamp(13px, 1.3vw, 18px);
+  font-size: clamp(10px, 1.4cqw, 18px);
+  line-height: 1.15;
   color: #2c3e50;
   letter-spacing: 0.02em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-wrap: balance;
+  overflow-wrap: break-word;
   max-width: 100%;
   text-align: center;
 }
 
 .toc-uma {
   font-weight: 600;
-  font-size: clamp(11px, 1.05vw, 14px);
+  font-size: clamp(8px, 1.1cqw, 14px);
+  line-height: 1.15;
   color: #5d6d7e;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Costume only appears when two cards on the page share a character.
+   Its own line, so the character name is never clipped to make room. */
+.toc-costume {
+  font-weight: 700;
+  font-size: clamp(7px, 0.95cqw, 12px);
+  line-height: 1.2;
+  color: #5d6d7e;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: break-word;
   max-width: 100%;
   text-align: center;
 }

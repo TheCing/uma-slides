@@ -95,6 +95,32 @@
   --uma-accent-deep: #3498db;
 }
 
+/* Sagittarius Cup II runs the cup icon's own ramp: night-sky violet into
+   the crescent's gold. The gold stop stays dark enough to read on cream. */
+.slide-viewer[data-event="CM20"] {
+  --uma-accent: #6d4aff;
+  --uma-accent-rgb: 109, 74, 255;
+  --uma-accent-bright: #e3b23c;
+  --uma-accent-light: #a86b00;
+  --uma-accent-deep: #4c2d9a;
+  --uma-accent-gradient: linear-gradient(
+    105deg,
+    #4c2d9a 0%,
+    #6d4aff 40%,
+    #a86b00 100%
+  );
+}
+
+.slide-viewer[data-event="CM20"] .toc-title {
+  /* background-image, not the background shorthand: the shorthand resets
+     background-clip and the title becomes a solid bar. */
+  background-image: var(--uma-accent-gradient);
+}
+
+.slide-viewer[data-event="CM20"] .uma-ribbon-main {
+  background: var(--uma-accent-gradient);
+}
+
 /* ── Slide Base ──────────────────────────────────────── */
 
 .uma-slide {
@@ -548,57 +574,90 @@
 
 .uma-stats-bar {
   display: flex;
-  gap: clamp(8px, 1.5vw, 20px);
-  padding: 8px 0 4px;
+  gap: clamp(12px, 1.6vw, 22px);
+  padding: 6px 0 0;
   justify-content: end;
+  align-items: flex-end;
 }
 
+/* Rank badge leads. The number is the reading, and the gauge shows how full
+   that stat is against its own cap, so a 765 stamina no longer looks like a
+   1,488 speed. Colors stay the game's stat colors, not the cup accent. */
 .uma-stat {
+  --stat: #5dade2;
+  --stat-ink: #15608f;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
-  min-width: clamp(60px, 8vw, 110px);
+  gap: 1px;
+  width: clamp(76px, 7.2vw, 108px);
 }
 
-.uma-stat-header {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  width: 100%;
+.uma-stat.speed {
+  --stat: #2e86c1;
+  --stat-ink: #15608f;
+}
+.uma-stat.stamina {
+  --stat: #e04b48;
+  --stat-ink: #b42318;
+}
+.uma-stat.power {
+  --stat: #e07a14;
+  --stat-ink: #9a4e00;
+}
+.uma-stat.guts {
+  --stat: #e25488;
+  --stat-ink: #a61d52;
+}
+.uma-stat.wit {
+  --stat: #3c9a46;
+  --stat-ink: #1d6b28;
+}
+
+.uma-grade-icon {
+  width: clamp(36px, 3.4vw, 48px);
+  height: clamp(36px, 3.4vw, 48px);
+  display: block;
+  margin-bottom: 2px;
+  user-select: none;
 }
 
 .uma-stat-label {
   font-family: var(--uma-font-body);
-  font-size: clamp(7px, 0.8vw, 11px);
-  font-weight: 700;
-  color: var(--uma-text-muted);
-  letter-spacing: 0.5px;
+  font-size: clamp(8px, 0.72vw, 11px);
+  font-weight: 800;
+  color: var(--stat-ink);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
-.uma-grade-icon {
-  width: clamp(20px, 2.2vw, 30px);
-  height: clamp(20px, 2.2vw, 30px);
-  display: block;
-  flex-shrink: 0;
-  image-rendering: -webkit-optimize-contrast;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
-  user-select: none;
+.uma-stat-value {
+  font-family: var(--uma-font-display);
+  font-size: clamp(16px, 1.7vw, 26px);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--uma-text-primary);
+  line-height: 1.05;
 }
 
 .uma-stat-bar-track {
   width: 100%;
-  height: clamp(6px, 0.7vw, 10px);
+  height: 7px;
+  margin-top: 4px;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.06);
+  background: color-mix(in srgb, var(--stat) 24%, white);
   overflow: hidden;
 }
 
 .uma-stat-bar-fill {
   height: 100%;
-  border-radius: 999px;
-  animation: umaBarFill 0.8s ease 0.4s both;
+  border-radius: inherit;
+  background: var(--stat);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   transform-origin: left;
+  animation: umaBarFill 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
 }
 
 @keyframes umaBarFill {
@@ -608,30 +667,6 @@
   to {
     transform: scaleX(1);
   }
-}
-
-.uma-stat-bar-fill.speed {
-  background: var(--uma-gradient-blue);
-}
-.uma-stat-bar-fill.stamina {
-  background: var(--uma-gradient-red);
-}
-.uma-stat-bar-fill.power {
-  background: var(--uma-gradient-orange);
-}
-.uma-stat-bar-fill.guts {
-  background: var(--uma-gradient-pink);
-}
-.uma-stat-bar-fill.wit {
-  background: var(--uma-gradient-green);
-}
-
-.uma-stat-value {
-  font-family: var(--uma-font-display);
-  font-size: clamp(18px, 2.8vw, 40px);
-  font-weight: 900;
-  color: var(--uma-text-primary);
-  line-height: 1;
 }
 
 /* ── Sparkle Decorations ─────────────────────────────── */

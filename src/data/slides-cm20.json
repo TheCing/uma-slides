@@ -1,0 +1,317 @@
+{
+  "event": {
+    "name": "Sagittarius Cup II",
+    "id": "CM20",
+    "icon": "sagittarius_cup.png",
+    "theme": "uma",
+    "distance": "Long",
+    "surface": "Turf",
+    "track": "Nakayama Turf 2500m"
+  },
+  "slides": [
+    {
+      "ign": "veee",
+      "trainee_name": "[pf. Winning Equation...] Biwa Hayahide",
+      "uma_image": "umas/[pf. Winning Equation...] Biwa Hayahide.png",
+      "time": "2:27.9",
+      "result": "1st",
+      "quote": "✅0.2 accel ✅failed wit checks ✅subpar midleg ✅win anyway :aga:",
+      "stats": {
+        "speed": 1610,
+        "stamina": 712,
+        "power": 1083,
+        "guts": 663,
+        "wit": 1167
+      },
+      "full_art_image": "umas/Biwa_Hayahide_(Race).png"
+    },
+    {
+      "ign": "Zeoxys",
+      "trainee_name": "[Beyond the Horizon] Tokai Teio",
+      "uma_image": "umas/[Beyond the Horizon] Tokai Teio.png",
+      "time": "2:27.9",
+      "result": "1st",
+      "quote": "1993 Arima Kinen Demon",
+      "stats": {
+        "speed": 1487,
+        "stamina": 819,
+        "power": 1057,
+        "guts": 666,
+        "wit": 1175
+      },
+      "full_art_image": "umas/Tokai_Teio_(Alt).png"
+    },
+    {
+      "ign": "CellistiaCat",
+      "trainee_name": "[Dot-o'-Lantern] Meisho Doto",
+      "uma_image": "umas/[Dot-o'-Lantern] Meisho Doto.png",
+      "time": "2:28.9",
+      "result": "1st",
+      "quote": "I'm so proud of her, wawa!",
+      "stats": {
+        "speed": 1449,
+        "stamina": 926,
+        "power": 1269,
+        "guts": 680,
+        "wit": 1034
+      },
+      "full_art_image": "umas/Meisho_Doto_(Alt).png"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "uma_image": "umas/[O Sole Suo!] T.M. Opera O.png",
+      "time": "2:28.4",
+      "result": "1st",
+      "quote": "The Overlord have done it again. SHE  is the LONG TRACK 100% WINNER UMA.",
+      "stats": {
+        "speed": 1468,
+        "stamina": 784,
+        "power": 1234,
+        "guts": 639,
+        "wit": 857
+      },
+      "full_art_image": "umas/T.M._Opera_O_(Race).png"
+    },
+    {
+      "ign": "kammie",
+      "trainee_name": "[Rouge Caroler] Biwa Hayahide",
+      "uma_image": "umas/[Rouge Caroler] Biwa Hayahide.png",
+      "time": "2:28.9",
+      "result": "1st",
+      "quote": "3 biwa wins in a row grand live is the best!!!!",
+      "stats": {
+        "speed": 1429,
+        "stamina": 848,
+        "power": 1178,
+        "guts": 576,
+        "wit": 1043
+      },
+      "full_art_image": "umas/Biwa_Hayahide_(Alt).png"
+    },
+    {
+      "ign": "Dylan",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "uma_image": "umas/[King of Emeralds] King Halo.png",
+      "time": "2:28.4",
+      "result": "1st",
+      "quote": "Throughout Sprints and Longs, King Halo alone is the honored one!",
+      "stats": {
+        "speed": 1488,
+        "stamina": 765,
+        "power": 1199,
+        "guts": 721,
+        "wit": 849
+      },
+      "full_art_image": "umas/King_Halo_(Race).png"
+    },
+    {
+      "ign": "Amasuro",
+      "trainee_name": "[Autumn Cosmos] Gold City",
+      "uma_image": "umas/[Autumn Cosmos] Gold City.png",
+      "time": "2:28.0",
+      "result": "1st",
+      "quote": "Nobody beats Gold City 13CMs in a row",
+      "stats": {
+        "speed": 1458,
+        "stamina": 817,
+        "power": 966,
+        "guts": 784,
+        "wit": 1159
+      },
+      "full_art_image": "umas/Gold_City_(Alt).png"
+    },
+    {
+      "ign": "RandomlyCasual",
+      "trainee_name": "[Saintly Jade Cleric] Grass Wonder",
+      "uma_image": "umas/[Saintly Jade Cleric] Grass Wonder.png",
+      "time": "2:29.1",
+      "result": "1st",
+      "quote": "I need a break from fucking Light Hello",
+      "stats": {
+        "speed": 1448,
+        "stamina": 895,
+        "power": 1033,
+        "guts": 826,
+        "wit": 1072
+      },
+      "full_art_image": "umas/Grass_Wonder_(Alt).png"
+    },
+    {
+      "ign": "namayO",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "uma_image": "umas/[Archer by Moonlight] Symboli Rudolf.png",
+      "time": "2:29.0",
+      "result": "1st",
+      "quote": "Luna my beloved🥰",
+      "stats": {
+        "speed": 1486,
+        "stamina": 960,
+        "power": 988,
+        "guts": 797,
+        "wit": 1032
+      },
+      "full_art_image": "umas/Symboli_Rudolf_(Alt).png"
+    },
+    {
+      "ign": "Arice12180",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "uma_image": "umas/[LOVE☆4EVER] Smart Falcon.png",
+      "time": "2:29.6",
+      "result": "1st",
+      "quote": "Sparkly Stardom > Cacao",
+      "stats": {
+        "speed": 1584,
+        "stamina": 949,
+        "power": 1052,
+        "guts": 795,
+        "wit": 982
+      },
+      "full_art_image": "umas/Smart_Falcon_(Race).png"
+    },
+    {
+      "ign": "hamster",
+      "trainee_name": "[Rising☆Fortune] Matikanefukukitaru",
+      "uma_image": "umas/[Rising☆Fortune] Matikanefukukitaru.png",
+      "time": "2:28.4",
+      "result": "1st",
+      "quote": "i love gambling",
+      "stats": {
+        "speed": 1602,
+        "stamina": 999,
+        "power": 1097,
+        "guts": 823,
+        "wit": 788
+      },
+      "full_art_image": "umas/Matikanefukukitaru_(Race).png"
+    },
+    {
+      "ign": "Fnaa27",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "uma_image": "umas/[Stone-Piercing Blue] Grass Wonder.png",
+      "time": "2:29.6",
+      "result": "1st",
+      "quote": "Grass for the win",
+      "stats": {
+        "speed": 1621,
+        "stamina": 913,
+        "power": 1134,
+        "guts": 809,
+        "wit": 1023
+      },
+      "full_art_image": "umas/Grass_Wonder_(Race).png"
+    },
+    {
+      "ign": "Beri (Waif Motion)",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "uma_image": "umas/[Noble Seamair] Fine Motion.png",
+      "time": "2:29.3",
+      "result": "1st",
+      "quote": "Waif. I ran her as pace for only 3 out of 9 CMs I've used her in because pace is still way too cope most of the time (I ran her as front this time)",
+      "stats": {
+        "speed": 1501,
+        "stamina": 914,
+        "power": 1236,
+        "guts": 784,
+        "wit": 935
+      },
+      "full_art_image": "umas/Fine_Motion_(Race).png"
+    },
+    {
+      "ign": "Plucky",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "uma_image": "umas/[Shooting Star Revue] Fuji Kiseki.png",
+      "time": "2:28.6",
+      "result": "1st",
+      "quote": "Best fuji player in global arima",
+      "stats": {
+        "speed": 1506,
+        "stamina": 884,
+        "power": 1218,
+        "guts": 613,
+        "wit": 1260
+      },
+      "full_art_image": "umas/Fuji_Kiseki_(Race).png"
+    },
+    {
+      "ign": "BurntBread",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "uma_image": "umas/[Blazed Head, Covered Fists] Yaeno Muteki.png",
+      "time": "2:28.1",
+      "result": "1st",
+      "quote": "I have surely witnessed it.",
+      "stats": {
+        "speed": 1531,
+        "stamina": 819,
+        "power": 1098,
+        "guts": 697,
+        "wit": 1131
+      },
+      "full_art_image": "umas/Yaeno_Muteki_(Race).png"
+    },
+    {
+      "ign": "Shobo",
+      "trainee_name": "[unsigned] Air Shakur",
+      "uma_image": "umas/[unsigned] Air Shakur.png",
+      "time": "2:28.1",
+      "result": "1st",
+      "quote": "2000 generation anime when...",
+      "stats": {
+        "speed": 1579,
+        "stamina": 931,
+        "power": 1026,
+        "guts": 662,
+        "wit": 997
+      },
+      "full_art_image": "umas/Air_Shakur_(Race).png"
+    },
+    {
+      "ign": "CJay",
+      "trainee_name": "[Bubblegum☆Memories] Taiki Shuttle",
+      "uma_image": "umas/[Bubblegum☆Memories] Taiki Shuttle.png",
+      "time": "2:29.2",
+      "result": "1st",
+      "quote": "Yeehaw!",
+      "stats": {
+        "speed": 1451,
+        "stamina": 909,
+        "power": 1281,
+        "guts": 797,
+        "wit": 696
+      },
+      "full_art_image": "umas/Taiki_Shuttle_(Alt).png"
+    },
+    {
+      "ign": "janjan",
+      "trainee_name": "[Reeling in the Big One] Seiun Sky",
+      "uma_image": "umas/[Reeling in the Big One] Seiun Sky.png",
+      "time": "2:27.8",
+      "result": "1st",
+      "quote": "Late starts never bothered me anyway",
+      "stats": {
+        "speed": 1556,
+        "stamina": 895,
+        "power": 1018,
+        "guts": 644,
+        "wit": 1165
+      },
+      "full_art_image": "umas/Seiun_Sky_(Race).png"
+    },
+    {
+      "ign": "Blitzzard",
+      "trainee_name": "[Natural Brilliance] Satono Diamond",
+      "uma_image": "umas/[Natural Brilliance] Satono Diamond.png",
+      "time": "2:27.9",
+      "result": "1st",
+      "quote": "She won the most important race",
+      "stats": {
+        "speed": 1520,
+        "stamina": 882,
+        "power": 1022,
+        "guts": 665,
+        "wit": 787
+      },
+      "full_art_image": "umas/Satono_Diamond_(Race).png"
+    }
+  ]
+}

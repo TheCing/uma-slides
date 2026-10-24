@@ -76,6 +76,13 @@
       "icon": "scorpio_cup.png",
       "file": "slides-cm19.json",
       "slideCount": 25
+    },
+    {
+      "id": "CM20",
+      "name": "Sagittarius Cup II",
+      "icon": "sagittarius_cup.png",
+      "file": "slides-cm20.json",
+      "slideCount": 19
     }
   ]
 }

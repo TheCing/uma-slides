@@ -1,0 +1,12 @@
+{
+  "exclusions": [
+    {
+      "ign": "JoSE_205",
+      "reason": "Dropped to match the team's hand-checked CM20 list. The form qualifies them for [Hot☆Summer Night] Maruzensky, but they are not on the list."
+    },
+    {
+      "ign": "Plati",
+      "reason": "Dropped to match the team's hand-checked CM20 list. The form qualifies them for [Formula R] Maruzensky, but they are not on the list."
+    }
+  ]
+}

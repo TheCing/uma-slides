@@ -1,0 +1,273 @@
+{
+  "event": "CM20",
+  "name": "Sagittarius Cup II",
+  "track": "Nakayama Turf 2500m",
+  "winners": [
+    {
+      "ign": "veee",
+      "trainee_name": "[pf. Winning Equation...] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "2:27.9",
+      "stats": {
+        "speed": 1610,
+        "stamina": 712,
+        "power": 1083,
+        "guts": 663,
+        "wit": 1167
+      },
+      "quote": "✅0.2 accel ✅failed wit checks ✅subpar midleg ✅win anyway :aga:"
+    },
+    {
+      "ign": "Zeoxys",
+      "trainee_name": "[Beyond the Horizon] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "2:27.9",
+      "stats": {
+        "speed": 1487,
+        "stamina": 819,
+        "power": 1057,
+        "guts": 666,
+        "wit": 1175
+      },
+      "quote": "1993 Arima Kinen Demon"
+    },
+    {
+      "ign": "CellistiaCat",
+      "trainee_name": "[Dot-o'-Lantern] Meisho Doto",
+      "base_name": "Meisho Doto",
+      "time": "2:28.9",
+      "stats": {
+        "speed": 1449,
+        "stamina": 926,
+        "power": 1269,
+        "guts": 680,
+        "wit": 1034
+      },
+      "quote": "I'm so proud of her, wawa!"
+    },
+    {
+      "ign": "Excelt",
+      "trainee_name": "[O Sole Suo!] T.M. Opera O",
+      "base_name": "T.M. Opera O",
+      "time": "2:28.4",
+      "stats": {
+        "speed": 1468,
+        "stamina": 784,
+        "power": 1234,
+        "guts": 639,
+        "wit": 857
+      },
+      "quote": "The Overlord have done it again. SHE  is the LONG TRACK 100% WINNER UMA."
+    },
+    {
+      "ign": "kammie",
+      "trainee_name": "[Rouge Caroler] Biwa Hayahide",
+      "base_name": "Biwa Hayahide",
+      "time": "2:28.9",
+      "stats": {
+        "speed": 1429,
+        "stamina": 848,
+        "power": 1178,
+        "guts": 576,
+        "wit": 1043
+      },
+      "quote": "3 biwa wins in a row grand live is the best!!!!"
+    },
+    {
+      "ign": "Dylan",
+      "trainee_name": "[King of Emeralds] King Halo",
+      "base_name": "King Halo",
+      "time": "2:28.4",
+      "stats": {
+        "speed": 1488,
+        "stamina": 765,
+        "power": 1199,
+        "guts": 721,
+        "wit": 849
+      },
+      "quote": "Throughout Sprints and Longs, King Halo alone is the honored one!"
+    },
+    {
+      "ign": "Amasuro",
+      "trainee_name": "[Autumn Cosmos] Gold City",
+      "base_name": "Gold City",
+      "time": "2:28.0",
+      "stats": {
+        "speed": 1458,
+        "stamina": 817,
+        "power": 966,
+        "guts": 784,
+        "wit": 1159
+      },
+      "quote": "Nobody beats Gold City 13CMs in a row"
+    },
+    {
+      "ign": "RandomlyCasual",
+      "trainee_name": "[Saintly Jade Cleric] Grass Wonder",
+      "base_name": "Grass Wonder",
+      "time": "2:29.1",
+      "stats": {
+        "speed": 1448,
+        "stamina": 895,
+        "power": 1033,
+        "guts": 826,
+        "wit": 1072
+      },
+      "quote": "I need a break from fucking Light Hello"
+    },
+    {
+      "ign": "namayO",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "base_name": "Symboli Rudolf",
+      "time": "2:29.0",
+      "stats": {
+        "speed": 1486,
+        "stamina": 960,
+        "power": 988,
+        "guts": 797,
+        "wit": 1032
+      },
+      "quote": "Luna my beloved🥰"
+    },
+    {
+      "ign": "Arice12180",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "base_name": "Smart Falcon",
+      "time": "2:29.6",
+      "stats": {
+        "speed": 1584,
+        "stamina": 949,
+        "power": 1052,
+        "guts": 795,
+        "wit": 982
+      },
+      "quote": "Sparkly Stardom > Cacao"
+    },
+    {
+      "ign": "hamster",
+      "trainee_name": "[Rising☆Fortune] Matikanefukukitaru",
+      "base_name": "Matikanefukukitaru",
+      "time": "2:28.4",
+      "stats": {
+        "speed": 1602,
+        "stamina": 999,
+        "power": 1097,
+        "guts": 823,
+        "wit": 788
+      },
+      "quote": "i love gambling"
+    },
+    {
+      "ign": "Fnaa27",
+      "trainee_name": "[Stone-Piercing Blue] Grass Wonder",
+      "base_name": "Grass Wonder",
+      "time": "2:29.6",
+      "stats": {
+        "speed": 1621,
+        "stamina": 913,
+        "power": 1134,
+        "guts": 809,
+        "wit": 1023
+      },
+      "quote": "Grass for the win"
+    },
+    {
+      "ign": "Beri (Waif Motion)",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "base_name": "Fine Motion",
+      "time": "2:29.3",
+      "stats": {
+        "speed": 1501,
+        "stamina": 914,
+        "power": 1236,
+        "guts": 784,
+        "wit": 935
+      },
+      "quote": "Waif. I ran her as pace for only 3 out of 9 CMs I've used her in because pace is still way too cope most of the time (I ran her as front this time)"
+    },
+    {
+      "ign": "Plucky",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "2:28.6",
+      "stats": {
+        "speed": 1506,
+        "stamina": 884,
+        "power": 1218,
+        "guts": 613,
+        "wit": 1260
+      },
+      "quote": "Best fuji player in global arima"
+    },
+    {
+      "ign": "BurntBread",
+      "trainee_name": "[Blazed Head, Covered Fists] Yaeno Muteki",
+      "base_name": "Yaeno Muteki",
+      "time": "2:28.1",
+      "stats": {
+        "speed": 1531,
+        "stamina": 819,
+        "power": 1098,
+        "guts": 697,
+        "wit": 1131
+      },
+      "quote": "I have surely witnessed it."
+    },
+    {
+      "ign": "Shobo",
+      "trainee_name": "[unsigned] Air Shakur",
+      "base_name": "Air Shakur",
+      "time": "2:28.1",
+      "stats": {
+        "speed": 1579,
+        "stamina": 931,
+        "power": 1026,
+        "guts": 662,
+        "wit": 997
+      },
+      "quote": "2000 generation anime when..."
+    },
+    {
+      "ign": "CJay",
+      "trainee_name": "[Bubblegum☆Memories] Taiki Shuttle",
+      "base_name": "Taiki Shuttle",
+      "time": "2:29.2",
+      "stats": {
+        "speed": 1451,
+        "stamina": 909,
+        "power": 1281,
+        "guts": 797,
+        "wit": 696
+      },
+      "quote": "Yeehaw!"
+    },
+    {
+      "ign": "janjan",
+      "trainee_name": "[Reeling in the Big One] Seiun Sky",
+      "base_name": "Seiun Sky",
+      "time": "2:27.8",
+      "stats": {
+        "speed": 1556,
+        "stamina": 895,
+        "power": 1018,
+        "guts": 644,
+        "wit": 1165
+      },
+      "quote": "Late starts never bothered me anyway"
+    },
+    {
+      "ign": "Blitzzard",
+      "trainee_name": "[Natural Brilliance] Satono Diamond",
+      "base_name": "Satono Diamond",
+      "time": "2:27.9",
+      "stats": {
+        "speed": 1520,
+        "stamina": 882,
+        "power": 1022,
+        "guts": 665,
+        "wit": 787
+      },
+      "quote": "She won the most important race"
+    }
+  ]
+}

@@ -21,6 +21,7 @@ const EVENT_ACCENT = {
   CM17: 0xef5350,
   CM18: 0x9b59b6,
   CM19: 0x5dade2,
+  CM20: 0x6d4aff,
 }
 
 function buildEmbed(slide, event) {

@@ -150,6 +150,18 @@ EVENT_CONFIG = {
         "podium": "events/cm19/data/podium.parquet",
         "schema": "v2",
     },
+    "CM20": {
+        "name": "Sagittarius Cup II",
+        "icon": "sagittarius_cup.png",
+        "theme": "uma",
+        "distance": "Long",
+        "surface": "Turf",
+        "track": "Nakayama Turf 2500m",
+        "finals_csv": "events/cm20/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm20/data/statsheet.parquet",
+        "podium": "events/cm20/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -163,6 +175,7 @@ COL_WINNER_TIME = "Finals - Winner - Time (optional)"
 COL_PODIUM_UPLOAD = "Finals - Results List - Upload Screenshot"
 COL_STAT_UPLOAD_1 = "Optional - Finals - Winner - Screenshot - Stat Screen (First Image)"
 COL_STAT_UPLOAD_2 = "Optional - Finals - Winner - Screenshot - Stat Screen (Second Image)"
+COL_STAT_UPLOAD_3 = "Optional - Finals - Winner - Screenshot - Stat Screen (Third Image)"
 LEAGUE_GRADED_PREFIX = "Graded"
 
 DEFAULT_COSTUME = {
@@ -212,6 +225,9 @@ DEFAULT_COSTUME = {
     # Winning_Ticket_(Race).png depicts the [Get to Winning!] tracksuit default
     # (card 103501); CM18's steampunk [Dream Deliverer] has its own ALT_ART.
     "Winning Ticket": "[Get to Winning!] Winning Ticket",
+    # Maruzensky_(Race).png depicts the [Formula R] default (card 100401).
+    # CM16/CM20's [Hot☆Summer Night] has its own ALT_ART entry.
+    "Maruzensky": "[Formula R] Maruzensky",
 }
 
 ALT_ART = {
@@ -238,6 +254,10 @@ ALT_ART = {
     "[Fanatic♡Jiangshi] Agnes Digital": "Agnes_Digital_(Alt).png",
     "[New Year, Same Radiance!] T.M. Opera O": "T.M._Opera_O_(Alt).png",
     "[Dream Deliverer] Winning Ticket": "Winning_Ticket_(Alt).png",
+    "[Bubblegum☆Memories] Taiki Shuttle": "Taiki_Shuttle_(Alt).png",
+    "[Dot-o'-Lantern] Meisho Doto": "Meisho_Doto_(Alt).png",
+    "[Autumn Cosmos] Gold City": "Gold_City_(Alt).png",
+    "[Saintly Jade Cleric] Grass Wonder": "Grass_Wonder_(Alt).png",
 }
 
 # The .full-art layout sizes the render by width, so a narrower-than-usual
@@ -440,6 +460,8 @@ V2_COLUMN_ALIASES = {
     'Finals - Own Winner - Oshi Award Quote (in case you end up winning one)': COL_OSHI_QUOTE_V2,
     'Optional - Finals - Own Winner - Screenshot - Stat Screen (First Image)': COL_STAT_UPLOAD_1,
     'Optional - Finals - Own Winner - Screenshot - Stat Screen (Second Image)': COL_STAT_UPLOAD_2,
+    # CM20 added a third stat-screen slot. A screenshot in any slot counts.
+    'Optional - Finals - Own Winner - Screenshot - Stat Screen (Third Image)': COL_STAT_UPLOAD_3,
 }
 
 
@@ -458,6 +480,17 @@ def canonicalize_v2_columns(df):
         df = df.rename(columns=rename)
         print(f"[v2 columns] Canonicalized {len(rename)} 'Own Winner' column(s): {sorted(rename.values())}")
     return df
+
+
+def _has_stat_screenshot(df):
+    """True when any stat-screen slot on the row has an upload."""
+    cols = [c for c in (COL_STAT_UPLOAD_1, COL_STAT_UPLOAD_2, COL_STAT_UPLOAD_3) if c in df.columns]
+    if not cols:
+        return pd.Series(False, index=df.index)
+    ok = df[cols[0]].notna()
+    for c in cols[1:]:
+        ok = ok | df[c].notna()
+    return ok
 
 
 def _derive_rowid_offset(finals_df, stats_df):
@@ -709,12 +742,7 @@ def _csv_only_preview(finals_df):
     )
     if COL_FINALS_GROUP in finals_df.columns:
         pool_filter &= (finals_df[COL_FINALS_GROUP] == "A Finals")
-    if COL_STAT_UPLOAD_2 in finals_df.columns:
-        pool_filter &= (
-            finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
-        )
-    else:
-        pool_filter &= finals_df[COL_STAT_UPLOAD_1].notna()
+    pool_filter &= _has_stat_screenshot(finals_df)
     pool = finals_df[pool_filter & finals_df[COL_WINNER_NAME].notna()].copy()
     print(f"Strict candidate pool (Graded/A-Finals/1st/SubmitPodium/SubmitStat): {len(pool)}")
 
@@ -799,11 +827,7 @@ def main():
     first = finals_df[COL_RESULT] == "1st"
     oshi_yes = finals_df[COL_OSHI] == "Yes"
     isA = (finals_df[COL_FINALS_GROUP] == "A Finals") if COL_FINALS_GROUP in finals_df.columns else pd.Series(True, index=finals_df.index)
-    if COL_STAT_UPLOAD_2 in finals_df.columns:
-        stat_ok = finals_df[COL_STAT_UPLOAD_1].notna() | finals_df[COL_STAT_UPLOAD_2].notna()
-    else:
-        stat_ok = finals_df[COL_STAT_UPLOAD_1].notna()
-    valid = finals_df[COL_PODIUM_UPLOAD].notna() & stat_ok
+    valid = finals_df[COL_PODIUM_UPLOAD].notna() & _has_stat_screenshot(finals_df)
 
     candidates = finals_df[graded & first & oshi_yes & isA & valid].copy()
     print(f"Award candidates (oshi+1st+A-Finals+Graded+valid): {len(candidates)}")
@@ -890,7 +914,7 @@ def main():
     claimed_umas = set()
 
     for _, row in oshi_unique.iterrows():
-        ign = row[COL_IGN]
+        ign = str(row[COL_IGN]).strip()
         csv_trainee = row[COL_WINNER_NAME]
         quote = _clean_quote(row[COL_QUOTE]) if pd.notna(row[COL_QUOTE]) else ""
         csv_time = row[COL_WINNER_TIME] if COL_WINNER_TIME in row and pd.notna(row[COL_WINNER_TIME]) else ""
@@ -932,13 +956,25 @@ def main():
                     print(f"  Resolved {ign} podium via fuzzy match (trainer={cw['trainer_name']})")
                     break
 
-        # Reject podium match if its uma disagrees with CSV declaration — this
-        # catches cases where the player's only podium row is an opponent's win
-        # in a race they lost (data inconsistency).
+        # Reject podium match if its uma disagrees with the declaration. A
+        # different character is an opponent's win. A different costume of the
+        # same character is a podium OCR miss: v2 already resolved the costume
+        # from this submission's own stat screen, and overwriting it here both
+        # shows the wrong outfit and can void the award as a duplicate
+        # (CM20 Plati: stat screen [Formula R], podium [Hot☆Summer Night]).
+        # Informal declarations without a costume tag still take the podium's
+        # canonical name.
+        costume_mismatch_time = ""
         if not pod_match.empty:
-            pod_trainee = pod_match.iloc[0]["trainee_name"]
-            if csv_base and _base_name(pod_trainee) != csv_base:
-                print(f"  REJECT podium for {ign}: declared {csv_trainee!r} ≠ podium {pod_trainee!r}")
+            pod_trainee = str(pod_match.iloc[0]["trainee_name"]).strip()
+            csv_full = str(csv_trainee).strip()
+            same_character = bool(csv_base) and _base_name(pod_trainee) == csv_base
+            both_costumed = "[" in csv_full and "[" in pod_trainee
+            if csv_full and pod_trainee != csv_full and (not same_character or both_costumed):
+                # Same character, wrong costume: the finish time is still theirs.
+                if same_character and pd.notna(pod_match.iloc[0]["time"]):
+                    costume_mismatch_time = str(pod_match.iloc[0]["time"]).strip()
+                print(f"  REJECT podium for {ign}: declared {csv_full!r} ≠ podium {pod_trainee!r}")
                 pod_match = pod_match.iloc[0:0]
 
         if not pod_match.empty:
@@ -959,8 +995,8 @@ def main():
                     print(f"  Canonicalized {ign}: CSV={csv_trainee!r} -> stats={trainee!r}")
             else:
                 trainee = csv_trainee
-            time_val = csv_time
-            print(f"  NOTE {ign}: no podium row for {trainee} (using CSV time={csv_time!r})")
+            time_val = csv_time or costume_mismatch_time
+            print(f"  NOTE {ign}: no podium row for {trainee} (using time={time_val!r})")
 
         if trainee in claimed_umas:
             print(f"  SKIP {ign}: {trainee} already claimed (duplicate or post-canonicalization collision)")

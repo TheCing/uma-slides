@@ -68,24 +68,21 @@ export function UmaStatsBar({ stats, event }) {
         const pct = Math.min(val / caps[key], 1)
 
         return (
-          <div class="uma-stat" key={key}>
-            <div class="uma-stat-header">
-              <img
-                class="uma-grade-icon"
-                src={rankIconSrc(idx)}
-                alt={grade}
-                title={grade}
-                draggable={false}
-              />
-              <span class="uma-stat-label">{label}</span>
-            </div>
+          <div class={`uma-stat ${cls}`} key={key}>
+            <img
+              class="uma-grade-icon"
+              src={rankIconSrc(idx)}
+              alt={grade}
+              draggable={false}
+            />
+            <span class="uma-stat-label">{label}</span>
+            <span class="uma-stat-value">{val.toLocaleString('en-US')}</span>
             <div class="uma-stat-bar-track">
               <div
                 class={`uma-stat-bar-fill ${cls}`}
                 style={{ width: `${pct * 100}%` }}
               />
             </div>
-            <span class="uma-stat-value">{val.toLocaleString('en-US')}</span>
           </div>
         )
       })}

@@ -1,4 +1,4 @@
-import { getDisplayName } from '../../utils/names'
+import { getBaseName } from '../../utils/names'
 import { buildHash } from '../../utils/route'
 import './styles.css'
 
@@ -58,7 +58,9 @@ export function TocSlide({ event, eventId, winners, totalWinners, page = 0, page
 
         <div class="toc-grid" style={{ '--toc-cols': columns }}>
           {winners.map((w) => {
-            const displayName = getDisplayName(w.trainee_name, allTraineeNames)
+            const base = getBaseName(w.trainee_name)
+            const shared = allTraineeNames.filter(n => getBaseName(n) === base).length > 1
+            const costume = shared ? (w.trainee_name.match(/\[(.*?)\]/)?.[1] ?? '') : ''
             return (
               <div class="toc-card" key={w.ign} onClick={goToWinner(w.ign)} role="button" tabIndex={0}>
                 <div class="toc-portrait">
@@ -69,8 +71,9 @@ export function TocSlide({ event, eventId, winners, totalWinners, page = 0, page
                   />
                 </div>
                 <div class="toc-card-info">
-                  <div class="toc-ign" title={w.ign}>{w.ign}</div>
-                  <div class="toc-uma" title={w.trainee_name}>{displayName}</div>
+                  <div class="toc-ign">{w.ign}</div>
+                  <div class="toc-uma">{base}</div>
+                  {costume && <div class="toc-costume">{costume}</div>}
                 </div>
               </div>
             )
