@@ -58,8 +58,8 @@ export function TocSlide({ event, eventId, winners, totalWinners, page = 0, page
 
         <div class="toc-grid" style={{ '--toc-cols': columns }}>
           {winners.map((w) => {
-            const base = getBaseName(w.trainee_name)
-            const shared = allTraineeNames.filter(n => getBaseName(n) === base).length > 1
+            const character = getBaseName(w.trainee_name)
+            const shared = allTraineeNames.filter(n => getBaseName(n) === character).length > 1
             const costume = shared ? (w.trainee_name.match(/\[(.*?)\]/)?.[1] ?? '') : ''
             return (
               <div class="toc-card" key={w.ign} onClick={goToWinner(w.ign)} role="button" tabIndex={0}>
@@ -72,7 +72,7 @@ export function TocSlide({ event, eventId, winners, totalWinners, page = 0, page
                 </div>
                 <div class="toc-card-info">
                   <div class="toc-ign">{w.ign}</div>
-                  <div class="toc-uma">{base}</div>
+                  <div class="toc-uma">{character}</div>
                   {costume && <div class="toc-costume">{costume}</div>}
                 </div>
               </div>
