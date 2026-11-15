@@ -1,0 +1,413 @@
+{
+  "event": "CM21",
+  "name": "Capricorn Cup II",
+  "track": "Chukyo Turf 1200m",
+  "winners": [
+    {
+      "ign": "Mattipus",
+      "trainee_name": "[Rocket☆Star] Seeking the Pearl",
+      "base_name": "Seeking the Pearl",
+      "time": "1:08.4",
+      "stats": {
+        "speed": 1612,
+        "stamina": 380,
+        "power": 1240,
+        "guts": 570,
+        "wit": 1282
+      },
+      "quote": "She's Possible!"
+    },
+    {
+      "ign": "Aero",
+      "trainee_name": "[Down the Line] Mejiro Ryan",
+      "base_name": "Mejiro Ryan",
+      "time": "1:07.9",
+      "stats": {
+        "speed": 1268,
+        "stamina": 579,
+        "power": 1127,
+        "guts": 653,
+        "wit": 1131
+      },
+      "quote": "I love her so much, so glad she's my first Plat win... tysm for locking in."
+    },
+    {
+      "ign": "Victoria Secret",
+      "trainee_name": "[Scramble☆Zone] Mayano Top Gun",
+      "base_name": "Mayano Top Gun",
+      "time": "1:06.6",
+      "stats": {
+        "speed": 1613,
+        "stamina": 487,
+        "power": 1208,
+        "guts": 591,
+        "wit": 1086
+      },
+      "quote": "Aye Copy !"
+    },
+    {
+      "ign": "Veronius",
+      "trainee_name": "[Brunissage Line] Mejiro Bright",
+      "base_name": "Mejiro Bright",
+      "time": "1:06.5",
+      "stats": {
+        "speed": 1603,
+        "stamina": 565,
+        "power": 1023,
+        "guts": 662,
+        "wit": 1267
+      },
+      "quote": "Howaaa~ Huh? This is not the Spring Tenno Sho"
+    },
+    {
+      "ign": "Explain",
+      "trainee_name": "[Blossom in Learning] Sakura Bakushin O",
+      "base_name": "Sakura Bakushin O",
+      "time": "1:06.7",
+      "stats": {
+        "speed": 1619,
+        "stamina": 428,
+        "power": 1190,
+        "guts": 608,
+        "wit": 1322
+      },
+      "quote": "Suddenly she's my oshi..."
+    },
+    {
+      "ign": "kc",
+      "trainee_name": "[Edomurasaki] Inari One",
+      "base_name": "Inari One",
+      "time": "1:07.7",
+      "stats": {
+        "speed": 1545,
+        "stamina": 380,
+        "power": 1157,
+        "guts": 515,
+        "wit": 1129
+      },
+      "quote": "Edo Umas don't let them legs rest until the day's well and spent!"
+    },
+    {
+      "ign": "awdzzz",
+      "trainee_name": "[Bestest Prize ♪] Haru Urara",
+      "base_name": "Haru Urara",
+      "time": "1:07.8",
+      "stats": {
+        "speed": 1603,
+        "stamina": 329,
+        "power": 1314,
+        "guts": 588,
+        "wit": 1020
+      },
+      "quote": "forsen"
+    },
+    {
+      "ign": "Harmony",
+      "trainee_name": "[Butterfly Sting] Wonder Acute",
+      "base_name": "Wonder Acute",
+      "time": "1:07.1",
+      "stats": {
+        "speed": 1606,
+        "stamina": 459,
+        "power": 1203,
+        "guts": 697,
+        "wit": 1196
+      },
+      "quote": "I hope I inspired everyone. -Wonder Acute"
+    },
+    {
+      "ign": "Yep, Clock",
+      "trainee_name": "[Peak Joy] Tokai Teio",
+      "base_name": "Tokai Teio",
+      "time": "1:08.3",
+      "stats": {
+        "speed": 1536,
+        "stamina": 562,
+        "power": 1252,
+        "guts": 654,
+        "wit": 1100
+      },
+      "quote": "21cms for that single W..."
+    },
+    {
+      "ign": "oaT",
+      "trainee_name": "[Succès Étoilé] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "1:07.7",
+      "stats": {
+        "speed": 1500,
+        "stamina": 363,
+        "power": 1127,
+        "guts": 1088,
+        "wit": 1206
+      },
+      "quote": "The miracle is real"
+    },
+    {
+      "ign": "Sac",
+      "trainee_name": "[Fille Éclair] Curren Chan",
+      "base_name": "Curren Chan",
+      "time": "1:08.3",
+      "stats": {
+        "speed": 1607,
+        "stamina": 332,
+        "power": 1112,
+        "guts": 554,
+        "wit": 1201
+      },
+      "quote": "Get Groundwork, get Lucky Pace, nobody else hits Let's go!"
+    },
+    {
+      "ign": "MercuryEpsilon",
+      "trainee_name": "[Wild Frontier] Taiki Shuttle",
+      "base_name": "Taiki Shuttle",
+      "time": "1:06.6",
+      "stats": {
+        "speed": 1600,
+        "stamina": 413,
+        "power": 1093,
+        "guts": 656,
+        "wit": 1062
+      },
+      "quote": "What I lack in Power, I make up for true cowgirl grit!"
+    },
+    {
+      "ign": "Magicannon",
+      "trainee_name": "[MB-19890425] Mihono Bourbon",
+      "base_name": "Mihono Bourbon",
+      "time": "1:07.4",
+      "stats": {
+        "speed": 1485,
+        "stamina": 532,
+        "power": 1255,
+        "guts": 754,
+        "wit": 946
+      },
+      "quote": "To win one must G00 1st. Forever."
+    },
+    {
+      "ign": "Origami",
+      "trainee_name": "[Empress Road] Air Groove",
+      "base_name": "Air Groove",
+      "time": "1:07.4",
+      "stats": {
+        "speed": 1611,
+        "stamina": 526,
+        "power": 1208,
+        "guts": 517,
+        "wit": 1188
+      },
+      "quote": "I think I woke up my neighbours screaming 行け on the final straight"
+    },
+    {
+      "ign": "kona",
+      "trainee_name": "[LOVE☆4EVER] Smart Falcon",
+      "base_name": "Smart Falcon",
+      "time": "1:07.1",
+      "stats": {
+        "speed": 1593,
+        "stamina": 481,
+        "power": 1213,
+        "guts": 762,
+        "wit": 963
+      },
+      "quote": "#1 UMADOL!!!!!!"
+    },
+    {
+      "ign": "Dan",
+      "trainee_name": "[Peak Blue] Daiwa Scarlet",
+      "base_name": "Daiwa Scarlet",
+      "time": "1:07.6",
+      "stats": {
+        "speed": 1604,
+        "stamina": 425,
+        "power": 1217,
+        "guts": 580,
+        "wit": 1258
+      },
+      "quote": "The Most Beautiful Number One Sprinter. Sorry-not-sorry Machan."
+    },
+    {
+      "ign": "LuseLunam",
+      "trainee_name": "[unsigned] Air Shakur",
+      "base_name": "Air Shakur",
+      "time": "1:07.4",
+      "stats": {
+        "speed": 1568,
+        "stamina": 447,
+        "power": 1069,
+        "guts": 522,
+        "wit": 1160
+      },
+      "quote": "++airShakurWins // Anything can happen in sprints :)"
+    },
+    {
+      "ign": "MCHamm",
+      "trainee_name": "[Eightfold☆Fortune] Copano Rickey",
+      "base_name": "Copano Rickey",
+      "time": "1:07.7",
+      "stats": {
+        "speed": 1639,
+        "stamina": 477,
+        "power": 1216,
+        "guts": 638,
+        "wit": 1235
+      },
+      "quote": "Rickey ☆ Lucky ☆ Hot Spring happy! ☆"
+    },
+    {
+      "ign": "Yoximura",
+      "trainee_name": "[Golden Dream] Inari One",
+      "base_name": "Inari One",
+      "time": "1:06.8",
+      "stats": {
+        "speed": 1613,
+        "stamina": 420,
+        "power": 1176,
+        "guts": 595,
+        "wit": 1204
+      },
+      "quote": "Inari sama"
+    },
+    {
+      "ign": "cat @lucabalsa",
+      "trainee_name": "[Tach-nology] Agnes Tachyon",
+      "base_name": "Agnes Tachyon",
+      "time": "1:06.9",
+      "stats": {
+        "speed": 1567,
+        "stamina": 457,
+        "power": 1191,
+        "guts": 832,
+        "wit": 1034
+      },
+      "quote": "we surpassed the limits of sprint G with this one"
+    },
+    {
+      "ign": "Kiriya",
+      "trainee_name": "[Noble Seamair] Fine Motion",
+      "base_name": "Fine Motion",
+      "time": "1:07.5",
+      "stats": {
+        "speed": 1623,
+        "stamina": 456,
+        "power": 1181,
+        "guts": 706,
+        "wit": 1199
+      },
+      "quote": "Lets just skip november and play gm instead"
+    },
+    {
+      "ign": "Mr. J",
+      "trainee_name": "[CODE: ICING] Mihono Bourbon",
+      "base_name": "Mihono Bourbon",
+      "time": "1:08.1",
+      "stats": {
+        "speed": 1617,
+        "stamina": 514,
+        "power": 1309,
+        "guts": 664,
+        "wit": 853
+      },
+      "quote": "Just dodge end closers"
+    },
+    {
+      "ign": "Snipey",
+      "trainee_name": "[Creeping Shadow] Manhattan Cafe",
+      "base_name": "Manhattan Cafe",
+      "time": "1:07.4",
+      "stats": {
+        "speed": 1518,
+        "stamina": 527,
+        "power": 1169,
+        "guts": 533,
+        "wit": 1057
+      },
+      "quote": "Torena... iwak :D"
+    },
+    {
+      "ign": "Tiphxodia",
+      "trainee_name": "[El☆Número 1] El Condor Pasa",
+      "base_name": "El Condor Pasa",
+      "time": "1:06.5",
+      "stats": {
+        "speed": 1600,
+        "stamina": 429,
+        "power": 1202,
+        "guts": 835,
+        "wit": 1137
+      },
+      "quote": "lock in"
+    },
+    {
+      "ign": "Chowside",
+      "trainee_name": "[Archer by Moonlight] Symboli Rudolf",
+      "base_name": "Symboli Rudolf",
+      "time": "1:07.1",
+      "stats": {
+        "speed": 1633,
+        "stamina": 420,
+        "power": 1129,
+        "guts": 659,
+        "wit": 1205
+      },
+      "quote": "I don't expect to get an Oshi Award, won capricorn 1 last time with rudolf and didn't get. Just throw some pun up here if I win"
+    },
+    {
+      "ign": "Moisty",
+      "trainee_name": "[Nuit Étoilée de Scarlet] Daiwa Scarlet",
+      "base_name": "Daiwa Scarlet",
+      "time": "1:06.5",
+      "stats": {
+        "speed": 1612,
+        "stamina": 504,
+        "power": 1064,
+        "guts": 595,
+        "wit": 1201
+      },
+      "quote": ":daiwahappy:"
+    },
+    {
+      "ign": "Citriux",
+      "trainee_name": "[Fiery Aqua Vitae] Vodka",
+      "base_name": "Vodka",
+      "time": "1:07.8",
+      "stats": {
+        "speed": 1614,
+        "stamina": 390,
+        "power": 1232,
+        "guts": 649,
+        "wit": 1081
+      },
+      "quote": "Intoxicated by her own strength."
+    },
+    {
+      "ign": "zo.official",
+      "trainee_name": "[Shooting Star Revue] Fuji Kiseki",
+      "base_name": "Fuji Kiseki",
+      "time": "1:06.5",
+      "stats": {
+        "speed": 1605,
+        "stamina": 524,
+        "power": 1286,
+        "guts": 599,
+        "wit": 1180
+      },
+      "quote": "Fuji made the magic happen."
+    },
+    {
+      "ign": "Kawakami Licker",
+      "trainee_name": "[Princess of Pink] Kawakami Princess",
+      "base_name": "Kawakami Princess",
+      "time": "1:06.9",
+      "stats": {
+        "speed": 1641,
+        "stamina": 350,
+        "power": 1254,
+        "guts": 520,
+        "wit": 1193
+      },
+      "quote": "PRINCESS GO!!!"
+    }
+  ]
+}
