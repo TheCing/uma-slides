@@ -162,6 +162,18 @@ EVENT_CONFIG = {
         "podium": "events/cm20/data/podium.parquet",
         "schema": "v2",
     },
+    "CM21": {
+        "name": "Capricorn Cup II",
+        "icon": "capricorn_icon.png",
+        "theme": "uma",
+        "distance": "Sprint",
+        "surface": "Turf",
+        "track": "Chukyo Turf 1200m",
+        "finals_csv": "events/cm21/data/sheet_cache_merged.csv",
+        "statsheet": "events/cm21/data/statsheet.parquet",
+        "podium": "events/cm21/data/podium.parquet",
+        "schema": "v2",
+    },
 }
 
 COL_IGN = "Unique display name"
@@ -228,6 +240,22 @@ DEFAULT_COSTUME = {
     # Maruzensky_(Race).png depicts the [Formula R] default (card 100401).
     # CM16/CM20's [Hot☆Summer Night] has its own ALT_ART entry.
     "Maruzensky": "[Formula R] Maruzensky",
+    # Inari_One_(Race).png depicts the festival default [Edomurasaki]
+    # (card 103401); CM21's [Golden Dream] needs its own ALT_ART.
+    "Inari One": "[Edomurasaki] Inari One",
+    # Daiwa_Scarlet_(Race).png depicts [Peak Blue] (card 100901);
+    # CM21's Christmas [Nuit Étoilée de Scarlet] needs its own ALT_ART.
+    "Daiwa Scarlet": "[Peak Blue] Daiwa Scarlet",
+    # Vodka_(Race).png depicts [Wild Top Gear] (card 100801);
+    # CM21's Christmas [Fiery Aqua Vitae] needs its own ALT_ART.
+    "Vodka": "[Wild Top Gear] Vodka",
+    # Seeking_the_Pearl_(Race).png depicts [Rocket☆Star] (card 104201).
+    "Seeking the Pearl": "[Rocket☆Star] Seeking the Pearl",
+    # Copano_Rickey_(Race).png depicts [Eightfold☆Fortune] (card 109801).
+    "Copano Rickey": "[Eightfold☆Fortune] Copano Rickey",
+    # Taiki_Shuttle_(Race).png depicts [Wild Frontier] (card 101001);
+    # camping [Bubblegum☆Memories] already has ALT_ART.
+    "Taiki Shuttle": "[Wild Frontier] Taiki Shuttle",
 }
 
 ALT_ART = {
@@ -258,6 +286,9 @@ ALT_ART = {
     "[Dot-o'-Lantern] Meisho Doto": "Meisho_Doto_(Alt).png",
     "[Autumn Cosmos] Gold City": "Gold_City_(Alt).png",
     "[Saintly Jade Cleric] Grass Wonder": "Grass_Wonder_(Alt).png",
+    "[Golden Dream] Inari One": "Inari_One_(Alt).png",
+    "[Nuit Étoilée de Scarlet] Daiwa Scarlet": "Daiwa_Scarlet_(Alt).png",
+    "[Fiery Aqua Vitae] Vodka": "Vodka_(Alt2).png",
 }
 
 # The .full-art layout sizes the render by width, so a narrower-than-usual

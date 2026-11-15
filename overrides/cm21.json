@@ -1,0 +1,19 @@
+{
+  "patches": [
+    {
+      "ign": "kc",
+      "trainee_name": "[Edomurasaki] Inari One",
+      "reason": "JP validation list Abs|Winner is Inari One (Festival). Form/OCR (statsheet + podium row 116) both read [Golden Dream], but kc's quote references Edo and the hand-checked table assigns Festival to kc."
+    },
+    {
+      "ign": "Yoximura",
+      "trainee_name": "[Golden Dream] Inari One",
+      "reason": "JP validation list Abs|Winner is Inari One (default). Form/OCR (statsheet + podium row 560) both read [Edomurasaki]; swapped with kc to match the hand-checked table."
+    },
+    {
+      "ign": "Citriux",
+      "full_art_compact": true,
+      "reason": "Christmas Vodka alt art is a tall narrow pose that full-bleed hero-crops edge-to-edge; force compact layout so she sits with cream margins like typical CM21 Race full-art."
+    }
+  ]
+}

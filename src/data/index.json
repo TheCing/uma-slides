@@ -83,6 +83,13 @@
       "icon": "sagittarius_cup.png",
       "file": "slides-cm20.json",
       "slideCount": 19
+    },
+    {
+      "id": "CM21",
+      "name": "Capricorn Cup II",
+      "icon": "capricorn_icon.png",
+      "file": "slides-cm21.json",
+      "slideCount": 29
     }
   ]
 }
