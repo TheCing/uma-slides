@@ -240,8 +240,9 @@ DEFAULT_COSTUME = {
     # Maruzensky_(Race).png depicts the [Formula R] default (card 100401).
     # CM16/CM20's [Hot☆Summer Night] has its own ALT_ART entry.
     "Maruzensky": "[Formula R] Maruzensky",
-    # Inari_One_(Race).png depicts the festival default [Edomurasaki]
-    # (card 103401); CM21's [Golden Dream] needs its own ALT_ART.
+    # Inari_One_(Race).png depicts the unique/default [Edomurasaki]
+    # (card 103401). CM21 Festival winners use [Golden Dream] via ALT_ART
+    # (card 103402 idle = Inari_One_(Alt).png; Fandom Inari_One_Festival).
     "Inari One": "[Edomurasaki] Inari One",
     # Daiwa_Scarlet_(Race).png depicts [Peak Blue] (card 100901);
     # CM21's Christmas [Nuit Étoilée de Scarlet] needs its own ALT_ART.

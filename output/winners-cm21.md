@@ -47,7 +47,7 @@
 
 ### 6. kc
 
-**Uma:** [Edomurasaki] Inari One  
+**Uma:** [Golden Dream] Inari One  
 **Time:** 1:07.7  
 **Stats:** 1545 / 380 / 1157 / 515 / 1129 (Total: 4726)  
 
@@ -151,7 +151,7 @@
 
 ### 19. Yoximura
 
-**Uma:** [Golden Dream] Inari One  
+**Uma:** [Edomurasaki] Inari One  
 **Time:** 1:06.8  
 **Stats:** 1613 / 420 / 1176 / 595 / 1204 (Total: 5008)  
 
