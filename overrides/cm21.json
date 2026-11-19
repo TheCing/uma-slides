@@ -2,13 +2,17 @@
   "patches": [
     {
       "ign": "kc",
-      "trainee_name": "[Edomurasaki] Inari One",
-      "reason": "JP validation list Abs|Winner is Inari One (Festival). Form/OCR (statsheet + podium row 116) both read [Golden Dream], but kc's quote references Edo and the hand-checked table assigns Festival to kc."
+      "trainee_name": "[Golden Dream] Inari One",
+      "uma_image": "umas/[Golden Dream] Inari One.png",
+      "full_art_image": "umas/Inari_One_(Alt).png",
+      "reason": "JP validation Abs|Winner is Inari One (Festival). Festival full-art is Golden Dream (Fandom Inari_One_Festival / Gametora 103402 idle = Inari_One_(Alt).png). Inari_One_(Race).png is the Edomurasaki unique (base 3★), which was incorrectly forced onto kc by an earlier Edo-quote swap. Form/OCR already had Golden Dream for kc — restore it and pin thumb + full-art."
     },
     {
       "ign": "Yoximura",
-      "trainee_name": "[Golden Dream] Inari One",
-      "reason": "JP validation list Abs|Winner is Inari One (default). Form/OCR (statsheet + podium row 560) both read [Edomurasaki]; swapped with kc to match the hand-checked table."
+      "trainee_name": "[Edomurasaki] Inari One",
+      "uma_image": "umas/[Edomurasaki] Inari One.png",
+      "full_art_image": "umas/Inari_One_(Race).png",
+      "reason": "JP validation Abs|Winner is Inari One (base/default) = [Edomurasaki] unique with Inari_One_(Race).png. Form/OCR already had Edomurasaki; undo the earlier swap with kc and pin thumb + full-art."
     },
     {
       "ign": "Citriux",
